@@ -1,0 +1,82 @@
+﻿== MpComputerStatus
+
+IsTamperProtected TamperProtectionSource RealTimeProtectionEnabled AntivirusEnabled
+----------------- ---------------------- ------------------------- ----------------
+            False UI                                          True             True
+
+
+
+== disable realtime
+realtime off OK
+== load intel driver
+[SC] CreateService réussite(s)
+[SC] StartService échec(s) 5 :
+
+Accès refusé.
+
+=== sc exit 5
+[SC] DeleteService réussite(s)
+== system log (last 10 min)
+
+
+TimeCreated  : 23/11/2026 20:14:31
+Id           : 7000
+ProviderName : Service Control Manager
+Msg          : Le service iqvw64etest n’a pas pu démarrer en raison de l’erreur :  Accès refusé.
+
+TimeCreated  : 23/11/2026 20:14:31
+Id           : 26
+ProviderName : Application Popup
+Msg          : 
+
+TimeCreated  : 23/11/2026 20:14:31
+Id           : 7045
+ProviderName : Service Control Manager
+Msg          : Un service a été installé sur le système.  Nom du service :  iqvw64etest Nom du fichier de service :  C:\Users\GIGABYTE\Desktop\new-rob-runhack\driver\out\intel_extracted.sys Type de service :  pilote
+
+TimeCreated  : 23/11/2026 20:13:35
+Id           : 7000
+ProviderName : Service Control Manager
+Msg          : Le service rbtest n’a pas pu démarrer en raison de l’erreur :  Windows ne peut pas vérifier la signature numérique de ce fichier. Il est possible qu’une modification matérielle ou logicielle récente a
+
+TimeCreated  : 23/11/2026 20:13:35
+Id           : 26
+ProviderName : Application Popup
+Msg          : 
+
+TimeCreated  : 23/11/2026 20:13:35
+Id           : 7045
+ProviderName : Service Control Manager
+Msg          : Un service a été installé sur le système.  Nom du service :  rbtest Nom du fichier de service :  C:\Users\GIGABYTE\Desktop\new-rob-runhack\driver\out\rb_drv.sys Type de service :  pilote en mode noyau
+
+TimeCreated  : 23/11/2026 20:12:59
+Id           : 26
+ProviderName : Application Popup
+Msg          : 
+
+TimeCreated  : 23/11/2026 20:11:33
+Id           : 26
+ProviderName : Application Popup
+Msg          : 
+
+TimeCreated  : 23/11/2026 20:07:53
+Id           : 19
+ProviderName : Microsoft-Windows-WindowsUpdateClient
+Msg          : Installation réussie : Windows a installé la mise à jour suivante : Mise à jour de la sélection disjointe pour Microsoft Defender Antivirus – 2267602 Ko (version 1.463.436.0) – Canal actuel (large)
+
+TimeCreated  : 23/11/2026 20:07:19
+Id           : 43
+ProviderName : Microsoft-Windows-WindowsUpdateClient
+Msg          : Installation démarrée : Windows a commencé l'installation de la mise à jour suivante : Mise à jour de la sélection disjointe pour Microsoft Defender Antivirus – 2267602 Ko (version 1.463.436.0) – Cana
+
+TimeCreated  : 23/11/2026 20:07:17
+Id           : 44
+ProviderName : Microsoft-Windows-WindowsUpdateClient
+Msg          : Windows Update a démarré le téléchargement d'une mise à jour.
+
+
+
+
+== restore realtime
+realtime on OK
+== done

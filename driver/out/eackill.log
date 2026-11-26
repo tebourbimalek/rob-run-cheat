@@ -1,0 +1,43 @@
+﻿== kill game
+killing pid 22748
+Opération réussie : le processus de PID 7412 (processus enfant de PID 22748) a été
+arrêté.
+Opération réussie : le processus de PID 1628 (processus enfant de PID 22748) a été
+arrêté.
+Opération réussie : le processus de PID 11416 (processus enfant de PID 22748) a été
+arrêté.
+Opération réussie : le processus de PID 22748 (processus enfant de PID 17868) a été
+arrêté.
+== stop EAC kernel driver
+[SC] ControlService échec(s) 1062 :
+
+Le service n'a pas été démarré.
+
+[SC] EnumQueryServicesStatus:OpenService échec(s) 1060 :
+
+Le service spécifié n'existe pas en tant que service installé.
+
+== retry intel load
+[SC] CreateService réussite(s)
+
+SERVICE_NAME: iqvw64etest 
+        TYPE               : 1  KERNEL_DRIVER  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+        PID                : 0
+        FLAGS              : 
+=== exit 0
+
+SERVICE_NAME: iqvw64etest 
+        TYPE               : 1  KERNEL_DRIVER  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+== done

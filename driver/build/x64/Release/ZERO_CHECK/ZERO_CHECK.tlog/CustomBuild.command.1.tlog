@@ -1,0 +1,10 @@
+^C:\USERS\GIGABYTE\DESKTOP\NEW-ROB-RUNHACK\DRIVER\BUILD\CMAKEFILES\145D213960400FB413DB079DD0419E54\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/GIGABYTE/Desktop/new-rob-runhack/driver -BC:/Users/GIGABYTE/Desktop/new-rob-runhack/driver/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/GIGABYTE/Desktop/new-rob-runhack/driver/build/robcheat_mapper.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

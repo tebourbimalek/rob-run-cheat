@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Rule
+  Name="CL"
+  OverrideMode="Extend"
+  xmlns="http://schemas.microsoft.com/build/2009/properties">
+  <!-- Hide the EnableASAN property that is defined already by SDK
+     Create a new Propety EnableKASAN which will have the same display name as Enable Kernel Address Sanitizer.
+  -->
+  <BoolProperty
+     Name="EnableASAN"
+     DisplayName="Enable Address Sanitizer"
+     Description="Compiles and links program with AddressSanitizer. Currently available for x86 and x64 builds."
+     Category="General"
+	 Visible="false"
+     Switch="fsanitize=address"
+     F1Keyword="VC.Project.VCCLCompilerTool.EnableASAN">
+    <BoolProperty.DataSource>
+      <DataSource
+         Persistence="ProjectFile"
+         ItemType=""
+         Label="Configuration"
+         HasConfigurationCondition="true" />
+    </BoolProperty.DataSource>
+  </BoolProperty>  
+  <BoolProperty
+     Name="EnableKASAN"
+     DisplayName="Enable Kernel Address Sanitizer"
+     Description="Compiles and links program with Kernel AddressSanitizer. Currently available for x64 builds."
+     Category="General"
+	 Visible="true"      
+     Switch="fsanitize=kernel-address"
+     F1Keyword="VC.Project.VCCLCompilerTool.EnableKASAN">
+    <BoolProperty.DataSource>
+      <DataSource
+         Persistence="ProjectFile"
+         ItemType=""
+         Label="Configuration"
+         HasConfigurationCondition="true" />
+    </BoolProperty.DataSource>
+  </BoolProperty>
+</Rule>

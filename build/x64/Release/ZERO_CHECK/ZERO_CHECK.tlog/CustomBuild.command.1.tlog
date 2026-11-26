@@ -1,0 +1,10 @@
+^C:\USERS\GIGABYTE\DESKTOP\NEW-ROB-RUNHACK\BUILD\CMAKEFILES\6AA44CE852B680A2E273C31F10CF745E\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/GIGABYTE/Desktop/new-rob-runhack -BC:/Users/GIGABYTE/Desktop/new-rob-runhack/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/GIGABYTE/Desktop/new-rob-runhack/build/robrun.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

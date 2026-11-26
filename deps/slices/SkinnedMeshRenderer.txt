@@ -1,0 +1,217 @@
+﻿1096132: }
+1096133: 
+1096134: // Namespace: UnityEngine
+1096135: public enum TextureMipmapLimitBiasMode // TypeDefIndex: 17239
+1096136: {
+1096137: 	// Fields
+1096138: 	public int value__; // 0x0
+1096139: 	public const TextureMipmapLimitBiasMode OffsetGlobalLimit = 0;
+1096140: 	public const TextureMipmapLimitBiasMode OverrideGlobalLimit = 1;
+1096141: }
+1096142: 
+1096143: // Namespace: UnityEngine
+1096144: public struct TextureMipmapLimitSettings // TypeDefIndex: 17240
+1096145: {
+1096146: 	// Fields
+1096147: 	[DebuggerBrowsable(0)]
+1096148: 	[CompilerGenerated]
+1096149: 	private TextureMipmapLimitBiasMode <limitBiasMode>k__BackingField; // 0x0
+1096150: 	[DebuggerBrowsable(0)]
+1096151: 	[CompilerGenerated]
+1096152: 	private int <limitBias>k__BackingField; // 0x4
+1096153: 
+1096154: 	// Properties
+1096155: 	public TextureMipmapLimitBiasMode limitBiasMode { set; }
+1096156: 	public int limitBias { set; }
+1096157: 
+1096158: 	// Methods
+1096159: 
+1096160: 	[CompilerGenerated]
+1096161: 	// RVA: 0xEE4B70 Offset: 0xEE3170 VA: 0x180EE4B70
+1096162: 	public void set_limitBiasMode(TextureMipmapLimitBiasMode value) { }
+1096163: 
+1096164: 	[CompilerGenerated]
+1096165: 	// RVA: 0xF07450 Offset: 0xF05A50 VA: 0x180F07450
+1096166: 	public void set_limitBias(int value) { }
+1096167: }
+1096168: 
+1096169: // Namespace: UnityEngine
+1096170: [NativeHeader("Runtime/Graphics/Mesh/SkinnedMeshRenderer.h")]
+1096171: [RequiredByNativeCode]
+1096172: public class SkinnedMeshRenderer : Renderer // TypeDefIndex: 17241
+1096173: {
+1096174: 	// Properties
+1096175: 	public SkinQuality quality { get; set; }
+1096176: 	public bool updateWhenOffscreen { get; set; }
+1096177: 	public bool forceMatrixRecalculationPerRender { get; set; }
+1096178: 	public Transform rootBone { get; set; }
+1096179: 	public Transform[] bones { get; set; }
+1096180: 	[NativeProperty("Mesh")]
+1096181: 	public Mesh sharedMesh { get; set; }
+1096182: 	[NativeProperty("SkinnedMeshMotionVectors")]
+1096183: 	public bool skinnedMotionVectors { get; set; }
+1096184: 	public GraphicsBuffer.Target vertexBufferTarget { get; set; }
+1096185: 
+1096186: 	// Methods
+1096187: 
+1096188: 	// RVA: 0x62A6770 Offset: 0x62A4D70 VA: 0x1862A6770
+1096189: 	public SkinQuality get_quality() { }
+1096190: 
+1096191: 	// RVA: 0x62A6DF0 Offset: 0x62A53F0 VA: 0x1862A6DF0
+1096192: 	public void set_quality(SkinQuality value) { }
+1096193: 
+1096194: 	// RVA: 0x62A6AB0 Offset: 0x62A50B0 VA: 0x1862A6AB0
+1096195: 	public bool get_updateWhenOffscreen() { }
+1096196: 
+1096197: 	// RVA: 0x62A71D0 Offset: 0x62A57D0 VA: 0x1862A71D0
+1096198: 	public void set_updateWhenOffscreen(bool value) { }
+1096199: 
+1096200: 	// RVA: 0x62A66B0 Offset: 0x62A4CB0 VA: 0x1862A66B0
+1096201: 	public bool get_forceMatrixRecalculationPerRender() { }
+1096202: 
+1096203: 	// RVA: 0x62A6D20 Offset: 0x62A5320 VA: 0x1862A6D20
+1096204: 	public void set_forceMatrixRecalculationPerRender(bool value) { }
+1096205: 
+1096206: 	// RVA: 0x62A6830 Offset: 0x62A4E30 VA: 0x1862A6830
+1096207: 	public Transform get_rootBone() { }
+1096208: 
+1096209: 	// RVA: 0x62A6ED0 Offset: 0x62A54D0 VA: 0x1862A6ED0
+1096210: 	public void set_rootBone(Transform value) { }
+1096211: 
+1096212: 	// RVA: 0x62A65F0 Offset: 0x62A4BF0 VA: 0x1862A65F0
+1096213: 	public Transform[] get_bones() { }
+1096214: 
+1096215: 	// RVA: 0x62A6C40 Offset: 0x62A5240 VA: 0x1862A6C40
+1096216: 	public void set_bones(Transform[] value) { }
+1096217: 
+1096218: 	// RVA: 0x62A6910 Offset: 0x62A4F10 VA: 0x1862A6910
+1096219: 	public Mesh get_sharedMesh() { }
+1096220: 
+1096221: 	// RVA: 0x62A6FE0 Offset: 0x62A55E0 VA: 0x1862A6FE0
+1096222: 	public void set_sharedMesh(Mesh value) { }
+1096223: 
+1096224: 	// RVA: 0x62A69F0 Offset: 0x62A4FF0 VA: 0x1862A69F0
+1096225: 	public bool get_skinnedMotionVectors() { }
+1096226: 
+1096227: 	// RVA: 0x62A70F0 Offset: 0x62A56F0 VA: 0x1862A70F0
+1096228: 	public void set_skinnedMotionVectors(bool value) { }
+1096229: 
+1096230: 	// RVA: 0x62A5DE0 Offset: 0x62A43E0 VA: 0x1862A5DE0
+1096231: 	public float GetBlendShapeWeight(int index) { }
+1096232: 
+1096233: 	// RVA: 0x62A6510 Offset: 0x62A4B10 VA: 0x1862A6510
+1096234: 	public void SetBlendShapeWeight(int index, float value) { }
+1096235: 
+1096236: 	// RVA: 0x62A5BD0 Offset: 0x62A41D0 VA: 0x1862A5BD0
+1096237: 	public void BakeMesh(Mesh mesh) { }
+1096238: 
+1096239: 	// RVA: 0x62A5CB0 Offset: 0x62A42B0 VA: 0x1862A5CB0
+1096240: 	public void BakeMesh(Mesh mesh, bool useScale) { }
+1096241: 
+1096242: 	// RVA: 0x62A6260 Offset: 0x62A4860 VA: 0x1862A6260
+1096243: 	public GraphicsBuffer GetVertexBuffer() { }
+1096244: 
+1096245: 	// RVA: 0x62A5F80 Offset: 0x62A4580 VA: 0x1862A5F80
+1096246: 	public GraphicsBuffer GetPreviousVertexBuffer() { }
+1096247: 
+1096248: 	[FreeFunction(Name = "SkinnedMeshRendererScripting::GetVertexBufferPtr", HasExplicitThis = True)]
+1096249: 	// RVA: 0x62A6190 Offset: 0x62A4790 VA: 0x1862A6190
+1096250: 	private GraphicsBuffer GetVertexBufferImpl() { }
+1096251: 
+1096252: 	[FreeFunction(Name = "SkinnedMeshRendererScripting::GetPreviousVertexBufferPtr", HasExplicitThis = True)]
+1096253: 	// RVA: 0x62A5EB0 Offset: 0x62A44B0 VA: 0x1862A5EB0
+1096254: 	private GraphicsBuffer GetPreviousVertexBufferImpl() { }
+1096255: 
+1096256: 	// RVA: 0x62A6B70 Offset: 0x62A5170 VA: 0x1862A6B70
+1096257: 	public GraphicsBuffer.Target get_vertexBufferTarget() { }
+1096258: 
+1096259: 	// RVA: 0x62A72A0 Offset: 0x62A58A0 VA: 0x1862A72A0
+1096260: 	public void set_vertexBufferTarget(GraphicsBuffer.Target value) { }
+1096261: 
+1096262: 	[FreeFunction(Name = "SkinnedMeshRendererScripting::SetShaderUserValue", HasExplicitThis = True)]
+1096263: 	// RVA: 0x62A6430 Offset: 0x62A4A30 VA: 0x1862A6430
+1096264: 	internal void Internal_SetShaderUserValueUInt(uint v) { }
+1096265: 
+1096266: 	// RVA: 0x62A6430 Offset: 0x62A4A30 VA: 0x1862A6430
+1096267: 	public void SetShaderUserValue(uint v) { }
+1096268: 
+1096269: 	[FreeFunction(Name = "SkinnedMeshRendererScripting::GetShaderUserValue", HasExplicitThis = True)]
+1096270: 	// RVA: 0x62A60D0 Offset: 0x62A46D0 VA: 0x1862A60D0
+1096271: 	internal uint Internal_GetShaderUserValueUInt() { }
+1096272: 
+1096273: 	// RVA: 0x62A60D0 Offset: 0x62A46D0 VA: 0x1862A60D0
+1096274: 	public uint GetShaderUserValue() { }
+1096275: 
+1096276: 	// RVA: 0xAE97C0 Offset: 0xAE7DC0 VA: 0x180AE97C0
+1096277: 	public void .ctor() { }
+1096278: 
+1096279: 	// RVA: 0x62A6730 Offset: 0x62A4D30 VA: 0x1862A6730
+1096280: 	private static SkinQuality get_quality_Injected(IntPtr _unity_self) { }
+1096281: 
+1096282: 	// RVA: 0x62A6DB0 Offset: 0x62A53B0 VA: 0x1862A6DB0
+1096283: 	private static void set_quality_Injected(IntPtr _unity_self, SkinQuality value) { }
+1096284: 
+1096285: 	// RVA: 0x62A6A70 Offset: 0x62A5070 VA: 0x1862A6A70
+1096286: 	private static bool get_updateWhenOffscreen_Injected(IntPtr _unity_self) { }
+1096287: 
+1096288: 	// RVA: 0x62A7180 Offset: 0x62A5780 VA: 0x1862A7180
+1096289: 	private static void set_updateWhenOffscreen_Injected(IntPtr _unity_self, bool value) { }
+1096290: 
+1096291: 	// RVA: 0x62A6670 Offset: 0x62A4C70 VA: 0x1862A6670
+1096292: 	private static bool get_forceMatrixRecalculationPerRender_Injected(IntPtr _unity_self) { }
+1096293: 
+1096294: 	// RVA: 0x62A6CD0 Offset: 0x62A52D0 VA: 0x1862A6CD0
+1096295: 	private static void set_forceMatrixRecalculationPerRender_Injected(IntPtr _unity_self, bool value) { }
+1096296: 
+1096297: 	// RVA: 0x62A67F0 Offset: 0x62A4DF0 VA: 0x1862A67F0
+1096298: 	private static IntPtr get_rootBone_Injected(IntPtr _unity_self) { }
+1096299: 
+1096300: 	// RVA: 0x62A6E80 Offset: 0x62A5480 VA: 0x1862A6E80
+1096301: 	private static void set_rootBone_Injected(IntPtr _unity_self, IntPtr value) { }
+1096302: 
+1096303: 	// RVA: 0x62A65B0 Offset: 0x62A4BB0 VA: 0x1862A65B0
+1096304: 	private static Transform[] get_bones_Injected(IntPtr _unity_self) { }
+1096305: 
+1096306: 	// RVA: 0x62A6BF0 Offset: 0x62A51F0 VA: 0x1862A6BF0
+1096307: 	private static void set_bones_Injected(IntPtr _unity_self, Transform[] value) { }
+1096308: 
+1096309: 	// RVA: 0x62A68D0 Offset: 0x62A4ED0 VA: 0x1862A68D0
+1096310: 	private static IntPtr get_sharedMesh_Injected(IntPtr _unity_self) { }
+1096311: 
+1096312: 	// RVA: 0x62A6F90 Offset: 0x62A5590 VA: 0x1862A6F90
+1096313: 	private static void set_sharedMesh_Injected(IntPtr _unity_self, IntPtr value) { }
+1096314: 
+1096315: 	// RVA: 0x62A69B0 Offset: 0x62A4FB0 VA: 0x1862A69B0
+1096316: 	private static bool get_skinnedMotionVectors_Injected(IntPtr _unity_self) { }
+1096317: 
+1096318: 	// RVA: 0x62A70A0 Offset: 0x62A56A0 VA: 0x1862A70A0
+1096319: 	private static void set_skinnedMotionVectors_Injected(IntPtr _unity_self, bool value) { }
+1096320: 
+1096321: 	// RVA: 0x62A5DA0 Offset: 0x62A43A0 VA: 0x1862A5DA0
+1096322: 	private static float GetBlendShapeWeight_Injected(IntPtr _unity_self, int index) { }
+1096323: 
+1096324: 	// RVA: 0x62A64C0 Offset: 0x62A4AC0 VA: 0x1862A64C0
+1096325: 	private static void SetBlendShapeWeight_Injected(IntPtr _unity_self, int index, float value) { }
+1096326: 
+1096327: 	// RVA: 0x62A5B70 Offset: 0x62A4170 VA: 0x1862A5B70
+1096328: 	private static void BakeMesh_Injected(IntPtr _unity_self, IntPtr mesh, bool useScale) { }
+1096329: 
+1096330: 	// RVA: 0x62A6150 Offset: 0x62A4750 VA: 0x1862A6150
+1096331: 	private static IntPtr GetVertexBufferImpl_Injected(IntPtr _unity_self) { }
+1096332: 
+1096333: 	// RVA: 0x62A5E70 Offset: 0x62A4470 VA: 0x1862A5E70
+1096334: 	private static IntPtr GetPreviousVertexBufferImpl_Injected(IntPtr _unity_self) { }
+1096335: 
+1096336: 	// RVA: 0x62A6B30 Offset: 0x62A5130 VA: 0x1862A6B30
+1096337: 	private static GraphicsBuffer.Target get_vertexBufferTarget_Injected(IntPtr _unity_self) { }
+1096338: 
+1096339: 	// RVA: 0x62A7260 Offset: 0x62A5860 VA: 0x1862A7260
+1096340: 	private static void set_vertexBufferTarget_Injected(IntPtr _unity_self, GraphicsBuffer.Target value) { }
+1096341: 
+1096342: 	// RVA: 0x62A63F0 Offset: 0x62A49F0 VA: 0x1862A63F0
+1096343: 	private static void Internal_SetShaderUserValueUInt_Injected(IntPtr _unity_self, uint v) { }
+1096344: 
+1096345: 	// RVA: 0x62A63B0 Offset: 0x62A49B0 VA: 0x1862A63B0
+1096346: 	private static uint Internal_GetShaderUserValueUInt_Injected(IntPtr _unity_self) { }
+1096347: }
+1096348: 

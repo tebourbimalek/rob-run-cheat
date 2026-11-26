@@ -1,0 +1,5 @@
+﻿start
+START-EXCEPTION: Le jeu de paramètres ne peut pas être résolu à l'aide des paramètres nommés spécifiés.
+== stdout ==
+== stderr ==
+== exit/restart? ==

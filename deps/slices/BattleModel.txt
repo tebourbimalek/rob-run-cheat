@@ -1,0 +1,301 @@
+﻿ 239094: 	// RVA: 0x936D50 Offset: 0x935350 VA: 0x180936D50
+ 239095: 	public static Vector3 ToPositive(Vector3 vec) { }
+ 239096: 
+ 239097: 	// RVA: 0x936F50 Offset: 0x935550 VA: 0x180936F50
+ 239098: 	private static void .cctor() { }
+ 239099: }
+ 239100: 
+ 239101: // Namespace: Game.Battle
+ 239102: public class BattleLoadingUpdater : IUpdater // TypeDefIndex: 5526
+ 239103: {
+ 239104: 	// Fields
+ 239105: 	private readonly LoadingModel _loadingModel; // 0x10
+ 239106: 	private readonly StartGameModel _startGameModel; // 0x18
+ 239107: 	private readonly ScopesLoadingModel _scopesLoadingModel; // 0x20
+ 239108: 	private readonly IBattleEntitiesModel _battleEntitiesModel; // 0x28
+ 239109: 	private readonly IUpdater _roleTipLoadedContentUpdater; // 0x30
+ 239110: 	private readonly CarViewDescriptions _carViewDescriptions; // 0x38
+ 239111: 	private readonly HelicopterViewDescriptions _helicopterViewDescriptions; // 0x40
+ 239112: 	private bool _initialized; // 0x48
+ 239113: 	private bool _wasLoadedRoleTips; // 0x49
+ 239114: 
+ 239115: 	// Methods
+ 239116: 
+ 239117: 	// RVA: 0x937730 Offset: 0x935D30 VA: 0x180937730
+ 239118: 	public void .ctor(GlobalModel globalModel, StartGameModel startGameModel, ScopesLoadingModel scopesLoadingModel, IBattleEntitiesModel battleEntitiesModel, BattleScreenContent content) { }
+ 239119: 
+ 239120: 	// RVA: 0x937670 Offset: 0x935C70 VA: 0x180937670 Slot: 4
+ 239121: 	public void Update() { }
+ 239122: 
+ 239123: 	// RVA: 0x937650 Offset: 0x935C50 VA: 0x180937650
+ 239124: 	private bool IsScopesLoading() { }
+ 239125: 
+ 239126: 	// RVA: 0x937480 Offset: 0x935A80 VA: 0x180937480
+ 239127: 	private bool IsPlayerCustomizationLoaded(PlayerEntityModel player) { }
+ 239128: 
+ 239129: 	// RVA: 0x937120 Offset: 0x935720 VA: 0x180937120
+ 239130: 	private bool CheckVehicleIsLoadedIfPlayerIsInTheVehicle(PlayerEntityModel player) { }
+ 239131: }
+ 239132: 
+ 239133: // Namespace: Game.Battle
+ 239134: public class BattleModel // TypeDefIndex: 5527
+ 239135: {
+ 239136: 	// Fields
+ 239137: 	private readonly RegionUserBattleRoomModel _battleRoomModel; // 0x10
+ 239138: 	private readonly BattleConnectionModel _battleConnectionModel; // 0x18
+ 239139: 	public readonly IRobberLocationEventModels RobberLocationEventModels; // 0x20
+ 239140: 	public readonly LocationSafeDoorModel LocationSafeDoorModel; // 0x28
+ 239141: 	[CompilerGenerated]
+ 239142: 	private readonly RealmVersion <RealmVersion>k__BackingField; // 0x30
+ 239143: 	[CompilerGenerated]
+ 239144: 	private readonly TimeModel <Time>k__BackingField; // 0x38
+ 239145: 	[CompilerGenerated]
+ 239146: 	private readonly PlayerRotationInputModel <PlayerRotationInput>k__BackingField; // 0x40
+ 239147: 	[CompilerGenerated]
+ 239148: 	private readonly PlayerMovementInputModel <PlayerMovementInput>k__BackingField; // 0x48
+ 239149: 	[CompilerGenerated]
+ 239150: 	private readonly BattleInputModel <BattleInputModel>k__BackingField; // 0x50
+ 239151: 	[CompilerGenerated]
+ 239152: 	private readonly BattleUISoundModel <UISoundModel>k__BackingField; // 0x58
+ 239153: 	[CompilerGenerated]
+ 239154: 	private readonly DebugNetModel <DebugNetModel>k__BackingField; // 0x60
+ 239155: 	[CompilerGenerated]
+ 239156: 	private readonly CarStatsDebugModel <CarStatsModel>k__BackingField; // 0x68
+ 239157: 	[CompilerGenerated]
+ 239158: 	private readonly HelicopterStatsDebugModel <HelicopterStatsModel>k__BackingField; // 0x70
+ 239159: 	[CompilerGenerated]
+ 239160: 	private readonly VehicleStatsModel <VehicleStatsModel>k__BackingField; // 0x78
+ 239161: 	[CompilerGenerated]
+ 239162: 	private readonly CheatSpawnCarModel <CheatSpawnCarModel>k__BackingField; // 0x80
+ 239163: 	[CompilerGenerated]
+ 239164: 	private readonly CheatSpawnHelicopterModel <CheatSpawnHelicopterModel>k__BackingField; // 0x88
+ 239165: 	[CompilerGenerated]
+ 239166: 	private readonly IBattleEntitiesModel <BattleEntitiesModel>k__BackingField; // 0x90
+ 239167: 	[CompilerGenerated]
+ 239168: 	private readonly BattleSettingsDescription <BattleSettings>k__BackingField; // 0x98
+ 239169: 	[CompilerGenerated]
+ 239170: 	private readonly IDataModels <DataModels>k__BackingField; // 0xA0
+ 239171: 	[CompilerGenerated]
+ 239172: 	private readonly IClanBattleCharacterTeamModel <ClanBattleCharacterTeamModel>k__BackingField; // 0xA8
+ 239173: 	[CompilerGenerated]
+ 239174: 	private readonly InterpolationStatsModel <InterpolationStatsModel>k__BackingField; // 0xB0
+ 239175: 	[CompilerGenerated]
+ 239176: 	private readonly InputsStatsModel <InputsStatsModel>k__BackingField; // 0xB8
+ 239177: 	[CompilerGenerated]
+ 239178: 	private readonly PacketStatsModel <PacketStatsModel>k__BackingField; // 0xC0
+ 239179: 	[CompilerGenerated]
+ 239180: 	private readonly ConnectionStatsModel <ConnectionStatsModel>k__BackingField; // 0xC8
+ 239181: 	[CompilerGenerated]
+ 239182: 	private readonly LocationHitsModel <LocationHits>k__BackingField; // 0xD0
+ 239183: 	[CompilerGenerated]
+ 239184: 	private readonly CharactersShotsModel <CharactersShotsModel>k__BackingField; // 0xD8
+ 239185: 	[CompilerGenerated]
+ 239186: 	private readonly CharactersMeleeAttackModel <CharactersMeleeAttackModel>k__BackingField; // 0xE0
+ 239187: 	[CompilerGenerated]
+ 239188: 	private readonly InputModel <SprintInputModel>k__BackingField; // 0xE8
+ 239189: 	[CompilerGenerated]
+ 239190: 	private readonly InputModel <AimInputModel>k__BackingField; // 0xF0
+ 239191: 	[CompilerGenerated]
+ 239192: 	private readonly AutoAimIntentionModel <AutoAimIntentionModel>k__BackingField; // 0xF8
+ 239193: 	[CompilerGenerated]
+ 239194: 	private readonly InputModel <CrouchInputModel>k__BackingField; // 0x100
+ 239195: 	[CompilerGenerated]
+ 239196: 	private readonly InputModel <JumpInputModel>k__BackingField; // 0x108
+ 239197: 	[CompilerGenerated]
+ 239198: 	private readonly InputModel <ShotInputModel>k__BackingField; // 0x110
+ 239199: 	[CompilerGenerated]
+ 239200: 	private readonly InputModel <AimModeInputModel>k__BackingField; // 0x118
+ 239201: 	[CompilerGenerated]
+ 239202: 	private readonly InputModel <MeleeAttackInputModel>k__BackingField; // 0x120
+ 239203: 	[CompilerGenerated]
+ 239204: 	private readonly InputModel <UseInputModel>k__BackingField; // 0x128
+ 239205: 	[CompilerGenerated]
+ 239206: 	private readonly InputModel <UseHoldingInputModel>k__BackingField; // 0x130
+ 239207: 	[CompilerGenerated]
+ 239208: 	private readonly InputModel <InVehicleUseInputModel>k__BackingField; // 0x138
+ 239209: 	[CompilerGenerated]
+ 239210: 	private readonly InputModel <BackInputModel>k__BackingField; // 0x140
+ 239211: 	[CompilerGenerated]
+ 239212: 	private readonly InputModel <LeaveVehicle>k__BackingField; // 0x148
+ 239213: 	[CompilerGenerated]
+ 239214: 	private readonly InputModel <GetOutHideObject>k__BackingField; // 0x150
+ 239215: 	[CompilerGenerated]
+ 239216: 	private readonly InputModel <CarSirenInputModel>k__BackingField; // 0x158
+ 239217: 	[CompilerGenerated]
+ 239218: 	private readonly InputModel <ChatInputModel>k__BackingField; // 0x160
+ 239219: 	[CompilerGenerated]
+ 239220: 	private readonly InputModel <LeftShoulderViewInputModel>k__BackingField; // 0x168
+ 239221: 	[CompilerGenerated]
+ 239222: 	private readonly QuickSlotsInputModel <QuickSlotsInputModel>k__BackingField; // 0x170
+ 239223: 	[CompilerGenerated]
+ 239224: 	private readonly InventoryDialogModel <InventoryDialogModel>k__BackingField; // 0x178
+ 239225: 	[CompilerGenerated]
+ 239226: 	private readonly InventoryModels <InventoryModels>k__BackingField; // 0x180
+ 239227: 	[CompilerGenerated]
+ 239228: 	private readonly ProlongedInteractionDialogModel <ProlongedInteractionDialogModel>k__BackingField; // 0x188
+ 239229: 	[CompilerGenerated]
+ 239230: 	private readonly MarkersModel <MarkersModel>k__BackingField; // 0x190
+ 239231: 	[CompilerGenerated]
+ 239232: 	private readonly AimTargetModel <AimTargetModel>k__BackingField; // 0x198
+ 239233: 	[CompilerGenerated]
+ 239234: 	private readonly TargetModel <TargetModel>k__BackingField; // 0x1A0
+ 239235: 	[CompilerGenerated]
+ 239236: 	private readonly TargetModel <InVehicleTargetModel>k__BackingField; // 0x1A8
+ 239237: 	[CompilerGenerated]
+ 239238: 	private readonly InteractAreasNearPlayerModel <InteractAreasNearPlayerModel>k__BackingField; // 0x1B0
+ 239239: 	[CompilerGenerated]
+ 239240: 	private readonly PreferredTargetModel <PreferredTargetModel>k__BackingField; // 0x1B8
+ 239241: 	[CompilerGenerated]
+ 239242: 	private readonly ShotBlockedModel <ShotBlockedModel>k__BackingField; // 0x1C0
+ 239243: 	[CompilerGenerated]
+ 239244: 	private readonly PlayerContextMenuModel <PlayerContextMenu>k__BackingField; // 0x1C8
+ 239245: 	[CompilerGenerated]
+ 239246: 	private readonly InputModel <CarHandBrakeInputModel>k__BackingField; // 0x1D0
+ 239247: 	[CompilerGenerated]
+ 239248: 	private readonly MapDialogModel <MapDialogModel>k__BackingField; // 0x1D8
+ 239249: 	[CompilerGenerated]
+ 239250: 	private readonly MapMarkersModel <MapMarkersModel>k__BackingField; // 0x1E0
+ 239251: 	[CompilerGenerated]
+ 239252: 	private readonly MapConfigModel <MapConfigModel>k__BackingField; // 0x1E8
+ 239253: 	[CompilerGenerated]
+ 239254: 	private readonly ShotIntentionModel <ShotIntentionModel>k__BackingField; // 0x1F0
+ 239255: 	[CompilerGenerated]
+ 239256: 	private readonly ShotParamsModel <AutomaticShotParamsModel>k__BackingField; // 0x1F8
+ 239257: 	[CompilerGenerated]
+ 239258: 	private readonly ShotParamsModel <SingleShotParamsModel>k__BackingField; // 0x200
+ 239259: 	[CompilerGenerated]
+ 239260: 	private readonly ShotInputLockModel <ShotInputLockModel>k__BackingField; // 0x208
+ 239261: 	[CompilerGenerated]
+ 239262: 	private readonly InputIntentionModel <SprintIntentionModel>k__BackingField; // 0x210
+ 239263: 	[CompilerGenerated]
+ 239264: 	private readonly NetworkConnectionStatusModel <NetworkConnectionStatusModel>k__BackingField; // 0x218
+ 239265: 	[CompilerGenerated]
+ 239266: 	private readonly DeathScreenModel <DeathScreenModel>k__BackingField; // 0x220
+ 239267: 	[CompilerGenerated]
+ 239268: 	private readonly InputModel <OpenInventoryInputModel>k__BackingField; // 0x228
+ 239269: 	[CompilerGenerated]
+ 239270: 	private readonly InputModel <OpenMapInputModel>k__BackingField; // 0x230
+ 239271: 	[CompilerGenerated]
+ 239272: 	private readonly InputModel <OpenEmotionDialogInputModel>k__BackingField; // 0x238
+ 239273: 	[CompilerGenerated]
+ 239274: 	private readonly UnlockRequirementItemPositionModel <UnlockRequirementItemPositionModel>k__BackingField; // 0x240
+ 239275: 	[CompilerGenerated]
+ 239276: 	private readonly ClientCharacterSlotsModel <CharacterSlotsModel>k__BackingField; // 0x248
+ 239277: 	[CompilerGenerated]
+ 239278: 	private readonly PredictionExtraTimeModel <PredictionExtraTimeModel>k__BackingField; // 0x250
+ 239279: 	[CompilerGenerated]
+ 239280: 	private readonly TargetHintObjectsModel <TargetHintObjectsModel>k__BackingField; // 0x258
+ 239281: 	[CompilerGenerated]
+ 239282: 	private readonly SurrenderInputModel <SurrenderInputModel>k__BackingField; // 0x260
+ 239283: 	[CompilerGenerated]
+ 239284: 	private readonly InputModel <OfferBribeInputModel>k__BackingField; // 0x268
+ 239285: 	[CompilerGenerated]
+ 239286: 	private readonly InputModel <SurrenderOrderInputModel>k__BackingField; // 0x270
+ 239287: 	[CompilerGenerated]
+ 239288: 	private readonly HideAndSeekNotificationModel <HideAndSeekNotificationModel>k__BackingField; // 0x278
+ 239289: 	[CompilerGenerated]
+ 239290: 	private readonly InputModel <SurrenderArrestingInputModel>k__BackingField; // 0x280
+ 239291: 	[CompilerGenerated]
+ 239292: 	private readonly BecomeRobberNotificationModel <BecomeRobberNotificationModel>k__BackingField; // 0x288
+ 239293: 	[CompilerGenerated]
+ 239294: 	private readonly InputHoldModel <BecomeRobberInputModel>k__BackingField; // 0x290
+ 239295: 	[CompilerGenerated]
+ 239296: 	private readonly PartyBuffModel <PartyBuffModel>k__BackingField; // 0x298
+ 239297: 	[CompilerGenerated]
+ 239298: 	private readonly ResourceNotificationModel <ResourceNotificationModel>k__BackingField; // 0x2A0
+ 239299: 	[CompilerGenerated]
+ 239300: 	private readonly IIncomingDebugShotsModel <IncomingDebugShots>k__BackingField; // 0x2A8
+ 239301: 	[CompilerGenerated]
+ 239302: 	private readonly IIncomingPhysicsDebugDataModel <IncomingPhysicsDebugData>k__BackingField; // 0x2B0
+ 239303: 	[CompilerGenerated]
+ 239304: 	private readonly InputModel <ForceKnockoutEndInputModel>k__BackingField; // 0x2B8
+ 239305: 	[CompilerGenerated]
+ 239306: 	private readonly ObserverRequestModel <ObserverRequestModel>k__BackingField; // 0x2C0
+ 239307: 	[CompilerGenerated]
+ 239308: 	private readonly DeferredOpenModel <DeferredOpenModel>k__BackingField; // 0x2C8
+ 239309: 	[CompilerGenerated]
+ 239310: 	private readonly CarTrunkDistanceOpenModel <CarTrunkDistanceOpenModel>k__BackingField; // 0x2D0
+ 239311: 	[CompilerGenerated]
+ 239312: 	private readonly CarUpgradesHolderOpenModel <CarUpgradesHolderOpenModel>k__BackingField; // 0x2D8
+ 239313: 	[CompilerGenerated]
+ 239314: 	private readonly ShelvingsOpenModel <ShelvingsOpenModel>k__BackingField; // 0x2E0
+ 239315: 	[CompilerGenerated]
+ 239316: 	private readonly Markers3DModel <Markers3DModel>k__BackingField; // 0x2E8
+ 239317: 	[CompilerGenerated]
+ 239318: 	private readonly MailIndicationModel <MailIndicationModel>k__BackingField; // 0x2F0
+ 239319: 	[CompilerGenerated]
+ 239320: 	private readonly InputModel <DropCargoInputModel>k__BackingField; // 0x2F8
+ 239321: 	[CompilerGenerated]
+ 239322: 	private readonly EmotionDialogModel <EmotionDialogModel>k__BackingField; // 0x300
+ 239323: 	[CompilerGenerated]
+ 239324: 	private readonly PingMarkerCollidersModel <PingMarkerCollidersModel>k__BackingField; // 0x308
+ 239325: 	[CompilerGenerated]
+ 239326: 	private readonly InputModel <PingInputModel>k__BackingField; // 0x310
+ 239327: 	[CompilerGenerated]
+ 239328: 	private readonly ProlongedActionProcessModel <ProlongedActionProcessModel>k__BackingField; // 0x318
+ 239329: 	[CompilerGenerated]
+ 239330: 	private readonly InputModel <BollardInputModel>k__BackingField; // 0x320
+ 239331: 	[CompilerGenerated]
+ 239332: 	private readonly BollardActiveModel <BollardActiveModel>k__BackingField; // 0x328
+ 239333: 	[CompilerGenerated]
+ 239334: 	private readonly SelectedCargoModel <SelectedCargoModel>k__BackingField; // 0x330
+ 239335: 	[CompilerGenerated]
+ 239336: 	private readonly VehiclesClientModel <VehiclesModel>k__BackingField; // 0x338
+ 239337: 	[CompilerGenerated]
+ 239338: 	private readonly IDelayedResponsesModel <DelayedResponsesModel>k__BackingField; // 0x340
+ 239339: 	[CompilerGenerated]
+ 239340: 	private readonly LaptopDialogModel <LaptopDialogModel>k__BackingField; // 0x348
+ 239341: 	[CompilerGenerated]
+ 239342: 	private readonly AchievementsDialogModel <AchievementsDialogModel>k__BackingField; // 0x350
+ 239343: 	[CompilerGenerated]
+ 239344: 	private readonly BattleCameraModel <BattleCameraModel>k__BackingField; // 0x358
+ 239345: 	[CompilerGenerated]
+ 239346: 	private readonly ICheatModel <CheatModel>k__BackingField; // 0x360
+ 239347: 	[CompilerGenerated]
+ 239348: 	private readonly MapBuildingsModel <MapBuildingsModel>k__BackingField; // 0x368
+ 239349: 	[CompilerGenerated]
+ 239350: 	private readonly ISettlementHelperModel <SettlementHelperModel>k__BackingField; // 0x370
+ 239351: 	[CompilerGenerated]
+ 239352: 	private readonly SettlementModel <SettlementModel>k__BackingField; // 0x378
+ 239353: 	[CompilerGenerated]
+ 239354: 	private readonly SettlementBonusModel <SettlementBonusModel>k__BackingField; // 0x380
+ 239355: 	[CompilerGenerated]
+ 239356: 	private readonly WorldWaterZonesClientModel <WorldWaterZonesModel>k__BackingField; // 0x388
+ 239357: 	[CompilerGenerated]
+ 239358: 	private readonly MixingCameraBlendModel <MixingCameraBlendModel>k__BackingField; // 0x390
+ 239359: 	[CompilerGenerated]
+ 239360: 	private readonly CharacterInVehiclesModel <CharactersInVehiclesModel>k__BackingField; // 0x398
+ 239361: 	[CompilerGenerated]
+ 239362: 	private readonly LocationPlotsViewsModel <PlotsViewModel>k__BackingField; // 0x3A0
+ 239363: 	[CompilerGenerated]
+ 239364: 	private readonly RenderersCullingRoomsViewModel <RenderersCullingRoomsViewModel>k__BackingField; // 0x3A8
+ 239365: 	[CompilerGenerated]
+ 239366: 	private readonly LocationPlotSpotsModel <LocationPlotSpotsModel>k__BackingField; // 0x3B0
+ 239367: 	[CompilerGenerated]
+ 239368: 	private readonly CarLandingCameraShakeModel <CarLandingCameraShakeModel>k__BackingField; // 0x3B8
+ 239369: 	[CompilerGenerated]
+ 239370: 	private readonly CompassMarkersModel <CompassMarkersModel>k__BackingField; // 0x3C0
+ 239371: 	[CompilerGenerated]
+ 239372: 	private readonly MapDistrictNamesModel <MapDistrictNamesModel>k__BackingField; // 0x3C8
+ 239373: 	[CompilerGenerated]
+ 239374: 	private readonly ClanBattleModel <ClanBattleModel>k__BackingField; // 0x3D0
+ 239375: 	[CompilerGenerated]
+ 239376: 	private readonly GrenadesExplosionsModel <GrenadesExplosionsModel>k__BackingField; // 0x3D8
+ 239377: 	[CompilerGenerated]
+ 239378: 	private readonly GrenadeCameraShakingModel <GrenadeCameraShakingModel>k__BackingField; // 0x3E0
+ 239379: 	[CompilerGenerated]
+ 239380: 	private readonly ClanBattleDialogModel <ClanBattleDialogModel>k__BackingField; // 0x3E8
+ 239381: 	[CompilerGenerated]
+ 239382: 	private readonly InputModel <OpenClanBattleDialogInputModel>k__BackingField; // 0x3F0
+ 239383: 	[CompilerGenerated]
+ 239384: 	private readonly InputModel <OpenClanShowdownInputModel>k__BackingField; // 0x3F8
+ 239385: 	[CompilerGenerated]
+ 239386: 	private readonly ClanBattleTeamsCacheModel <ClanBattleTeamsCacheModel>k__BackingField; // 0x400
+ 239387: 	[CompilerGenerated]
+ 239388: 	private readonly CargoExchangerDialogModel <CargoExchangerDialogModel>k__BackingField; // 0x408
+ 239389: 	[CompilerGenerated]
+ 239390: 	private readonly CurrencyExchangeDialogModel <CurrencyExchangeDialogModel>k__BackingField; // 0x410
+ 239391: 	[CompilerGenerated]
+ 239392: 	private readonly TaxCollectionDialogModel <TaxCollectionDialogModel>k__BackingField; // 0x418
+ 239393: 	[CompilerGenerated]
+ 239394: 	private readonly InputModel <RenameInputModel>k__BackingField; // 0x420

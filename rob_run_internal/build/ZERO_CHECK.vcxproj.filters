@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\GIGABYTE\Desktop\new-rob-runhack\rob_run_internal\build\CMakeFiles\1c074653854df93c0c5eadec6c32ae11\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3569F9EB-ADC1-348C-AAD8-4616977C139C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

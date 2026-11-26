@@ -1,0 +1,14 @@
+﻿== delete stale rbtest
+[SC] OpenService échec(s) 1060 :
+
+Le service spécifié n'existe pas en tant que service installé.
+
+== create rbtest (unsigned rb_drv.sys)
+[SC] CreateService réussite(s)
+== start rbtest
+[SC] StartService échec(s) 577 :
+
+Windows ne peut pas vérifier la signature numérique de ce fichier. Il est possible qu'une modification matérielle ou logicielle récente ait installé un fichier endommagé ou dont la signature est incorrecte, ou qu'il s'agisse d'un logiciel malveillant provenant d'une source inconnue.
+
+=== exit code 577
+[SC] DeleteService réussite(s)

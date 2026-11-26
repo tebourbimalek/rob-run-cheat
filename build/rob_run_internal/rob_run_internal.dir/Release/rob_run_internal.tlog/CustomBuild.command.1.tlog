@@ -1,0 +1,10 @@
+^C:\USERS\GIGABYTE\DESKTOP\NEW-ROB-RUNHACK\ROB_RUN_INTERNAL\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/GIGABYTE/Desktop/new-rob-runhack -BC:/Users/GIGABYTE/Desktop/new-rob-runhack/build --check-stamp-file C:/Users/GIGABYTE/Desktop/new-rob-runhack/build/rob_run_internal/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

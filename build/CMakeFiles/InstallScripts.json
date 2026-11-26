@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/GIGABYTE/Desktop/new-rob-runhack/build/cmake_install.cmake",
+		"C:/Users/GIGABYTE/Desktop/new-rob-runhack/build/rob_run_internal/cmake_install.cmake",
+		"C:/Users/GIGABYTE/Desktop/new-rob-runhack/build/driver/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

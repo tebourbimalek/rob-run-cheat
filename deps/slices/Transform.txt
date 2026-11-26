@@ -1,0 +1,391 @@
+﻿1111341: 	// Fields
+1111342: 	public int value__; // 0x0
+1111343: 	public const RotationOrder OrderXYZ = 0;
+1111344: 	public const RotationOrder OrderXZY = 1;
+1111345: 	public const RotationOrder OrderYZX = 2;
+1111346: 	public const RotationOrder OrderYXZ = 3;
+1111347: 	public const RotationOrder OrderZXY = 4;
+1111348: 	public const RotationOrder OrderZYX = 5;
+1111349: }
+1111350: 
+1111351: // Namespace: 
+1111352: private class Transform.Enumerator : IEnumerator // TypeDefIndex: 17457
+1111353: {
+1111354: 	// Fields
+1111355: 	private Transform outer; // 0x10
+1111356: 	private int currentIndex; // 0x18
+1111357: 
+1111358: 	// Properties
+1111359: 	public object Current { get; }
+1111360: 
+1111361: 	// Methods
+1111362: 
+1111363: 	// RVA: 0x558AFD0 Offset: 0x55895D0 VA: 0x18558AFD0
+1111364: 	internal void .ctor(Transform outer) { }
+1111365: 
+1111366: 	// RVA: 0x63166B0 Offset: 0x6314CB0 VA: 0x1863166B0 Slot: 5
+1111367: 	public object get_Current() { }
+1111368: 
+1111369: 	// RVA: 0x6316610 Offset: 0x6314C10 VA: 0x186316610 Slot: 4
+1111370: 	public bool MoveNext() { }
+1111371: 
+1111372: 	// RVA: 0x18E89D0 Offset: 0x18E6FD0 VA: 0x1818E89D0 Slot: 6
+1111373: 	public void Reset() { }
+1111374: }
+1111375: 
+1111376: // Namespace: UnityEngine
+1111377: [NativeHeader("Runtime/Transform/ScriptBindings/TransformScriptBindings.h")]
+1111378: [RequiredByNativeCode]
+1111379: [NativeHeader("Configuration/UnityConfigure.h")]
+1111380: [NativeHeader("Runtime/Transform/Transform.h")]
+1111381: public class Transform : Component, IEnumerable // TypeDefIndex: 17458
+1111382: {
+1111383: 	// Properties
+1111384: 	public Vector3 position { get; set; }
+1111385: 	public Vector3 localPosition { get; set; }
+1111386: 	public Vector3 eulerAngles { get; set; }
+1111387: 	public Vector3 localEulerAngles { get; set; }
+1111388: 	public Vector3 right { get; set; }
+1111389: 	public Vector3 up { get; set; }
+1111390: 	public Vector3 forward { get; set; }
+1111391: 	public Quaternion rotation { get; set; }
+1111392: 	public Quaternion localRotation { get; set; }
+1111393: 	[NativeConditional("UNITY_EDITOR")]
+1111394: 	internal RotationOrder rotationOrder { get; set; }
+1111395: 	public Vector3 localScale { get; set; }
+1111396: 	public Transform parent { get; set; }
+1111397: 	internal Transform parentInternal { get; set; }
+1111398: 	public Matrix4x4 worldToLocalMatrix { get; }
+1111399: 	public Matrix4x4 localToWorldMatrix { get; }
+1111400: 	public Transform root { get; }
+1111401: 	public int childCount { get; }
+1111402: 	public Vector3 lossyScale { get; }
+1111403: 	[NativeProperty("HasChangedDeprecated")]
+1111404: 	public bool hasChanged { get; set; }
+1111405: 	public int hierarchyCapacity { get; set; }
+1111406: 	public int hierarchyCount { get; }
+1111407: 	[NativeConditional("UNITY_EDITOR")]
+1111408: 	internal bool constrainProportionsScale { get; set; }
+1111409: 
+1111410: 	// Methods
+1111411: 
+1111412: 	// RVA: 0x7B78C0 Offset: 0x7B5EC0 VA: 0x1807B78C0
+1111413: 	protected void .ctor() { }
+1111414: 
+1111415: 	// RVA: 0x632C530 Offset: 0x632AB30 VA: 0x18632C530
+1111416: 	public Vector3 get_position() { }
+1111417: 
+1111418: 	// RVA: 0x632D2E0 Offset: 0x632B8E0 VA: 0x18632D2E0
+1111419: 	public void set_position(Vector3 value) { }
+1111420: 
+1111421: 	// RVA: 0x632C090 Offset: 0x632A690 VA: 0x18632C090
+1111422: 	public Vector3 get_localPosition() { }
+1111423: 
+1111424: 	// RVA: 0x632CF00 Offset: 0x632B500 VA: 0x18632CF00
+1111425: 	public void set_localPosition(Vector3 value) { }
+1111426: 
+1111427: 	// RVA: 0x63265B0 Offset: 0x6324BB0 VA: 0x1863265B0
+1111428: 	internal Vector3 GetLocalEulerAngles(RotationOrder order) { }
+1111429: 
+1111430: 	// RVA: 0x6329B70 Offset: 0x6328170 VA: 0x186329B70
+1111431: 	internal void SetLocalEulerAngles(Vector3 euler, RotationOrder order) { }
+1111432: 
+1111433: 	[NativeConditional("UNITY_EDITOR")]
+1111434: 	// RVA: 0x6329C60 Offset: 0x6328260 VA: 0x186329C60
+1111435: 	internal void SetLocalEulerHint(Vector3 euler) { }
+1111436: 
+1111437: 	// RVA: 0x632BB10 Offset: 0x632A110 VA: 0x18632BB10
+1111438: 	public Vector3 get_eulerAngles() { }
+1111439: 
+1111440: 	// RVA: 0x632CB10 Offset: 0x632B110 VA: 0x18632CB10
+1111441: 	public void set_eulerAngles(Vector3 value) { }
+1111442: 
+1111443: 	// RVA: 0x632BF10 Offset: 0x632A510 VA: 0x18632BF10
+1111444: 	public Vector3 get_localEulerAngles() { }
+1111445: 
+1111446: 	// RVA: 0x632CDD0 Offset: 0x632B3D0 VA: 0x18632CDD0
+1111447: 	public void set_localEulerAngles(Vector3 value) { }
+1111448: 
+1111449: 	// RVA: 0x632C5D0 Offset: 0x632ABD0 VA: 0x18632C5D0
+1111450: 	public Vector3 get_right() { }
+1111451: 
+1111452: 	// RVA: 0x632D370 Offset: 0x632B970 VA: 0x18632D370
+1111453: 	public void set_right(Vector3 value) { }
+1111454: 
+1111455: 	// RVA: 0x632C7C0 Offset: 0x632ADC0 VA: 0x18632C7C0
+1111456: 	public Vector3 get_up() { }
+1111457: 
+1111458: 	// RVA: 0x632D540 Offset: 0x632BB40 VA: 0x18632D540
+1111459: 	public void set_up(Vector3 value) { }
+1111460: 
+1111461: 	// RVA: 0x632BC40 Offset: 0x632A240 VA: 0x18632BC40
+1111462: 	public Vector3 get_forward() { }
+1111463: 
+1111464: 	// RVA: 0x632CBF0 Offset: 0x632B1F0 VA: 0x18632CBF0
+1111465: 	public void set_forward(Vector3 value) { }
+1111466: 
+1111467: 	// RVA: 0x632C730 Offset: 0x632AD30 VA: 0x18632C730
+1111468: 	public Quaternion get_rotation() { }
+1111469: 
+1111470: 	// RVA: 0x632D4B0 Offset: 0x632BAB0 VA: 0x18632D4B0
+1111471: 	public void set_rotation(Quaternion value) { }
+1111472: 
+1111473: 	// RVA: 0x632C180 Offset: 0x632A780 VA: 0x18632C180
+1111474: 	public Quaternion get_localRotation() { }
+1111475: 
+1111476: 	// RVA: 0x632CFE0 Offset: 0x632B5E0 VA: 0x18632CFE0
+1111477: 	public void set_localRotation(Quaternion value) { }
+1111478: 
+1111479: 	// RVA: 0x6326A60 Offset: 0x6325060 VA: 0x186326A60
+1111480: 	internal RotationOrder get_rotationOrder() { }
+1111481: 
+1111482: 	// RVA: 0x632A120 Offset: 0x6328720 VA: 0x18632A120
+1111483: 	internal void set_rotationOrder(RotationOrder value) { }
+1111484: 
+1111485: 	[NativeConditional("UNITY_EDITOR")]
+1111486: 	[NativeMethod("GetRotationOrder")]
+1111487: 	// RVA: 0x6326A60 Offset: 0x6325060 VA: 0x186326A60
+1111488: 	internal int GetRotationOrderInternal() { }
+1111489: 
+1111490: 	[NativeConditional("UNITY_EDITOR")]
+1111491: 	[NativeMethod("SetRotationOrder")]
+1111492: 	// RVA: 0x632A120 Offset: 0x6328720 VA: 0x18632A120
+1111493: 	internal void SetRotationOrderInternal(RotationOrder rotationOrder) { }
+1111494: 
+1111495: 	// RVA: 0x632C260 Offset: 0x632A860 VA: 0x18632C260
+1111496: 	public Vector3 get_localScale() { }
+1111497: 
+1111498: 	// RVA: 0x632D0C0 Offset: 0x632B6C0 VA: 0x18632D0C0
+1111499: 	public void set_localScale(Vector3 value) { }
+1111500: 
+1111501: 	// RVA: 0x63267A0 Offset: 0x6324DA0 VA: 0x1863267A0
+1111502: 	public Transform get_parent() { }
+1111503: 
+1111504: 	// RVA: 0x632D150 Offset: 0x632B750 VA: 0x18632D150
+1111505: 	public void set_parent(Transform value) { }
+1111506: 
+1111507: 	// RVA: 0x63267A0 Offset: 0x6324DA0 VA: 0x1863267A0
+1111508: 	internal Transform get_parentInternal() { }
+1111509: 
+1111510: 	// RVA: 0x6329E50 Offset: 0x6328450 VA: 0x186329E50
+1111511: 	internal void set_parentInternal(Transform value) { }
+1111512: 
+1111513: 	// RVA: 0x63267A0 Offset: 0x6324DA0 VA: 0x1863267A0
+1111514: 	private Transform GetParent() { }
+1111515: 
+1111516: 	// RVA: 0x6329E50 Offset: 0x6328450 VA: 0x186329E50
+1111517: 	public void SetParent(Transform p) { }
+1111518: 
+1111519: 	[FreeFunction("SetParent", HasExplicitThis = True)]
+1111520: 	// RVA: 0x6329F10 Offset: 0x6328510 VA: 0x186329F10
+1111521: 	public void SetParent(Transform parent, bool worldPositionStays) { }
+1111522: 
+1111523: 	// RVA: 0x632C920 Offset: 0x632AF20 VA: 0x18632C920
+1111524: 	public Matrix4x4 get_worldToLocalMatrix() { }
+1111525: 
+1111526: 	// RVA: 0x632C350 Offset: 0x632A950 VA: 0x18632C350
+1111527: 	public Matrix4x4 get_localToWorldMatrix() { }
+1111528: 
+1111529: 	// RVA: 0x632A040 Offset: 0x6328640 VA: 0x18632A040
+1111530: 	public void SetPositionAndRotation(Vector3 position, Quaternion rotation) { }
+1111531: 
+1111532: 	// RVA: 0x6329D50 Offset: 0x6328350 VA: 0x186329D50
+1111533: 	public void SetLocalPositionAndRotation(Vector3 localPosition, Quaternion localRotation) { }
+1111534: 
+1111535: 	// RVA: 0x63268A0 Offset: 0x6324EA0 VA: 0x1863268A0
+1111536: 	public void GetPositionAndRotation(out Vector3 position, out Quaternion rotation) { }
+1111537: 
+1111538: 	// RVA: 0x63266C0 Offset: 0x6324CC0 VA: 0x1863266C0
+1111539: 	public void GetLocalPositionAndRotation(out Vector3 localPosition, out Quaternion localRotation) { }
+1111540: 
+1111541: 	// RVA: 0x632B730 Offset: 0x6329D30 VA: 0x18632B730
+1111542: 	public void Translate(Vector3 translation, Space relativeTo) { }
+1111543: 
+1111544: 	// RVA: 0x632B3C0 Offset: 0x63299C0 VA: 0x18632B3C0
+1111545: 	public void Translate(Vector3 translation) { }
+1111546: 
+1111547: 	// RVA: 0x632B9F0 Offset: 0x6329FF0 VA: 0x18632B9F0
+1111548: 	public void Translate(float x, float y, float z, Space relativeTo) { }
+1111549: 
+1111550: 	// RVA: 0x632BA20 Offset: 0x632A020 VA: 0x18632BA20
+1111551: 	public void Translate(float x, float y, float z) { }
+1111552: 
+1111553: 	// RVA: 0x632B3F0 Offset: 0x63299F0 VA: 0x18632B3F0
+1111554: 	public void Translate(Vector3 translation, Transform relativeTo) { }
+1111555: 
+1111556: 	// RVA: 0x632B700 Offset: 0x6329D00 VA: 0x18632B700
+1111557: 	public void Translate(float x, float y, float z, Transform relativeTo) { }
+1111558: 
+1111559: 	// RVA: 0x63290D0 Offset: 0x63276D0 VA: 0x1863290D0
+1111560: 	public void Rotate(Vector3 eulers, Space relativeTo) { }
+1111561: 
+1111562: 	// RVA: 0x6328D40 Offset: 0x6327340 VA: 0x186328D40
+1111563: 	public void Rotate(Vector3 eulers) { }
+1111564: 
+1111565: 	// RVA: 0x63297C0 Offset: 0x6327DC0 VA: 0x1863297C0
+1111566: 	public void Rotate(float xAngle, float yAngle, float zAngle, Space relativeTo) { }
+1111567: 
+1111568: 	// RVA: 0x63290A0 Offset: 0x63276A0 VA: 0x1863290A0
+1111569: 	public void Rotate(float xAngle, float yAngle, float zAngle) { }
+1111570: 
+1111571: 	[NativeMethod("RotateAround")]
+1111572: 	// RVA: 0x6328850 Offset: 0x6326E50 VA: 0x186328850
+1111573: 	internal void RotateAroundInternal(Vector3 axis, float angle) { }
+1111574: 
+1111575: 	// RVA: 0x6328EC0 Offset: 0x63274C0 VA: 0x186328EC0
+1111576: 	public void Rotate(Vector3 axis, float angle, Space relativeTo) { }
+1111577: 
+1111578: 	// RVA: 0x6328D70 Offset: 0x6327370 VA: 0x186328D70
+1111579: 	public void Rotate(Vector3 axis, float angle) { }
+1111580: 
+1111581: 	// RVA: 0x6328A50 Offset: 0x6327050 VA: 0x186328A50
+1111582: 	public void RotateAround(Vector3 point, Vector3 axis, float angle) { }
+1111583: 
+1111584: 	// RVA: 0x6328460 Offset: 0x6326A60 VA: 0x186328460
+1111585: 	public void LookAt(Transform target, Vector3 worldUp) { }
+1111586: 
+1111587: 	// RVA: 0x6328210 Offset: 0x6326810 VA: 0x186328210
+1111588: 	public void LookAt(Transform target) { }
+1111589: 
+1111590: 	// RVA: 0x63283B0 Offset: 0x63269B0 VA: 0x1863283B0
+1111591: 	public void LookAt(Vector3 worldPosition, Vector3 worldUp) { }
+1111592: 
+1111593: 	// RVA: 0x63285E0 Offset: 0x6326BE0 VA: 0x1863285E0
+1111594: 	public void LookAt(Vector3 worldPosition) { }
+1111595: 
+1111596: 	[FreeFunction("Internal_LookAt", HasExplicitThis = True)]
+1111597: 	// RVA: 0x6326C00 Offset: 0x6325200 VA: 0x186326C00
+1111598: 	private void Internal_LookAt(Vector3 worldPosition, Vector3 worldUp) { }
+1111599: 
+1111600: 	// RVA: 0x632A2E0 Offset: 0x63288E0 VA: 0x18632A2E0
+1111601: 	public Vector3 TransformDirection(Vector3 direction) { }
+1111602: 
+1111603: 	// RVA: 0x632A390 Offset: 0x6328990 VA: 0x18632A390
+1111604: 	public Vector3 TransformDirection(float x, float y, float z) { }
+1111605: 
+1111606: 	[NativeMethod(Name = "TransformDirections")]
+1111607: 	// RVA: 0x632A4C0 Offset: 0x6328AC0 VA: 0x18632A4C0
+1111608: 	internal void TransformDirectionsInternal(ReadOnlySpan<Vector3> directions, Span<Vector3> transformedDirections) { }
+1111609: 
+1111610: 	// RVA: 0x632A680 Offset: 0x6328C80 VA: 0x18632A680
+1111611: 	public void TransformDirections(ReadOnlySpan<Vector3> directions, Span<Vector3> transformedDirections) { }
+1111612: 
+1111613: 	// RVA: 0x632A600 Offset: 0x6328C00 VA: 0x18632A600
+1111614: 	public void TransformDirections(Span<Vector3> directions) { }
+1111615: 
+1111616: 	// RVA: 0x6326D00 Offset: 0x6325300 VA: 0x186326D00
+1111617: 	public Vector3 InverseTransformDirection(Vector3 direction) { }
+1111618: 
+1111619: 	// RVA: 0x6326DB0 Offset: 0x63253B0 VA: 0x186326DB0
+1111620: 	public Vector3 InverseTransformDirection(float x, float y, float z) { }
+1111621: 
+1111622: 	[NativeMethod(Name = "InverseTransformDirections")]
+1111623: 	// RVA: 0x6326EE0 Offset: 0x63254E0 VA: 0x186326EE0
+1111624: 	internal void InverseTransformDirectionsInternal(ReadOnlySpan<Vector3> directions, Span<Vector3> transformedDirections) { }
+1111625: 
+1111626: 	// RVA: 0x63270A0 Offset: 0x63256A0 VA: 0x1863270A0
+1111627: 	public void InverseTransformDirections(ReadOnlySpan<Vector3> directions, Span<Vector3> transformedDirections) { }
+1111628: 
+1111629: 	// RVA: 0x6327020 Offset: 0x6325620 VA: 0x186327020
+1111630: 	public void InverseTransformDirections(Span<Vector3> directions) { }
+1111631: 
+1111632: 	// RVA: 0x632AF30 Offset: 0x6329530 VA: 0x18632AF30
+1111633: 	public Vector3 TransformVector(Vector3 vector) { }
+1111634: 
+1111635: 	// RVA: 0x632AE60 Offset: 0x6329460 VA: 0x18632AE60
+1111636: 	public Vector3 TransformVector(float x, float y, float z) { }
+1111637: 
+1111638: 	[NativeMethod(Name = "TransformVectors")]
+1111639: 	// RVA: 0x632B040 Offset: 0x6329640 VA: 0x18632B040
+1111640: 	internal void TransformVectorsInternal(ReadOnlySpan<Vector3> vectors, Span<Vector3> transformedVectors) { }
+1111641: 
+1111642: 	// RVA: 0x632B180 Offset: 0x6329780 VA: 0x18632B180
+1111643: 	public void TransformVectors(ReadOnlySpan<Vector3> vectors, Span<Vector3> transformedVectors) { }
+1111644: 
+1111645: 	// RVA: 0x632B340 Offset: 0x6329940 VA: 0x18632B340
+1111646: 	public void TransformVectors(Span<Vector3> vectors) { }
+1111647: 
+1111648: 	// RVA: 0x6327AE0 Offset: 0x63260E0 VA: 0x186327AE0
+1111649: 	public Vector3 InverseTransformVector(Vector3 vector) { }
+1111650: 
+1111651: 	// RVA: 0x6327A10 Offset: 0x6326010 VA: 0x186327A10
+1111652: 	public Vector3 InverseTransformVector(float x, float y, float z) { }
+1111653: 
+1111654: 	[NativeMethod(Name = "InverseTransformVectors")]
+1111655: 	// RVA: 0x6327BF0 Offset: 0x63261F0 VA: 0x186327BF0
+1111656: 	internal void InverseTransformVectorsInternal(ReadOnlySpan<Vector3> vectors, Span<Vector3> transformedVectors) { }
+1111657: 
+1111658: 	// RVA: 0x6327DB0 Offset: 0x63263B0 VA: 0x186327DB0
+1111659: 	public void InverseTransformVectors(ReadOnlySpan<Vector3> vectors, Span<Vector3> transformedVectors) { }
+1111660: 
+1111661: 	// RVA: 0x6327D30 Offset: 0x6326330 VA: 0x186327D30
+1111662: 	public void InverseTransformVectors(Span<Vector3> vectors) { }
+1111663: 
+1111664: 	// RVA: 0x632A8A0 Offset: 0x6328EA0 VA: 0x18632A8A0
+1111665: 	public Vector3 TransformPoint(Vector3 position) { }
+1111666: 
+1111667: 	// RVA: 0x632A950 Offset: 0x6328F50 VA: 0x18632A950
+1111668: 	public Vector3 TransformPoint(float x, float y, float z) { }
+1111669: 
+1111670: 	[NativeMethod(Name = "TransformPoints")]
+1111671: 	// RVA: 0x632AA80 Offset: 0x6329080 VA: 0x18632AA80
+1111672: 	internal void TransformPointsInternal(ReadOnlySpan<Vector3> positions, Span<Vector3> transformedPositions) { }
+1111673: 
+1111674: 	// RVA: 0x632AC40 Offset: 0x6329240 VA: 0x18632AC40
+1111675: 	public void TransformPoints(ReadOnlySpan<Vector3> positions, Span<Vector3> transformedPositions) { }
+1111676: 
+1111677: 	// RVA: 0x632ABC0 Offset: 0x63291C0 VA: 0x18632ABC0
+1111678: 	public void TransformPoints(Span<Vector3> positions) { }
+1111679: 
+1111680: 	// RVA: 0x6327390 Offset: 0x6325990 VA: 0x186327390
+1111681: 	public Vector3 InverseTransformPoint(Vector3 position) { }
+1111682: 
+1111683: 	// RVA: 0x63272C0 Offset: 0x63258C0 VA: 0x1863272C0
+1111684: 	public Vector3 InverseTransformPoint(float x, float y, float z) { }
+1111685: 
+1111686: 	[NativeMethod(Name = "InverseTransformPoints")]
+1111687: 	// RVA: 0x63274A0 Offset: 0x6325AA0 VA: 0x1863274A0
+1111688: 	internal void InverseTransformPointsInternal(ReadOnlySpan<Vector3> positions, Span<Vector3> transformedPositions) { }
+1111689: 
+1111690: 	// RVA: 0x63275E0 Offset: 0x6325BE0 VA: 0x1863275E0
+1111691: 	public void InverseTransformPoints(ReadOnlySpan<Vector3> positions, Span<Vector3> transformedPositions) { }
+1111692: 
+1111693: 	// RVA: 0x63277A0 Offset: 0x6325DA0 VA: 0x1863277A0
+1111694: 	public void InverseTransformPoints(Span<Vector3> positions) { }
+1111695: 
+1111696: 	// RVA: 0x6326980 Offset: 0x6324F80 VA: 0x186326980
+1111697: 	public Transform get_root() { }
+1111698: 
+1111699: 	// RVA: 0x6326980 Offset: 0x6324F80 VA: 0x186326980
+1111700: 	private Transform GetRoot() { }
+1111701: 
+1111702: 	[NativeMethod("GetChildrenCount")]
+1111703: 	// RVA: 0x632BA90 Offset: 0x632A090 VA: 0x18632BA90
+1111704: 	public int get_childCount() { }
+1111705: 
+1111706: 	[FreeFunction("DetachChildren", HasExplicitThis = True)]
+1111707: 	// RVA: 0x6325FF0 Offset: 0x63245F0 VA: 0x186325FF0
+1111708: 	public void DetachChildren() { }
+1111709: 
+1111710: 	// RVA: 0x63298F0 Offset: 0x6327EF0 VA: 0x1863298F0
+1111711: 	public void SetAsFirstSibling() { }
+1111712: 
+1111713: 	// RVA: 0x63299B0 Offset: 0x6327FB0 VA: 0x1863299B0
+1111714: 	public void SetAsLastSibling() { }
+1111715: 
+1111716: 	// RVA: 0x632A1F0 Offset: 0x63287F0 VA: 0x18632A1F0
+1111717: 	public void SetSiblingIndex(int index) { }
+1111718: 
+1111719: 	[NativeMethod("MoveAfterSiblingInternal")]
+1111720: 	// RVA: 0x6328720 Offset: 0x6326D20 VA: 0x186328720
+1111721: 	internal void MoveAfterSibling(Transform transform, bool notifyEditorAndMarkDirty) { }
+1111722: 
+1111723: 	// RVA: 0x6326B20 Offset: 0x6325120 VA: 0x186326B20
+1111724: 	public int GetSiblingIndex() { }
+1111725: 
+1111726: 	[FreeFunction(HasExplicitThis = True)]
+1111727: 	// RVA: 0x6326140 Offset: 0x6324740 VA: 0x186326140
+1111728: 	private Transform FindRelativeTransformWithPath(string path, bool isActiveOnly) { }
+1111729: 
+1111730: 	// RVA: 0x6326070 Offset: 0x6324670 VA: 0x186326070
+1111731: 	public Transform Find(string n) { }

@@ -1,0 +1,261 @@
+﻿ 375907: 	private float <AimDirectionY>k__BackingField; // 0x18
+ 375908: 	public const float ScopeThreshold = 0.7;
+ 375909: 	public const float StartTransitionNormalizedTime = 0.75;
+ 375910: 
+ 375911: 	// Properties
+ 375912: 	public float Aim { get; set; }
+ 375913: 	public float AimDirectionX { get; set; }
+ 375914: 	public float AimDirectionY { get; set; }
+ 375915: 
+ 375916: 	// Methods
+ 375917: 
+ 375918: 	[CompilerGenerated]
+ 375919: 	// RVA: 0x8341C0 Offset: 0x8327C0 VA: 0x1808341C0
+ 375920: 	public float get_Aim() { }
+ 375921: 
+ 375922: 	[CompilerGenerated]
+ 375923: 	// RVA: 0x834220 Offset: 0x832820 VA: 0x180834220
+ 375924: 	public void set_Aim(float value) { }
+ 375925: 
+ 375926: 	[CompilerGenerated]
+ 375927: 	// RVA: 0x8341D0 Offset: 0x8327D0 VA: 0x1808341D0
+ 375928: 	public float get_AimDirectionX() { }
+ 375929: 
+ 375930: 	[CompilerGenerated]
+ 375931: 	// RVA: 0x834230 Offset: 0x832830 VA: 0x180834230
+ 375932: 	public void set_AimDirectionX(float value) { }
+ 375933: 
+ 375934: 	[CompilerGenerated]
+ 375935: 	// RVA: 0x8341E0 Offset: 0x8327E0 VA: 0x1808341E0
+ 375936: 	public float get_AimDirectionY() { }
+ 375937: 
+ 375938: 	[CompilerGenerated]
+ 375939: 	// RVA: 0x834240 Offset: 0x832840 VA: 0x180834240
+ 375940: 	public void set_AimDirectionY(float value) { }
+ 375941: 
+ 375942: 	// RVA: 0x7AA710 Offset: 0x7A8D10 VA: 0x1807AA710
+ 375943: 	public void .ctor() { }
+ 375944: }
+ 375945: 
+ 375946: // Namespace: Game.Battle.EntityModel.BattleCharacter
+ 375947: public abstract class CharacterClientModel // TypeDefIndex: 9059
+ 375948: {
+ 375949: 	// Fields
+ 375950: 	[CompilerGenerated]
+ 375951: 	private readonly MovementTimeline <MovementTimeline>k__BackingField; // 0x10
+ 375952: 	[CompilerGenerated]
+ 375953: 	private readonly RotationTimeline <LookRotationTimeline>k__BackingField; // 0x18
+ 375954: 	[CompilerGenerated]
+ 375955: 	private readonly RotationTimeline <RotationTimeline>k__BackingField; // 0x20
+ 375956: 	[CompilerGenerated]
+ 375957: 	private readonly MovementModel <Movement>k__BackingField; // 0x28
+ 375958: 	[CompilerGenerated]
+ 375959: 	private readonly SetMovementModel <SetMovement>k__BackingField; // 0x30
+ 375960: 	[CompilerGenerated]
+ 375961: 	private readonly CharacterRotationModel <RotationModel>k__BackingField; // 0x38
+ 375962: 	[CompilerGenerated]
+ 375963: 	private readonly CharacterRotationModel <RotationInterpolated>k__BackingField; // 0x40
+ 375964: 	[CompilerGenerated]
+ 375965: 	private readonly CharacterRelativeVelocityModel <RelativeVelocityModel>k__BackingField; // 0x48
+ 375966: 	[CompilerGenerated]
+ 375967: 	private CharacterMovementIntentionDirectionModel <MovementIntentionDirectionModel>k__BackingField; // 0x50
+ 375968: 	[CompilerGenerated]
+ 375969: 	private readonly BattleCharacterHitsModel <SelfHitsModel>k__BackingField; // 0x58
+ 375970: 	[CompilerGenerated]
+ 375971: 	private readonly StateAnimationModel <StateAnimationModel>k__BackingField; // 0x60
+ 375972: 	[CompilerGenerated]
+ 375973: 	private readonly CharacterReloadingModel <CharacterReloadingModel>k__BackingField; // 0x68
+ 375974: 	[CompilerGenerated]
+ 375975: 	private readonly CharacterCrouchModel <CharacterCrouchModel>k__BackingField; // 0x70
+ 375976: 	[CompilerGenerated]
+ 375977: 	private readonly SelectedItemModel <SelectedItemModel>k__BackingField; // 0x78
+ 375978: 	[CompilerGenerated]
+ 375979: 	private readonly CharacterHeadManualControlRulesModel <CharacterHeadManualControlRulesModel>k__BackingField; // 0x80
+ 375980: 	[CompilerGenerated]
+ 375981: 	private readonly CharacterArmedModel <CharacterArmedModel>k__BackingField; // 0x88
+ 375982: 	[CompilerGenerated]
+ 375983: 	private readonly CharacterTurningModel <CharacterTurningModel>k__BackingField; // 0x90
+ 375984: 	[CompilerGenerated]
+ 375985: 	private readonly BattleCharacterVisibleModel <VisibleModel>k__BackingField; // 0x98
+ 375986: 	[CompilerGenerated]
+ 375987: 	private readonly CharacterVelocityModel <VelocityModel>k__BackingField; // 0xA0
+ 375988: 	[CompilerGenerated]
+ 375989: 	private readonly CharacterSexModel <SexModel>k__BackingField; // 0xA8
+ 375990: 	[CompilerGenerated]
+ 375991: 	private readonly IsHiddenModel <IsHiddenModel>k__BackingField; // 0xB0
+ 375992: 	[CompilerGenerated]
+ 375993: 	private readonly CharacterFireModel <CharacterFireModel>k__BackingField; // 0xB8
+ 375994: 	[CompilerGenerated]
+ 375995: 	private readonly CharacterMeleeAttackProgressModel <MeleeAttackProgressModel>k__BackingField; // 0xC0
+ 375996: 	[CompilerGenerated]
+ 375997: 	private readonly BlendArgs <BlendArgs>k__BackingField; // 0xC8
+ 375998: 	[CompilerGenerated]
+ 375999: 	private readonly CharacterAimingModel <CharacterAimingModel>k__BackingField; // 0xD0
+ 376000: 	[CompilerGenerated]
+ 376001: 	private readonly CharacterFirstFootstepSoundModel <FirstFootstepSoundModel>k__BackingField; // 0xD8
+ 376002: 	[CompilerGenerated]
+ 376003: 	private readonly CharacterUnderGasModel <CharacterUnderGasModel>k__BackingField; // 0xE0
+ 376004: 	[CompilerGenerated]
+ 376005: 	private readonly SkinLoadingModel<CustomizationMaleSnapshotModel> <MaleSkinLoadingModel>k__BackingField; // 0xE8
+ 376006: 	[CompilerGenerated]
+ 376007: 	private readonly SkinLoadingModel<CustomizationFemaleSnapshotModel> <FemaleSkinLoadingModel>k__BackingField; // 0xF0
+ 376008: 	[CompilerGenerated]
+ 376009: 	private readonly CharacterCustomizationViewModel <CharacterCustomizationViewModel>k__BackingField; // 0xF8
+ 376010: 	[CompilerGenerated]
+ 376011: 	private readonly CharacterCustomizationModel <CharacterCustomizationModel>k__BackingField; // 0x100
+ 376012: 	[CompilerGenerated]
+ 376013: 	private readonly CharacterUseItemModel <CharacterUseItemModel>k__BackingField; // 0x108
+ 376014: 	[CompilerGenerated]
+ 376015: 	private readonly CompositeSharedMaterialsProvider <CompositeMaterialsProvider>k__BackingField; // 0x110
+ 376016: 	[CompilerGenerated]
+ 376017: 	private readonly CharacterWaterZonesModel <CharacterWaterZonesModel>k__BackingField; // 0x118
+ 376018: 	[CompilerGenerated]
+ 376019: 	private float <SqrDistanceToPlayer>k__BackingField; // 0x120
+ 376020: 
+ 376021: 	// Properties
+ 376022: 	public MovementTimeline MovementTimeline { get; }
+ 376023: 	public RotationTimeline LookRotationTimeline { get; }
+ 376024: 	public RotationTimeline RotationTimeline { get; }
+ 376025: 	public MovementModel Movement { get; }
+ 376026: 	public SetMovementModel SetMovement { get; }
+ 376027: 	public CharacterRotationModel RotationModel { get; }
+ 376028: 	public CharacterRotationModel RotationInterpolated { get; }
+ 376029: 	public CharacterRelativeVelocityModel RelativeVelocityModel { get; }
+ 376030: 	public CharacterMovementIntentionDirectionModel MovementIntentionDirectionModel { get; set; }
+ 376031: 	public BattleCharacterHitsModel SelfHitsModel { get; }
+ 376032: 	public StateAnimationModel StateAnimationModel { get; }
+ 376033: 	public CharacterReloadingModel CharacterReloadingModel { get; }
+ 376034: 	public CharacterCrouchModel CharacterCrouchModel { get; }
+ 376035: 	public SelectedItemModel SelectedItemModel { get; }
+ 376036: 	public CharacterHeadManualControlRulesModel CharacterHeadManualControlRulesModel { get; }
+ 376037: 	public CharacterArmedModel CharacterArmedModel { get; }
+ 376038: 	public CharacterTurningModel CharacterTurningModel { get; }
+ 376039: 	public BattleCharacterVisibleModel VisibleModel { get; }
+ 376040: 	public CharacterVelocityModel VelocityModel { get; }
+ 376041: 	public CharacterSexModel SexModel { get; }
+ 376042: 	public IsHiddenModel IsHiddenModel { get; }
+ 376043: 	public CharacterFireModel CharacterFireModel { get; }
+ 376044: 	public CharacterMeleeAttackProgressModel MeleeAttackProgressModel { get; }
+ 376045: 	public BlendArgs BlendArgs { get; }
+ 376046: 	public CharacterAimingModel CharacterAimingModel { get; }
+ 376047: 	public CharacterFirstFootstepSoundModel FirstFootstepSoundModel { get; }
+ 376048: 	public CharacterUnderGasModel CharacterUnderGasModel { get; }
+ 376049: 	public SkinLoadingModel<CustomizationMaleSnapshotModel> MaleSkinLoadingModel { get; }
+ 376050: 	public SkinLoadingModel<CustomizationFemaleSnapshotModel> FemaleSkinLoadingModel { get; }
+ 376051: 	public CharacterCustomizationViewModel CharacterCustomizationViewModel { get; }
+ 376052: 	public CharacterCustomizationModel CharacterCustomizationModel { get; }
+ 376053: 	public CharacterUseItemModel CharacterUseItemModel { get; }
+ 376054: 	public CompositeSharedMaterialsProvider CompositeMaterialsProvider { get; }
+ 376055: 	public CharacterWaterZonesModel CharacterWaterZonesModel { get; }
+ 376056: 	public float SqrDistanceToPlayer { get; set; }
+ 376057: 
+ 376058: 	// Methods
+ 376059: 
+ 376060: 	// RVA: 0xCC0D80 Offset: 0xCBF380 VA: 0x180CC0D80
+ 376061: 	protected void .ctor(BattleCharacterModel serverModel) { }
+ 376062: 
+ 376063: 	[CompilerGenerated]
+ 376064: 	// RVA: 0x7EC6B0 Offset: 0x7EACB0 VA: 0x1807EC6B0
+ 376065: 	public MovementTimeline get_MovementTimeline() { }
+ 376066: 
+ 376067: 	[CompilerGenerated]
+ 376068: 	// RVA: 0x7E7130 Offset: 0x7E5730 VA: 0x1807E7130
+ 376069: 	public RotationTimeline get_LookRotationTimeline() { }
+ 376070: 
+ 376071: 	[CompilerGenerated]
+ 376072: 	// RVA: 0x7AB150 Offset: 0x7A9750 VA: 0x1807AB150
+ 376073: 	public RotationTimeline get_RotationTimeline() { }
+ 376074: 
+ 376075: 	[CompilerGenerated]
+ 376076: 	// RVA: 0x7AA000 Offset: 0x7A8600 VA: 0x1807AA000
+ 376077: 	public MovementModel get_Movement() { }
+ 376078: 
+ 376079: 	[CompilerGenerated]
+ 376080: 	// RVA: 0x7BB030 Offset: 0x7B9630 VA: 0x1807BB030
+ 376081: 	public SetMovementModel get_SetMovement() { }
+ 376082: 
+ 376083: 	[CompilerGenerated]
+ 376084: 	// RVA: 0x7E5BC0 Offset: 0x7E41C0 VA: 0x1807E5BC0
+ 376085: 	public CharacterRotationModel get_RotationModel() { }
+ 376086: 
+ 376087: 	[CompilerGenerated]
+ 376088: 	// RVA: 0x7E9250 Offset: 0x7E7850 VA: 0x1807E9250
+ 376089: 	public CharacterRotationModel get_RotationInterpolated() { }
+ 376090: 
+ 376091: 	[CompilerGenerated]
+ 376092: 	// RVA: 0x841560 Offset: 0x83FB60 VA: 0x180841560
+ 376093: 	public CharacterRelativeVelocityModel get_RelativeVelocityModel() { }
+ 376094: 
+ 376095: 	[CompilerGenerated]
+ 376096: 	// RVA: 0x8B1A30 Offset: 0x8B0030 VA: 0x1808B1A30
+ 376097: 	public CharacterMovementIntentionDirectionModel get_MovementIntentionDirectionModel() { }
+ 376098: 
+ 376099: 	[CompilerGenerated]
+ 376100: 	// RVA: 0x927140 Offset: 0x925740 VA: 0x180927140
+ 376101: 	protected void set_MovementIntentionDirectionModel(CharacterMovementIntentionDirectionModel value) { }
+ 376102: 
+ 376103: 	[CompilerGenerated]
+ 376104: 	// RVA: 0x8B1A20 Offset: 0x8B0020 VA: 0x1808B1A20
+ 376105: 	public BattleCharacterHitsModel get_SelfHitsModel() { }
+ 376106: 
+ 376107: 	[CompilerGenerated]
+ 376108: 	// RVA: 0x8E1B30 Offset: 0x8E0130 VA: 0x1808E1B30
+ 376109: 	public StateAnimationModel get_StateAnimationModel() { }
+ 376110: 
+ 376111: 	[CompilerGenerated]
+ 376112: 	// RVA: 0x8E1B40 Offset: 0x8E0140 VA: 0x1808E1B40
+ 376113: 	public CharacterReloadingModel get_CharacterReloadingModel() { }
+ 376114: 
+ 376115: 	[CompilerGenerated]
+ 376116: 	// RVA: 0x8E1C10 Offset: 0x8E0210 VA: 0x1808E1C10
+ 376117: 	public CharacterCrouchModel get_CharacterCrouchModel() { }
+ 376118: 
+ 376119: 	[CompilerGenerated]
+ 376120: 	// RVA: 0x9161A0 Offset: 0x9147A0 VA: 0x1809161A0
+ 376121: 	public SelectedItemModel get_SelectedItemModel() { }
+ 376122: 
+ 376123: 	[CompilerGenerated]
+ 376124: 	// RVA: 0x925800 Offset: 0x923E00 VA: 0x180925800
+ 376125: 	public CharacterHeadManualControlRulesModel get_CharacterHeadManualControlRulesModel() { }
+ 376126: 
+ 376127: 	[CompilerGenerated]
+ 376128: 	// RVA: 0x8E1BE0 Offset: 0x8E01E0 VA: 0x1808E1BE0
+ 376129: 	public CharacterArmedModel get_CharacterArmedModel() { }
+ 376130: 
+ 376131: 	[CompilerGenerated]
+ 376132: 	// RVA: 0x7AAF90 Offset: 0x7A9590 VA: 0x1807AAF90
+ 376133: 	public CharacterTurningModel get_CharacterTurningModel() { }
+ 376134: 
+ 376135: 	[CompilerGenerated]
+ 376136: 	// RVA: 0x9257F0 Offset: 0x923DF0 VA: 0x1809257F0
+ 376137: 	public BattleCharacterVisibleModel get_VisibleModel() { }
+ 376138: 
+ 376139: 	[CompilerGenerated]
+ 376140: 	// RVA: 0x7AAFC0 Offset: 0x7A95C0 VA: 0x1807AAFC0
+ 376141: 	public CharacterVelocityModel get_VelocityModel() { }
+ 376142: 
+ 376143: 	[CompilerGenerated]
+ 376144: 	// RVA: 0x8E1BC0 Offset: 0x8E01C0 VA: 0x1808E1BC0
+ 376145: 	public CharacterSexModel get_SexModel() { }
+ 376146: 
+ 376147: 	[CompilerGenerated]
+ 376148: 	// RVA: 0x8E1AE0 Offset: 0x8E00E0 VA: 0x1808E1AE0
+ 376149: 	public IsHiddenModel get_IsHiddenModel() { }
+ 376150: 
+ 376151: 	[CompilerGenerated]
+ 376152: 	// RVA: 0x926DF0 Offset: 0x9253F0 VA: 0x180926DF0
+ 376153: 	public CharacterFireModel get_CharacterFireModel() { }
+ 376154: 
+ 376155: 	[CompilerGenerated]
+ 376156: 	// RVA: 0x8C46F0 Offset: 0x8C2CF0 VA: 0x1808C46F0
+ 376157: 	public CharacterMeleeAttackProgressModel get_MeleeAttackProgressModel() { }
+ 376158: 
+ 376159: 	[CompilerGenerated]
+ 376160: 	// RVA: 0x926E00 Offset: 0x925400 VA: 0x180926E00
+ 376161: 	public BlendArgs get_BlendArgs() { }
+ 376162: 
+ 376163: 	[CompilerGenerated]
+ 376164: 	// RVA: 0x916190 Offset: 0x914790 VA: 0x180916190
+ 376165: 	public CharacterAimingModel get_CharacterAimingModel() { }
+ 376166: 
+ 376167: 	[CompilerGenerated]

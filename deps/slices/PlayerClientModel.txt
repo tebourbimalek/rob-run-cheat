@@ -1,0 +1,261 @@
+﻿ 362896: }
+ 362897: 
+ 362898: // Namespace: Game.Battle.EntityModel.Player
+ 362899: public class HitsCacheModel // TypeDefIndex: 8709
+ 362900: {
+ 362901: 	// Fields
+ 362902: 	public const long MaskActualDuration = 300;
+ 362903: 	public readonly Queue<ValueTuple<long, long>> Ticks; // 0x10
+ 362904: 	[CompilerGenerated]
+ 362905: 	private long <LastMask>k__BackingField; // 0x18
+ 362906: 	[CompilerGenerated]
+ 362907: 	private long <LastTick>k__BackingField; // 0x20
+ 362908: 
+ 362909: 	// Properties
+ 362910: 	public long LastMask { get; set; }
+ 362911: 	public long LastTick { get; set; }
+ 362912: 
+ 362913: 	// Methods
+ 362914: 
+ 362915: 	[CompilerGenerated]
+ 362916: 	// RVA: 0x7E7130 Offset: 0x7E5730 VA: 0x1807E7130
+ 362917: 	public long get_LastMask() { }
+ 362918: 
+ 362919: 	[CompilerGenerated]
+ 362920: 	// RVA: 0x8D5A40 Offset: 0x8D4040 VA: 0x1808D5A40
+ 362921: 	public void set_LastMask(long value) { }
+ 362922: 
+ 362923: 	[CompilerGenerated]
+ 362924: 	// RVA: 0x7AB150 Offset: 0x7A9750 VA: 0x1807AB150
+ 362925: 	public long get_LastTick() { }
+ 362926: 
+ 362927: 	[CompilerGenerated]
+ 362928: 	// RVA: 0x9BCAE0 Offset: 0x9BB0E0 VA: 0x1809BCAE0
+ 362929: 	public void set_LastTick(long value) { }
+ 362930: 
+ 362931: 	// RVA: 0xC39190 Offset: 0xC37790 VA: 0x180C39190
+ 362932: 	public void .ctor() { }
+ 362933: }
+ 362934: 
+ 362935: // Namespace: Game.Battle.EntityModel.Player
+ 362936: public class PlayerClientModel : CharacterClientModel // TypeDefIndex: 8710
+ 362937: {
+ 362938: 	// Fields
+ 362939: 	[CompilerGenerated]
+ 362940: 	private readonly EquipItemMoveContext[] <EquipContexts>k__BackingField; // 0x128
+ 362941: 	[CompilerGenerated]
+ 362942: 	private readonly PocketItemMoveContext[] <PocketsContexts>k__BackingField; // 0x130
+ 362943: 	[CompilerGenerated]
+ 362944: 	private readonly InventoryItemMoveContext[] <InventoryContexts>k__BackingField; // 0x138
+ 362945: 	[CompilerGenerated]
+ 362946: 	private readonly PlayerShotsModel <PlayerShotsModel>k__BackingField; // 0x140
+ 362947: 	[CompilerGenerated]
+ 362948: 	private readonly HitMarkerModel <HitMarkerModel>k__BackingField; // 0x148
+ 362949: 	[CompilerGenerated]
+ 362950: 	private readonly PredictHitsModel <PredictHitsModel>k__BackingField; // 0x150
+ 362951: 	[CompilerGenerated]
+ 362952: 	private readonly PlayerTurningModel <PlayerTurningModel>k__BackingField; // 0x158
+ 362953: 	[CompilerGenerated]
+ 362954: 	private readonly PopupDamageModel <PopupDamageModel>k__BackingField; // 0x160
+ 362955: 	[CompilerGenerated]
+ 362956: 	private readonly ReceivedDamageModel <ReceivedDamageModel>k__BackingField; // 0x168
+ 362957: 	[CompilerGenerated]
+ 362958: 	private readonly BusySlotsModel <BusySlotsModel>k__BackingField; // 0x170
+ 362959: 	[CompilerGenerated]
+ 362960: 	private readonly BlockedSlotsModel <BlockedSlotsModel>k__BackingField; // 0x178
+ 362961: 	[CompilerGenerated]
+ 362962: 	private readonly BlockedSlotsModel <BuyBlockedSlotsModel>k__BackingField; // 0x180
+ 362963: 	[CompilerGenerated]
+ 362964: 	private readonly BlockedSlotsModel <LockedTraderItemByLocationTier>k__BackingField; // 0x188
+ 362965: 	[CompilerGenerated]
+ 362966: 	private readonly BlockedSlotsModel <LockedTraderItemByVendorTree>k__BackingField; // 0x190
+ 362967: 	[CompilerGenerated]
+ 362968: 	private readonly NewAvailableItemsModel <NewAvailableItemsByVendor>k__BackingField; // 0x198
+ 362969: 	[CompilerGenerated]
+ 362970: 	private readonly BlockedEntitiesModel <BlockedEntitiesModel>k__BackingField; // 0x1A0
+ 362971: 	[CompilerGenerated]
+ 362972: 	private readonly InventoryProgressItemModel <InventoryProgressItemModel>k__BackingField; // 0x1A8
+ 362973: 	[CompilerGenerated]
+ 362974: 	private readonly InventoryIntention <InventoryIntention>k__BackingField; // 0x1B0
+ 362975: 	[CompilerGenerated]
+ 362976: 	private readonly LootItemSoundModel <LootItemSoundModel>k__BackingField; // 0x1B8
+ 362977: 	[CompilerGenerated]
+ 362978: 	private readonly GroupsInventoryItemsModel <GroupsInventoryItemsModel>k__BackingField; // 0x1C0
+ 362979: 	[CompilerGenerated]
+ 362980: 	private readonly ChangedSlotsInventoryModel <ChangedSlotsInventoryModel>k__BackingField; // 0x1C8
+ 362981: 	[CompilerGenerated]
+ 362982: 	private readonly DamageArmorModel <DamageArmorModel>k__BackingField; // 0x1D0
+ 362983: 	[CompilerGenerated]
+ 362984: 	private readonly PlayerInVehicleModel <PlayerInVehicleModel>k__BackingField; // 0x1D8
+ 362985: 	[CompilerGenerated]
+ 362986: 	private readonly RequestModel<string> <LastSpawnPlotVehicleRequest>k__BackingField; // 0x1E0
+ 362987: 	[CompilerGenerated]
+ 362988: 	private readonly InventoryShadowAreaModel <InventoryShadowAreaModel>k__BackingField; // 0x1E8
+ 362989: 	[CompilerGenerated]
+ 362990: 	private readonly MapTransformModel <MapVehicleTransformModel>k__BackingField; // 0x1F0
+ 362991: 	[CompilerGenerated]
+ 362992: 	private readonly PlayerSurrenderArrestModel <PlayerSurrenderArrestModel>k__BackingField; // 0x1F8
+ 362993: 	[CompilerGenerated]
+ 362994: 	private readonly PlayerForceKnockoutEndModel <PlayerForceKnockoutEndModel>k__BackingField; // 0x200
+ 362995: 	[CompilerGenerated]
+ 362996: 	private readonly PlayerDelayInputVehicleLeaveModel <PlayerDelayInputVehicleLeaveModel>k__BackingField; // 0x208
+ 362997: 	[CompilerGenerated]
+ 362998: 	private readonly KillOtherCharacterModel <KillOtherCharacterModel>k__BackingField; // 0x210
+ 362999: 	[CompilerGenerated]
+ 363000: 	private readonly PlayerCameraModel <CameraModel>k__BackingField; // 0x218
+ 363001: 	[CompilerGenerated]
+ 363002: 	private readonly UseItemModel <UseItemModel>k__BackingField; // 0x220
+ 363003: 	[CompilerGenerated]
+ 363004: 	private readonly UseReloadWeapon <UseReloadWeapon>k__BackingField; // 0x228
+ 363005: 	[CompilerGenerated]
+ 363006: 	private readonly UsePlate <UsePlateRule>k__BackingField; // 0x230
+ 363007: 	[CompilerGenerated]
+ 363008: 	private readonly SingleUseItem <SingleUseItemRule>k__BackingField; // 0x238
+ 363009: 	[CompilerGenerated]
+ 363010: 	private readonly UseItemsRule <UseItemsRule>k__BackingField; // 0x240
+ 363011: 	[CompilerGenerated]
+ 363012: 	private readonly DirtyCashIncomeModel <DirtyCashIncomeModel>k__BackingField; // 0x248
+ 363013: 	[CompilerGenerated]
+ 363014: 	private readonly PlayerCameraTypeModel <PlayerCameraTypeModel>k__BackingField; // 0x250
+ 363015: 	[CompilerGenerated]
+ 363016: 	private float <AccelerationWeightSpeed>k__BackingField; // 0x258
+ 363017: 	[CompilerGenerated]
+ 363018: 	private readonly CharacterInSmokescreenModel <CharacterInSmokescreenModel>k__BackingField; // 0x260
+ 363019: 	[CompilerGenerated]
+ 363020: 	private bool <IsInsideClanBattleFlagZone>k__BackingField; // 0x268
+ 363021: 	[CompilerGenerated]
+ 363022: 	private readonly SkinCenterModel <SkinCenterModel>k__BackingField; // 0x270
+ 363023: 	[CompilerGenerated]
+ 363024: 	private bool <IsTeleported>k__BackingField; // 0x278
+ 363025: 	[CompilerGenerated]
+ 363026: 	private readonly HitsCacheModel <HitsCacheModel>k__BackingField; // 0x280
+ 363027: 	[CompilerGenerated]
+ 363028: 	private readonly ClientCooldownModel <KinematicUseCooldownModel>k__BackingField; // 0x288
+ 363029: 	[CompilerGenerated]
+ 363030: 	private readonly ClientImmunePopupModel <ImmunePopupModel>k__BackingField; // 0x290
+ 363031: 	[CompilerGenerated]
+ 363032: 	private readonly DesiredYawModel <DesiredYawModel>k__BackingField; // 0x298
+ 363033: 	[CompilerGenerated]
+ 363034: 	private readonly AimAssistModel <AimAssistModel>k__BackingField; // 0x2A0
+ 363035: 	[CompilerGenerated]
+ 363036: 	private readonly AutoFireModel <AutoFireModel>k__BackingField; // 0x2A8
+ 363037: 	[CompilerGenerated]
+ 363038: 	private readonly AutoLootAfterBreakColliderModel <AutoLootAfterBreak>k__BackingField; // 0x2B0
+ 363039: 	[CompilerGenerated]
+ 363040: 	private readonly RecoilModel <RecoilModel>k__BackingField; // 0x2B8
+ 363041: 	[CompilerGenerated]
+ 363042: 	private readonly PlayerFakeSpreadModel <FakeSpreadModel>k__BackingField; // 0x2C0
+ 363043: 	[CompilerGenerated]
+ 363044: 	private readonly PlayerInsidePlotModel <PlayerInsidePlotModel>k__BackingField; // 0x2C8
+ 363045: 	public bool IsActualData; // 0x2D0
+ 363046: 
+ 363047: 	// Properties
+ 363048: 	public EquipItemMoveContext[] EquipContexts { get; }
+ 363049: 	public PocketItemMoveContext[] PocketsContexts { get; }
+ 363050: 	public InventoryItemMoveContext[] InventoryContexts { get; }
+ 363051: 	public PlayerShotsModel PlayerShotsModel { get; }
+ 363052: 	public HitMarkerModel HitMarkerModel { get; }
+ 363053: 	public PredictHitsModel PredictHitsModel { get; }
+ 363054: 	public PlayerTurningModel PlayerTurningModel { get; }
+ 363055: 	public PopupDamageModel PopupDamageModel { get; }
+ 363056: 	public ReceivedDamageModel ReceivedDamageModel { get; }
+ 363057: 	public BusySlotsModel BusySlotsModel { get; }
+ 363058: 	public BlockedSlotsModel BlockedSlotsModel { get; }
+ 363059: 	public BlockedSlotsModel BuyBlockedSlotsModel { get; }
+ 363060: 	public BlockedSlotsModel LockedTraderItemByLocationTier { get; }
+ 363061: 	public BlockedSlotsModel LockedTraderItemByVendorTree { get; }
+ 363062: 	public NewAvailableItemsModel NewAvailableItemsByVendor { get; }
+ 363063: 	public BlockedEntitiesModel BlockedEntitiesModel { get; }
+ 363064: 	public InventoryProgressItemModel InventoryProgressItemModel { get; }
+ 363065: 	public InventoryIntention InventoryIntention { get; }
+ 363066: 	public LootItemSoundModel LootItemSoundModel { get; }
+ 363067: 	public GroupsInventoryItemsModel GroupsInventoryItemsModel { get; }
+ 363068: 	public ChangedSlotsInventoryModel ChangedSlotsInventoryModel { get; }
+ 363069: 	public DamageArmorModel DamageArmorModel { get; }
+ 363070: 	public PlayerInVehicleModel PlayerInVehicleModel { get; }
+ 363071: 	public RequestModel<string> LastSpawnPlotVehicleRequest { get; }
+ 363072: 	public InventoryShadowAreaModel InventoryShadowAreaModel { get; }
+ 363073: 	public MapTransformModel MapVehicleTransformModel { get; }
+ 363074: 	public PlayerSurrenderArrestModel PlayerSurrenderArrestModel { get; }
+ 363075: 	public PlayerForceKnockoutEndModel PlayerForceKnockoutEndModel { get; }
+ 363076: 	public PlayerDelayInputVehicleLeaveModel PlayerDelayInputVehicleLeaveModel { get; }
+ 363077: 	public KillOtherCharacterModel KillOtherCharacterModel { get; }
+ 363078: 	public PlayerCameraModel CameraModel { get; }
+ 363079: 	public UseItemModel UseItemModel { get; }
+ 363080: 	public UseReloadWeapon UseReloadWeapon { get; }
+ 363081: 	public UsePlate UsePlateRule { get; }
+ 363082: 	public SingleUseItem SingleUseItemRule { get; }
+ 363083: 	public UseItemsRule UseItemsRule { get; }
+ 363084: 	public DirtyCashIncomeModel DirtyCashIncomeModel { get; }
+ 363085: 	public PlayerCameraTypeModel PlayerCameraTypeModel { get; }
+ 363086: 	public float AccelerationWeightSpeed { get; set; }
+ 363087: 	public CharacterInSmokescreenModel CharacterInSmokescreenModel { get; }
+ 363088: 	public bool IsInsideClanBattleFlagZone { get; set; }
+ 363089: 	public SkinCenterModel SkinCenterModel { get; }
+ 363090: 	public bool IsTeleported { get; set; }
+ 363091: 	public HitsCacheModel HitsCacheModel { get; }
+ 363092: 	public ClientCooldownModel KinematicUseCooldownModel { get; }
+ 363093: 	public ClientImmunePopupModel ImmunePopupModel { get; }
+ 363094: 	public DesiredYawModel DesiredYawModel { get; }
+ 363095: 	public AimAssistModel AimAssistModel { get; }
+ 363096: 	public AutoFireModel AutoFireModel { get; }
+ 363097: 	public AutoLootAfterBreakColliderModel AutoLootAfterBreak { get; }
+ 363098: 	public RecoilModel RecoilModel { get; }
+ 363099: 	public PlayerFakeSpreadModel FakeSpreadModel { get; }
+ 363100: 	public PlayerInsidePlotModel PlayerInsidePlotModel { get; }
+ 363101: 
+ 363102: 	// Methods
+ 363103: 
+ 363104: 	// RVA: 0xC4A4C0 Offset: 0xC48AC0 VA: 0x180C4A4C0
+ 363105: 	public void .ctor(GlobalModel globalModel, BattleCharacterModel model, long publicId, SettlementBonusModel settlementBonusModel, LocationDescription locationDescription, InventoryModels inventoryModels, WorldEntitiesModel worldEntitiesModel, ISetNow now, DirtyCashModel laptopDirtyCashModel) { }
+ 363106: 
+ 363107: 	[CompilerGenerated]
+ 363108: 	// RVA: 0x926D20 Offset: 0x925320 VA: 0x180926D20
+ 363109: 	public EquipItemMoveContext[] get_EquipContexts() { }
+ 363110: 
+ 363111: 	[CompilerGenerated]
+ 363112: 	// RVA: 0x926D30 Offset: 0x925330 VA: 0x180926D30
+ 363113: 	public PocketItemMoveContext[] get_PocketsContexts() { }
+ 363114: 
+ 363115: 	[CompilerGenerated]
+ 363116: 	// RVA: 0x926CA0 Offset: 0x9252A0 VA: 0x180926CA0
+ 363117: 	public InventoryItemMoveContext[] get_InventoryContexts() { }
+ 363118: 
+ 363119: 	[CompilerGenerated]
+ 363120: 	// RVA: 0x926C00 Offset: 0x925200 VA: 0x180926C00
+ 363121: 	public PlayerShotsModel get_PlayerShotsModel() { }
+ 363122: 
+ 363123: 	[CompilerGenerated]
+ 363124: 	// RVA: 0x926B50 Offset: 0x925150 VA: 0x180926B50
+ 363125: 	public HitMarkerModel get_HitMarkerModel() { }
+ 363126: 
+ 363127: 	[CompilerGenerated]
+ 363128: 	// RVA: 0x926E30 Offset: 0x925430 VA: 0x180926E30
+ 363129: 	public PredictHitsModel get_PredictHitsModel() { }
+ 363130: 
+ 363131: 	[CompilerGenerated]
+ 363132: 	// RVA: 0x926C20 Offset: 0x925220 VA: 0x180926C20
+ 363133: 	public PlayerTurningModel get_PlayerTurningModel() { }
+ 363134: 
+ 363135: 	[CompilerGenerated]
+ 363136: 	// RVA: 0x926C30 Offset: 0x925230 VA: 0x180926C30
+ 363137: 	public PopupDamageModel get_PopupDamageModel() { }
+ 363138: 
+ 363139: 	[CompilerGenerated]
+ 363140: 	// RVA: 0x926DB0 Offset: 0x9253B0 VA: 0x180926DB0
+ 363141: 	public ReceivedDamageModel get_ReceivedDamageModel() { }
+ 363142: 
+ 363143: 	[CompilerGenerated]
+ 363144: 	// RVA: 0x926C60 Offset: 0x925260 VA: 0x180926C60
+ 363145: 	public BusySlotsModel get_BusySlotsModel() { }
+ 363146: 
+ 363147: 	[CompilerGenerated]
+ 363148: 	// RVA: 0x93B420 Offset: 0x939A20 VA: 0x18093B420
+ 363149: 	public BlockedSlotsModel get_BlockedSlotsModel() { }
+ 363150: 
+ 363151: 	[CompilerGenerated]
+ 363152: 	// RVA: 0x93B430 Offset: 0x939A30 VA: 0x18093B430
+ 363153: 	public BlockedSlotsModel get_BuyBlockedSlotsModel() { }
+ 363154: 
+ 363155: 	[CompilerGenerated]
+ 363156: 	// RVA: 0x926CB0 Offset: 0x9252B0 VA: 0x180926CB0

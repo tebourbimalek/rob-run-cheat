@@ -1,0 +1,741 @@
+﻿1085387: public enum Camera.MonoOrStereoscopicEye // TypeDefIndex: 17094
+1085388: {
+1085389: 	// Fields
+1085390: 	public int value__; // 0x0
+1085391: 	public const Camera.MonoOrStereoscopicEye Left = 0;
+1085392: 	public const Camera.MonoOrStereoscopicEye Right = 1;
+1085393: 	public const Camera.MonoOrStereoscopicEye Mono = 2;
+1085394: }
+1085395: 
+1085396: // Namespace: 
+1085397: public enum Camera.SceneViewFilterMode // TypeDefIndex: 17095
+1085398: {
+1085399: 	// Fields
+1085400: 	public int value__; // 0x0
+1085401: 	public const Camera.SceneViewFilterMode Off = 0;
+1085402: 	public const Camera.SceneViewFilterMode ShowFiltered = 1;
+1085403: }
+1085404: 
+1085405: // Namespace: 
+1085406: public sealed class Camera.CameraCallback : MulticastDelegate // TypeDefIndex: 17096
+1085407: {
+1085408: 	// Methods
+1085409: 
+1085410: 	// RVA: 0x7AB080 Offset: 0x7A9680 VA: 0x1807AB080
+1085411: 	public void .ctor(object object, IntPtr method) { }
+1085412: 
+1085413: 	// RVA: 0x7AB070 Offset: 0x7A9670 VA: 0x1807AB070 Slot: 13
+1085414: 	public virtual void Invoke(Camera cam) { }
+1085415: }
+1085416: 
+1085417: // Namespace: UnityEngine
+1085418: [NativeHeader("Runtime/Camera/Camera.h")]
+1085419: [NativeHeader("Runtime/Graphics/CommandBuffer/RenderingCommandBuffer.h")]
+1085420: [RequireComponent(typeof(Transform))]
+1085421: [UsedByNativeCode]
+1085422: [NativeHeader("Runtime/Misc/GameObjectUtility.h")]
+1085423: [NativeHeader("Runtime/Camera/RenderManager.h")]
+1085424: [NativeHeader("Runtime/Shaders/Shader.h")]
+1085425: [NativeHeader("Runtime/GfxDevice/GfxDeviceTypes.h")]
+1085426: [NativeHeader("Runtime/Graphics/RenderTexture.h")]
+1085427: public sealed class Camera : Behaviour // TypeDefIndex: 17097
+1085428: {
+1085429: 	// Fields
+1085430: 	public const float kMinAperture = 0.7;
+1085431: 	public const float kMaxAperture = 32;
+1085432: 	public const int kMinBladeCount = 3;
+1085433: 	public const int kMaxBladeCount = 11;
+1085434: 	internal uint m_NonSerializedVersion; // 0x18
+1085435: 	public static Camera.CameraCallback onPreCull; // 0x0
+1085436: 	public static Camera.CameraCallback onPreRender; // 0x8
+1085437: 	public static Camera.CameraCallback onPostRender; // 0x10
+1085438: 
+1085439: 	// Properties
+1085440: 	[NativeProperty("Near")]
+1085441: 	public float nearClipPlane { get; set; }
+1085442: 	[NativeProperty("Far")]
+1085443: 	public float farClipPlane { get; set; }
+1085444: 	[NativeProperty("VerticalFieldOfView")]
+1085445: 	public float fieldOfView { get; set; }
+1085446: 	public RenderingPath renderingPath { get; set; }
+1085447: 	public RenderingPath actualRenderingPath { get; }
+1085448: 	public bool allowHDR { get; set; }
+1085449: 	public bool allowMSAA { get; set; }
+1085450: 	public bool allowDynamicResolution { get; set; }
+1085451: 	[NativeProperty("ForceIntoRT")]
+1085452: 	public bool forceIntoRenderTexture { get; set; }
+1085453: 	public float orthographicSize { get; set; }
+1085454: 	public bool orthographic { get; set; }
+1085455: 	public OpaqueSortMode opaqueSortMode { get; set; }
+1085456: 	public TransparencySortMode transparencySortMode { get; set; }
+1085457: 	public Vector3 transparencySortAxis { get; set; }
+1085458: 	public float depth { get; set; }
+1085459: 	public float aspect { get; set; }
+1085460: 	public Vector3 velocity { get; }
+1085461: 	public int cullingMask { get; set; }
+1085462: 	public int eventMask { get; set; }
+1085463: 	public bool layerCullSpherical { get; set; }
+1085464: 	[NativeProperty("LayerCullSpherical")]
+1085465: 	internal bool layerCullSphericalInternal { get; set; }
+1085466: 	public CameraType cameraType { get; set; }
+1085467: 	internal Material skyboxMaterial { get; }
+1085468: 	[NativeConditional("UNITY_EDITOR")]
+1085469: 	public ulong overrideSceneCullingMask { get; set; }
+1085470: 	[NativeConditional("UNITY_EDITOR")]
+1085471: 	internal ulong sceneCullingMask { get; }
+1085472: 	[NativeConditional("UNITY_EDITOR")]
+1085473: 	internal bool useInteractiveLightBakingData { get; set; }
+1085474: 	public float[] layerCullDistances { get; set; }
+1085475: 	[Obsolete("PreviewCullingLayer is obsolete. Use scene culling masks instead.", False)]
+1085476: 	internal static int PreviewCullingLayer { get; }
+1085477: 	public bool useOcclusionCulling { get; set; }
+1085478: 	public Matrix4x4 cullingMatrix { get; set; }
+1085479: 	public Color backgroundColor { get; set; }
+1085480: 	public CameraClearFlags clearFlags { get; set; }
+1085481: 	public DepthTextureMode depthTextureMode { get; set; }
+1085482: 	public bool clearStencilAfterLightingPass { get; set; }
+1085483: 	internal Camera.ProjectionMatrixMode projectionMatrixMode { get; }
+1085484: 	public bool usePhysicalProperties { get; set; }
+1085485: 	public int iso { get; set; }
+1085486: 	public float shutterSpeed { get; set; }
+1085487: 	public float aperture { get; set; }
+1085488: 	public float focusDistance { get; set; }
+1085489: 	public float focalLength { get; set; }
+1085490: 	public int bladeCount { get; set; }
+1085491: 	public Vector2 curvature { get; set; }
+1085492: 	public float barrelClipping { get; set; }
+1085493: 	public float anamorphism { get; set; }
+1085494: 	public Vector2 sensorSize { get; set; }
+1085495: 	public Vector2 lensShift { get; set; }
+1085496: 	public Camera.GateFitMode gateFit { get; set; }
+1085497: 	[NativeProperty("NormalizedViewportRect")]
+1085498: 	public Rect rect { get; set; }
+1085499: 	[NativeProperty("ScreenViewportRect")]
+1085500: 	public Rect pixelRect { get; set; }
+1085501: 	public int pixelWidth { get; }
+1085502: 	public int pixelHeight { get; }
+1085503: 	public int scaledPixelWidth { get; }
+1085504: 	public int scaledPixelHeight { get; }
+1085505: 	public RenderTexture targetTexture { get; set; }
+1085506: 	public RenderTexture activeTexture { get; }
+1085507: 	public int targetDisplay { get; set; }
+1085508: 	public Matrix4x4 cameraToWorldMatrix { get; }
+1085509: 	public Matrix4x4 worldToCameraMatrix { get; set; }
+1085510: 	public Matrix4x4 projectionMatrix { get; set; }
+1085511: 	public Matrix4x4 nonJitteredProjectionMatrix { get; set; }
+1085512: 	[NativeProperty("UseJitteredProjectionMatrixForTransparent")]
+1085513: 	public bool useJitteredProjectionMatrixForTransparentRendering { get; set; }
+1085514: 	public Matrix4x4 previousViewProjectionMatrix { get; }
+1085515: 	public static Camera main { get; }
+1085516: 	public static Camera current { get; }
+1085517: 	private static Camera currentInternal { get; }
+1085518: 	public Scene scene { get; set; }
+1085519: 	public bool stereoEnabled { get; }
+1085520: 	public float stereoSeparation { get; set; }
+1085521: 	public float stereoConvergence { get; set; }
+1085522: 	public bool areVRStereoViewMatricesWithinSingleCullTolerance { get; }
+1085523: 	public StereoTargetEyeMask stereoTargetEye { get; set; }
+1085524: 	[NativeProperty("StereoTargetEye")]
+1085525: 	internal StereoTargetEyeMask stereoTargetEyeInternal { get; set; }
+1085526: 	public Camera.MonoOrStereoscopicEye stereoActiveEye { get; }
+1085527: 	public static int allCamerasCount { get; }
+1085528: 	public static Camera[] allCameras { get; }
+1085529: 	[NativeConditional("UNITY_EDITOR")]
+1085530: 	public Camera.SceneViewFilterMode sceneViewFilterMode { get; }
+1085531: 	[NativeConditional("UNITY_EDITOR")]
+1085532: 	public bool renderCloudsInSceneView { get; set; }
+1085533: 	public bool isProcessingRenderRequest { get; }
+1085534: 	public int commandBufferCount { get; }
+1085535: 
+1085536: 	// Methods
+1085537: 
+1085538: 	// RVA: 0x7B78C0 Offset: 0x7B5EC0 VA: 0x1807B78C0
+1085539: 	public void .ctor() { }
+1085540: 
+1085541: 	// RVA: 0x623C690 Offset: 0x623AC90 VA: 0x18623C690
+1085542: 	public float get_nearClipPlane() { }
+1085543: 
+1085544: 	// RVA: 0x623FE00 Offset: 0x623E400 VA: 0x18623FE00
+1085545: 	public void set_nearClipPlane(float value) { }
+1085546: 
+1085547: 	// RVA: 0x623BE50 Offset: 0x623A450 VA: 0x18623BE50
+1085548: 	public float get_farClipPlane() { }
+1085549: 
+1085550: 	// RVA: 0x623F3A0 Offset: 0x623D9A0 VA: 0x18623F3A0
+1085551: 	public void set_farClipPlane(float value) { }
+1085552: 
+1085553: 	// RVA: 0x623BF10 Offset: 0x623A510 VA: 0x18623BF10
+1085554: 	public float get_fieldOfView() { }
+1085555: 
+1085556: 	// RVA: 0x623F480 Offset: 0x623DA80 VA: 0x18623F480
+1085557: 	public void set_fieldOfView(float value) { }
+1085558: 
+1085559: 	// RVA: 0x623D1E0 Offset: 0x623B7E0 VA: 0x18623D1E0
+1085560: 	public RenderingPath get_renderingPath() { }
+1085561: 
+1085562: 	// RVA: 0x62406A0 Offset: 0x623ECA0 VA: 0x1862406A0
+1085563: 	public void set_renderingPath(RenderingPath value) { }
+1085564: 
+1085565: 	[NativeName("CalculateRenderingPath")]
+1085566: 	// RVA: 0x623ABE0 Offset: 0x62391E0 VA: 0x18623ABE0
+1085567: 	public RenderingPath get_actualRenderingPath() { }
+1085568: 
+1085569: 	// RVA: 0x6238B90 Offset: 0x6237190 VA: 0x186238B90
+1085570: 	public void Reset() { }
+1085571: 
+1085572: 	// RVA: 0x623AE20 Offset: 0x6239420 VA: 0x18623AE20
+1085573: 	public bool get_allowHDR() { }
+1085574: 
+1085575: 	// RVA: 0x623E520 Offset: 0x623CB20 VA: 0x18623E520
+1085576: 	public void set_allowHDR(bool value) { }
+1085577: 
+1085578: 	// RVA: 0x623AEE0 Offset: 0x62394E0 VA: 0x18623AEE0
+1085579: 	public bool get_allowMSAA() { }
+1085580: 
+1085581: 	// RVA: 0x623E600 Offset: 0x623CC00 VA: 0x18623E600
+1085582: 	public void set_allowMSAA(bool value) { }
+1085583: 
+1085584: 	// RVA: 0x623AD60 Offset: 0x6239360 VA: 0x18623AD60
+1085585: 	public bool get_allowDynamicResolution() { }
+1085586: 
+1085587: 	// RVA: 0x623E440 Offset: 0x623CA40 VA: 0x18623E440
+1085588: 	public void set_allowDynamicResolution(bool value) { }
+1085589: 
+1085590: 	// RVA: 0x623C150 Offset: 0x623A750 VA: 0x18623C150
+1085591: 	public bool get_forceIntoRenderTexture() { }
+1085592: 
+1085593: 	// RVA: 0x623F720 Offset: 0x623DD20 VA: 0x18623F720
+1085594: 	public void set_forceIntoRenderTexture(bool value) { }
+1085595: 
+1085596: 	// RVA: 0x623C900 Offset: 0x623AF00 VA: 0x18623C900
+1085597: 	public float get_orthographicSize() { }
+1085598: 
+1085599: 	// RVA: 0x6240090 Offset: 0x623E690 VA: 0x186240090
+1085600: 	public void set_orthographicSize(float value) { }
+1085601: 
+1085602: 	// RVA: 0x623C9C0 Offset: 0x623AFC0 VA: 0x18623C9C0
+1085603: 	public bool get_orthographic() { }
+1085604: 
+1085605: 	// RVA: 0x6240170 Offset: 0x623E770 VA: 0x186240170
+1085606: 	public void set_orthographic(bool value) { }
+1085607: 
+1085608: 	// RVA: 0x623C840 Offset: 0x623AE40 VA: 0x18623C840
+1085609: 	public OpaqueSortMode get_opaqueSortMode() { }
+1085610: 
+1085611: 	// RVA: 0x623FFB0 Offset: 0x623E5B0 VA: 0x18623FFB0
+1085612: 	public void set_opaqueSortMode(OpaqueSortMode value) { }
+1085613: 
+1085614: 	// RVA: 0x623DE90 Offset: 0x623C490 VA: 0x18623DE90
+1085615: 	public TransparencySortMode get_transparencySortMode() { }
+1085616: 
+1085617: 	// RVA: 0x6241080 Offset: 0x623F680 VA: 0x186241080
+1085618: 	public void set_transparencySortMode(TransparencySortMode value) { }
+1085619: 
+1085620: 	// RVA: 0x623DDB0 Offset: 0x623C3B0 VA: 0x18623DDB0
+1085621: 	public Vector3 get_transparencySortAxis() { }
+1085622: 
+1085623: 	// RVA: 0x6240FB0 Offset: 0x623F5B0 VA: 0x186240FB0
+1085624: 	public void set_transparencySortAxis(Vector3 value) { }
+1085625: 
+1085626: 	// RVA: 0x6238A10 Offset: 0x6237010 VA: 0x186238A10
+1085627: 	public void ResetTransparencySortSettings() { }
+1085628: 
+1085629: 	// RVA: 0x623BCD0 Offset: 0x623A2D0 VA: 0x18623BCD0
+1085630: 	public float get_depth() { }
+1085631: 
+1085632: 	// RVA: 0x623F1F0 Offset: 0x623D7F0 VA: 0x18623F1F0
+1085633: 	public void set_depth(float value) { }
+1085634: 
+1085635: 	// RVA: 0x623B1E0 Offset: 0x62397E0 VA: 0x18623B1E0
+1085636: 	public float get_aspect() { }
+1085637: 
+1085638: 	// RVA: 0x623E8A0 Offset: 0x623CEA0 VA: 0x18623E8A0
+1085639: 	public void set_aspect(float value) { }
+1085640: 
+1085641: 	// RVA: 0x6238590 Offset: 0x6236B90 VA: 0x186238590
+1085642: 	public void ResetAspect() { }
+1085643: 
+1085644: 	// RVA: 0x623E260 Offset: 0x623C860 VA: 0x18623E260
+1085645: 	public Vector3 get_velocity() { }
+1085646: 
+1085647: 	// RVA: 0x623B8F0 Offset: 0x6239EF0 VA: 0x18623B8F0
+1085648: 	public int get_cullingMask() { }
+1085649: 
+1085650: 	// RVA: 0x623EE80 Offset: 0x623D480 VA: 0x18623EE80
+1085651: 	public void set_cullingMask(int value) { }
+1085652: 
+1085653: 	// RVA: 0x623BD90 Offset: 0x623A390 VA: 0x18623BD90
+1085654: 	public int get_eventMask() { }
+1085655: 
+1085656: 	// RVA: 0x623F2C0 Offset: 0x623D8C0 VA: 0x18623F2C0
+1085657: 	public void set_eventMask(int value) { }
+1085658: 
+1085659: 	// RVA: 0x623C460 Offset: 0x623AA60 VA: 0x18623C460
+1085660: 	public bool get_layerCullSpherical() { }
+1085661: 
+1085662: 	// RVA: 0x623FBA0 Offset: 0x623E1A0 VA: 0x18623FBA0
+1085663: 	public void set_layerCullSpherical(bool value) { }
+1085664: 
+1085665: 	// RVA: 0x623C460 Offset: 0x623AA60 VA: 0x18623C460
+1085666: 	internal bool get_layerCullSphericalInternal() { }
+1085667: 
+1085668: 	// RVA: 0x623FB10 Offset: 0x623E110 VA: 0x18623FB10
+1085669: 	internal void set_layerCullSphericalInternal(bool value) { }
+1085670: 
+1085671: 	// RVA: 0x623B5F0 Offset: 0x6239BF0 VA: 0x18623B5F0
+1085672: 	public CameraType get_cameraType() { }
+1085673: 
+1085674: 	// RVA: 0x623EC00 Offset: 0x623D200 VA: 0x18623EC00
+1085675: 	public void set_cameraType(CameraType value) { }
+1085676: 
+1085677: 	// RVA: 0x623D760 Offset: 0x623BD60 VA: 0x18623D760
+1085678: 	internal Material get_skyboxMaterial() { }
+1085679: 
+1085680: 	// RVA: 0x623CA80 Offset: 0x623B080 VA: 0x18623CA80
+1085681: 	public ulong get_overrideSceneCullingMask() { }
+1085682: 
+1085683: 	// RVA: 0x6240250 Offset: 0x623E850 VA: 0x186240250
+1085684: 	public void set_overrideSceneCullingMask(ulong value) { }
+1085685: 
+1085686: 	// RVA: 0x623D420 Offset: 0x623BA20 VA: 0x18623D420
+1085687: 	internal ulong get_sceneCullingMask() { }
+1085688: 
+1085689: 	// RVA: 0x623DF50 Offset: 0x623C550 VA: 0x18623DF50
+1085690: 	internal bool get_useInteractiveLightBakingData() { }
+1085691: 
+1085692: 	// RVA: 0x6241160 Offset: 0x623F760 VA: 0x186241160
+1085693: 	internal void set_useInteractiveLightBakingData(bool value) { }
+1085694: 
+1085695: 	[FreeFunction("CameraScripting::GetLayerCullDistances", HasExplicitThis = True)]
+1085696: 	// RVA: 0x62371D0 Offset: 0x62357D0 VA: 0x1862371D0
+1085697: 	private float[] GetLayerCullDistances() { }
+1085698: 
+1085699: 	[FreeFunction("CameraScripting::SetLayerCullDistances", HasExplicitThis = True)]
+1085700: 	// RVA: 0x6239280 Offset: 0x6237880 VA: 0x186239280
+1085701: 	private void SetLayerCullDistances(float[] d) { }
+1085702: 
+1085703: 	// RVA: 0x623C410 Offset: 0x623AA10 VA: 0x18623C410
+1085704: 	public float[] get_layerCullDistances() { }
+1085705: 
+1085706: 	// RVA: 0x623F950 Offset: 0x623DF50 VA: 0x18623F950
+1085707: 	public void set_layerCullDistances(float[] value) { }
+1085708: 
+1085709: 	// RVA: 0x623AAB0 Offset: 0x62390B0 VA: 0x18623AAB0
+1085710: 	internal static int get_PreviewCullingLayer() { }
+1085711: 
+1085712: 	// RVA: 0x623E0D0 Offset: 0x623C6D0 VA: 0x18623E0D0
+1085713: 	public bool get_useOcclusionCulling() { }
+1085714: 
+1085715: 	// RVA: 0x6241320 Offset: 0x623F920 VA: 0x186241320
+1085716: 	public void set_useOcclusionCulling(bool value) { }
+1085717: 
+1085718: 	// RVA: 0x623B9C0 Offset: 0x6239FC0 VA: 0x18623B9C0
+1085719: 	public Matrix4x4 get_cullingMatrix() { }
+1085720: 
+1085721: 	// RVA: 0x623EF60 Offset: 0x623D560 VA: 0x18623EF60
+1085722: 	public void set_cullingMatrix(Matrix4x4 value) { }
+1085723: 
+1085724: 	// RVA: 0x6238650 Offset: 0x6236C50 VA: 0x186238650
+1085725: 	public void ResetCullingMatrix() { }
+1085726: 
+1085727: 	// RVA: 0x623B2B0 Offset: 0x62398B0 VA: 0x18623B2B0
+1085728: 	public Color get_backgroundColor() { }
+1085729: 
+1085730: 	// RVA: 0x623E980 Offset: 0x623CF80 VA: 0x18623E980
+1085731: 	public void set_backgroundColor(Color value) { }
+1085732: 
+1085733: 	// RVA: 0x623B6B0 Offset: 0x6239CB0 VA: 0x18623B6B0
+1085734: 	public CameraClearFlags get_clearFlags() { }
+1085735: 
+1085736: 	// RVA: 0x623ECD0 Offset: 0x623D2D0 VA: 0x18623ECD0
+1085737: 	public void set_clearFlags(CameraClearFlags value) { }
+1085738: 
+1085739: 	// RVA: 0x623BC10 Offset: 0x623A210 VA: 0x18623BC10
+1085740: 	public DepthTextureMode get_depthTextureMode() { }
+1085741: 
+1085742: 	// RVA: 0x623F110 Offset: 0x623D710 VA: 0x18623F110
+1085743: 	public void set_depthTextureMode(DepthTextureMode value) { }
+1085744: 
+1085745: 	// RVA: 0x623B770 Offset: 0x6239D70 VA: 0x18623B770
+1085746: 	public bool get_clearStencilAfterLightingPass() { }
+1085747: 
+1085748: 	// RVA: 0x623EDB0 Offset: 0x623D3B0 VA: 0x18623EDB0
+1085749: 	public void set_clearStencilAfterLightingPass(bool value) { }
+1085750: 
+1085751: 	// RVA: 0x6239410 Offset: 0x6237A10 VA: 0x186239410
+1085752: 	public void SetReplacementShader(Shader shader, string replacementTag) { }
+1085753: 
+1085754: 	// RVA: 0x62387D0 Offset: 0x6236DD0 VA: 0x1862387D0
+1085755: 	public void ResetReplacementShader() { }
+1085756: 
+1085757: 	// RVA: 0x623CE90 Offset: 0x623B490 VA: 0x18623CE90
+1085758: 	internal Camera.ProjectionMatrixMode get_projectionMatrixMode() { }
+1085759: 
+1085760: 	// RVA: 0x623E190 Offset: 0x623C790 VA: 0x18623E190
+1085761: 	public bool get_usePhysicalProperties() { }
+1085762: 
+1085763: 	// RVA: 0x6241400 Offset: 0x623FA00 VA: 0x186241400
+1085764: 	public void set_usePhysicalProperties(bool value) { }
+1085765: 
+1085766: 	// RVA: 0x623C390 Offset: 0x623A990 VA: 0x18623C390
+1085767: 	public int get_iso() { }
+1085768: 
+1085769: 	// RVA: 0x623F8C0 Offset: 0x623DEC0 VA: 0x18623F8C0
+1085770: 	public void set_iso(int value) { }
+1085771: 
+1085772: 	// RVA: 0x623D6A0 Offset: 0x623BCA0 VA: 0x18623D6A0
+1085773: 	public float get_shutterSpeed() { }
+1085774: 
+1085775: 	// RVA: 0x6240930 Offset: 0x623EF30 VA: 0x186240930
+1085776: 	public void set_shutterSpeed(float value) { }
+1085777: 
+1085778: 	// RVA: 0x623B060 Offset: 0x6239660 VA: 0x18623B060
+1085779: 	public float get_aperture() { }
+1085780: 
+1085781: 	// RVA: 0x623E7C0 Offset: 0x623CDC0 VA: 0x18623E7C0
+1085782: 	public void set_aperture(float value) { }
+1085783: 
+1085784: 	// RVA: 0x623C090 Offset: 0x623A690 VA: 0x18623C090
+1085785: 	public float get_focusDistance() { }
+1085786: 
+1085787: 	// RVA: 0x623F640 Offset: 0x623DC40 VA: 0x18623F640
+1085788: 	public void set_focusDistance(float value) { }
+1085789: 
+1085790: 	// RVA: 0x623BFD0 Offset: 0x623A5D0 VA: 0x18623BFD0
+1085791: 	public float get_focalLength() { }
+1085792: 
+1085793: 	// RVA: 0x623F560 Offset: 0x623DB60 VA: 0x18623F560
+1085794: 	public void set_focalLength(float value) { }
+1085795: 
+1085796: 	// RVA: 0x623B440 Offset: 0x6239A40 VA: 0x18623B440
+1085797: 	public int get_bladeCount() { }
+1085798: 
+1085799: 	// RVA: 0x623EB30 Offset: 0x623D130 VA: 0x18623EB30
+1085800: 	public void set_bladeCount(int value) { }
+1085801: 
+1085802: 	// RVA: 0x623BB40 Offset: 0x623A140 VA: 0x18623BB40
+1085803: 	public Vector2 get_curvature() { }
+1085804: 
+1085805: 	// RVA: 0x623F040 Offset: 0x623D640 VA: 0x18623F040
+1085806: 	public void set_curvature(Vector2 value) { }
+1085807: 
+1085808: 	// RVA: 0x623B380 Offset: 0x6239980 VA: 0x18623B380
+1085809: 	public float get_barrelClipping() { }
+1085810: 
+1085811: 	// RVA: 0x623EA60 Offset: 0x623D060 VA: 0x18623EA60
+1085812: 	public void set_barrelClipping(float value) { }
+1085813: 
+1085814: 	// RVA: 0x623AFA0 Offset: 0x62395A0 VA: 0x18623AFA0
+1085815: 	public float get_anamorphism() { }
+1085816: 
+1085817: 	// RVA: 0x623E6E0 Offset: 0x623CCE0 VA: 0x18623E6E0
+1085818: 	public void set_anamorphism(float value) { }
+1085819: 
+1085820: 	// RVA: 0x623D5D0 Offset: 0x623BBD0 VA: 0x18623D5D0
+1085821: 	public Vector2 get_sensorSize() { }
+1085822: 
+1085823: 	// RVA: 0x6240850 Offset: 0x623EE50 VA: 0x186240850
+1085824: 	public void set_sensorSize(Vector2 value) { }
+1085825: 
+1085826: 	// RVA: 0x623C530 Offset: 0x623AB30 VA: 0x18623C530
+1085827: 	public Vector2 get_lensShift() { }
+1085828: 
+1085829: 	// RVA: 0x623FD20 Offset: 0x623E320 VA: 0x18623FD20
+1085830: 	public void set_lensShift(Vector2 value) { }
+1085831: 
+1085832: 	// RVA: 0x623C210 Offset: 0x623A810 VA: 0x18623C210
+1085833: 	public Camera.GateFitMode get_gateFit() { }
+1085834: 
+1085835: 	// RVA: 0x623F7F0 Offset: 0x623DDF0 VA: 0x18623F7F0
+1085836: 	public void set_gateFit(Camera.GateFitMode value) { }
+1085837: 
+1085838: 	// RVA: 0x6237020 Offset: 0x6235620 VA: 0x186237020
+1085839: 	public float GetGateFittedFieldOfView() { }
+1085840: 
+1085841: 	// RVA: 0x62370F0 Offset: 0x62356F0 VA: 0x1862370F0
+1085842: 	public Vector2 GetGateFittedLensShift() { }
+1085843: 
+1085844: 	// RVA: 0x6237320 Offset: 0x6235920 VA: 0x186237320
+1085845: 	internal Vector3 GetLocalSpaceAim() { }
+1085846: 
+1085847: 	// RVA: 0x623D050 Offset: 0x623B650 VA: 0x18623D050
+1085848: 	public Rect get_rect() { }
+1085849: 
+1085850: 	// RVA: 0x62404F0 Offset: 0x623EAF0 VA: 0x1862404F0
+1085851: 	public void set_rect(Rect value) { }
+1085852: 
+1085853: 	// RVA: 0x623CC10 Offset: 0x623B210 VA: 0x18623CC10
+1085854: 	public Rect get_pixelRect() { }
+1085855: 
+1085856: 	// RVA: 0x6240330 Offset: 0x623E930 VA: 0x186240330
+1085857: 	public void set_pixelRect(Rect value) { }
+1085858: 
+1085859: 	[FreeFunction("CameraScripting::GetPixelWidth", HasExplicitThis = True)]
+1085860: 	// RVA: 0x623CCE0 Offset: 0x623B2E0 VA: 0x18623CCE0
+1085861: 	public int get_pixelWidth() { }
+1085862: 
+1085863: 	[FreeFunction("CameraScripting::GetPixelHeight", HasExplicitThis = True)]
+1085864: 	// RVA: 0x623CB40 Offset: 0x623B140 VA: 0x18623CB40
+1085865: 	public int get_pixelHeight() { }
+1085866: 
+1085867: 	[FreeFunction("CameraScripting::GetScaledPixelWidth", HasExplicitThis = True)]
+1085868: 	// RVA: 0x623D360 Offset: 0x623B960 VA: 0x18623D360
+1085869: 	public int get_scaledPixelWidth() { }
+1085870: 
+1085871: 	[FreeFunction("CameraScripting::GetScaledPixelHeight", HasExplicitThis = True)]
+1085872: 	// RVA: 0x623D2A0 Offset: 0x623B8A0 VA: 0x18623D2A0
+1085873: 	public int get_scaledPixelHeight() { }
+1085874: 
+1085875: 	// RVA: 0x623DCC0 Offset: 0x623C2C0 VA: 0x18623DCC0
+1085876: 	public RenderTexture get_targetTexture() { }
+1085877: 
+1085878: 	// RVA: 0x6240EA0 Offset: 0x623F4A0 VA: 0x186240EA0
+1085879: 	public void set_targetTexture(RenderTexture value) { }
+1085880: 
+1085881: 	[NativeName("GetCurrentTargetTexture")]
+1085882: 	// RVA: 0x623AB00 Offset: 0x6239100 VA: 0x18623AB00
+1085883: 	public RenderTexture get_activeTexture() { }
+1085884: 
+1085885: 	// RVA: 0x623DC00 Offset: 0x623C200 VA: 0x18623DC00
+1085886: 	public int get_targetDisplay() { }
+1085887: 
+1085888: 	// RVA: 0x6240DC0 Offset: 0x623F3C0 VA: 0x186240DC0
+1085889: 	public void set_targetDisplay(int value) { }
+1085890: 
+1085891: 	[FreeFunction("CameraScripting::SetTargetBuffers", HasExplicitThis = True)]
+1085892: 	// RVA: 0x6239850 Offset: 0x6237E50 VA: 0x186239850
+1085893: 	private void SetTargetBuffersImpl(RenderBuffer color, RenderBuffer depth) { }
+1085894: 
+1085895: 	// RVA: 0x6239A70 Offset: 0x6238070 VA: 0x186239A70
+1085896: 	public void SetTargetBuffers(RenderBuffer colorBuffer, RenderBuffer depthBuffer) { }
+1085897: 
+1085898: 	[FreeFunction("CameraScripting::SetTargetBuffers", HasExplicitThis = True)]
+1085899: 	// RVA: 0x6239950 Offset: 0x6237F50 VA: 0x186239950
+1085900: 	private void SetTargetBuffersMRTImpl(RenderBuffer[] color, RenderBuffer depth) { }
+1085901: 
+1085902: 	// RVA: 0x6239B10 Offset: 0x6238110 VA: 0x186239B10
+1085903: 	public void SetTargetBuffers(RenderBuffer[] colorBuffer, RenderBuffer depthBuffer) { }
+1085904: 
+1085905: 	// RVA: 0x6236AC0 Offset: 0x62350C0 VA: 0x186236AC0
+1085906: 	internal string[] GetCameraBufferWarnings() { }
+1085907: 
+1085908: 	// RVA: 0x623B510 Offset: 0x6239B10 VA: 0x18623B510
+1085909: 	public Matrix4x4 get_cameraToWorldMatrix() { }
+1085910: 
+1085911: 	// RVA: 0x623E350 Offset: 0x623C950 VA: 0x18623E350
+1085912: 	public Matrix4x4 get_worldToCameraMatrix() { }
+1085913: 
+1085914: 	// RVA: 0x62414E0 Offset: 0x623FAE0 VA: 0x1862414E0
+1085915: 	public void set_worldToCameraMatrix(Matrix4x4 value) { }
+1085916: 
+1085917: 	// RVA: 0x623CF60 Offset: 0x623B560 VA: 0x18623CF60
+1085918: 	public Matrix4x4 get_projectionMatrix() { }
+1085919: 
+1085920: 	// RVA: 0x6240410 Offset: 0x623EA10 VA: 0x186240410
+1085921: 	public void set_projectionMatrix(Matrix4x4 value) { }
+1085922: 
+1085923: 	// RVA: 0x623C760 Offset: 0x623AD60 VA: 0x18623C760
+1085924: 	public Matrix4x4 get_nonJitteredProjectionMatrix() { }
+1085925: 
+1085926: 	// RVA: 0x623FEE0 Offset: 0x623E4E0 VA: 0x18623FEE0
+1085927: 	public void set_nonJitteredProjectionMatrix(Matrix4x4 value) { }
+1085928: 
+1085929: 	// RVA: 0x623E010 Offset: 0x623C610 VA: 0x18623E010
+1085930: 	public bool get_useJitteredProjectionMatrixForTransparentRendering() { }
+1085931: 
+1085932: 	// RVA: 0x6241240 Offset: 0x623F840 VA: 0x186241240
+1085933: 	public void set_useJitteredProjectionMatrixForTransparentRendering(bool value) { }
+1085934: 
+1085935: 	// RVA: 0x623CDB0 Offset: 0x623B3B0 VA: 0x18623CDB0
+1085936: 	public Matrix4x4 get_previousViewProjectionMatrix() { }
+1085937: 
+1085938: 	// RVA: 0x6238AD0 Offset: 0x62370D0 VA: 0x186238AD0
+1085939: 	public void ResetWorldToCameraMatrix() { }
+1085940: 
+1085941: 	// RVA: 0x6238710 Offset: 0x6236D10 VA: 0x186238710
+1085942: 	public void ResetProjectionMatrix() { }
+1085943: 
+1085944: 	[FreeFunction("CameraScripting::CalculateObliqueMatrix", HasExplicitThis = True)]
+1085945: 	// RVA: 0x62362C0 Offset: 0x62348C0 VA: 0x1862362C0
+1085946: 	public Matrix4x4 CalculateObliqueMatrix(Vector4 clipPlane) { }
+1085947: 
+1085948: 	// RVA: 0x623A7F0 Offset: 0x6238DF0 VA: 0x18623A7F0
+1085949: 	public Vector3 WorldToScreenPoint(Vector3 position, Camera.MonoOrStereoscopicEye eye) { }
+1085950: 
+1085951: 	// RVA: 0x623A9F0 Offset: 0x6238FF0 VA: 0x18623A9F0
+1085952: 	public Vector3 WorldToViewportPoint(Vector3 position, Camera.MonoOrStereoscopicEye eye) { }
+1085953: 
+1085954: 	// RVA: 0x623A5F0 Offset: 0x6238BF0 VA: 0x18623A5F0
+1085955: 	public Vector3 ViewportToWorldPoint(Vector3 position, Camera.MonoOrStereoscopicEye eye) { }
+1085956: 
+1085957: 	// RVA: 0x62390A0 Offset: 0x62376A0 VA: 0x1862390A0
+1085958: 	public Vector3 ScreenToWorldPoint(Vector3 position, Camera.MonoOrStereoscopicEye eye) { }
+1085959: 
+1085960: 	// RVA: 0x623A720 Offset: 0x6238D20 VA: 0x18623A720
+1085961: 	public Vector3 WorldToScreenPoint(Vector3 position) { }
+1085962: 
+1085963: 	// RVA: 0x623A920 Offset: 0x6238F20 VA: 0x18623A920
+1085964: 	public Vector3 WorldToViewportPoint(Vector3 position) { }
+1085965: 
+1085966: 	// RVA: 0x623A520 Offset: 0x6238B20 VA: 0x18623A520
+1085967: 	public Vector3 ViewportToWorldPoint(Vector3 position) { }
+1085968: 
+1085969: 	// RVA: 0x6239160 Offset: 0x6237760 VA: 0x186239160
+1085970: 	public Vector3 ScreenToWorldPoint(Vector3 position) { }
+1085971: 
+1085972: 	// RVA: 0x6238F80 Offset: 0x6237580 VA: 0x186238F80
+1085973: 	public Vector3 ScreenToViewportPoint(Vector3 position) { }
+1085974: 
+1085975: 	// RVA: 0x623A400 Offset: 0x6238A00 VA: 0x18623A400
+1085976: 	public Vector3 ViewportToScreenPoint(Vector3 position) { }
+1085977: 
+1085978: 	// RVA: 0x6236F40 Offset: 0x6235540 VA: 0x186236F40
+1085979: 	internal Vector2 GetFrustumPlaneSizeAt(float distance) { }
+1085980: 
+1085981: 	// RVA: 0x623A100 Offset: 0x6238700 VA: 0x18623A100
+1085982: 	private Ray ViewportPointToRay(Vector2 pos, Camera.MonoOrStereoscopicEye eye) { }
+1085983: 
+1085984: 	// RVA: 0x623A2A0 Offset: 0x62388A0 VA: 0x18623A2A0
+1085985: 	public Ray ViewportPointToRay(Vector3 pos, Camera.MonoOrStereoscopicEye eye) { }
+1085986: 
+1085987: 	// RVA: 0x623A1B0 Offset: 0x62387B0 VA: 0x18623A1B0
+1085988: 	public Ray ViewportPointToRay(Vector3 pos) { }
+1085989: 
+1085990: 	// RVA: 0x6238E70 Offset: 0x6237470 VA: 0x186238E70
+1085991: 	private Ray ScreenPointToRay(Vector2 pos, Camera.MonoOrStereoscopicEye eye) { }
+1085992: 
+1085993: 	// RVA: 0x6238D70 Offset: 0x6237370 VA: 0x186238D70
+1085994: 	public Ray ScreenPointToRay(Vector3 pos, Camera.MonoOrStereoscopicEye eye) { }
+1085995: 
+1085996: 	// RVA: 0x6238C80 Offset: 0x6237280 VA: 0x186238C80
+1085997: 	public Ray ScreenPointToRay(Vector3 pos) { }
+1085998: 
+1085999: 	[FreeFunction("CameraScripting::CalculateViewportRayVectors", HasExplicitThis = True)]
+1086000: 	// RVA: 0x6236000 Offset: 0x6234600 VA: 0x186236000
+1086001: 	private void CalculateFrustumCornersInternal(Rect viewport, float z, Camera.MonoOrStereoscopicEye eye, [Out] Vector3[] outCorners) { }
+1086002: 
+1086003: 	// RVA: 0x6236170 Offset: 0x6234770 VA: 0x186236170
+1086004: 	public void CalculateFrustumCorners(Rect viewport, float z, Camera.MonoOrStereoscopicEye eye, Vector3[] outCorners) { }
+1086005: 
+1086006: 	[NativeName("CalculateProjectionMatrixFromPhysicalProperties")]
+1086007: 	// RVA: 0x62363E0 Offset: 0x62349E0 VA: 0x1862363E0
+1086008: 	private static void CalculateProjectionMatrixFromPhysicalPropertiesInternal(out Matrix4x4 output, float focalLength, Vector2 sensorSize, Vector2 lensShift, float nearClip, float farClip, float gateAspect, Camera.GateFitMode gateFitMode) { }
+1086009: 
+1086010: 	// RVA: 0x6236470 Offset: 0x6234A70 VA: 0x186236470
+1086011: 	public static void CalculateProjectionMatrixFromPhysicalProperties(out Matrix4x4 output, float focalLength, Vector2 sensorSize, Vector2 lensShift, float nearClip, float farClip, Camera.GateFitParameters gateFitParameters) { }
+1086012: 
+1086013: 	[NativeName("FocalLengthToFieldOfView_Safe")]
+1086014: 	// RVA: 0x6236850 Offset: 0x6234E50 VA: 0x186236850
+1086015: 	public static float FocalLengthToFieldOfView(float focalLength, float sensorSize) { }
+1086016: 
+1086017: 	[NativeName("FieldOfViewToFocalLength_Safe")]
+1086018: 	// RVA: 0x62366E0 Offset: 0x6234CE0 VA: 0x1862366E0
+1086019: 	public static float FieldOfViewToFocalLength(float fieldOfView, float sensorSize) { }
+1086020: 
+1086021: 	[NativeName("HorizontalToVerticalFieldOfView_Safe")]
+1086022: 	// RVA: 0x62376C0 Offset: 0x6235CC0 VA: 0x1862376C0
+1086023: 	public static float HorizontalToVerticalFieldOfView(float horizontalFieldOfView, float aspectRatio) { }
+1086024: 
+1086025: 	// RVA: 0x623A040 Offset: 0x6238640 VA: 0x18623A040
+1086026: 	public static float VerticalToHorizontalFieldOfView(float verticalFieldOfView, float aspectRatio) { }
+1086027: 
+1086028: 	[FreeFunction("FindMainCamera")]
+1086029: 	// RVA: 0x623C5F0 Offset: 0x623ABF0 VA: 0x18623C5F0
+1086030: 	public static Camera get_main() { }
+1086031: 
+1086032: 	// RVA: 0x623BA90 Offset: 0x623A090 VA: 0x18623BA90
+1086033: 	public static Camera get_current() { }
+1086034: 
+1086035: 	[FreeFunction("GetCurrentCameraPPtr")]
+1086036: 	// RVA: 0x623BA90 Offset: 0x623A090 VA: 0x18623BA90
+1086037: 	private static Camera get_currentInternal() { }
+1086038: 
+1086039: 	[FreeFunction("CameraScripting::GetScene", HasExplicitThis = True)]
+1086040: 	// RVA: 0x623D4F0 Offset: 0x623BAF0 VA: 0x18623D4F0
+1086041: 	public Scene get_scene() { }
+1086042: 
+1086043: 	[FreeFunction("CameraScripting::SetScene", HasExplicitThis = True)]
+1086044: 	// RVA: 0x6240780 Offset: 0x623ED80 VA: 0x186240780
+1086045: 	public void set_scene(Scene value) { }
+1086046: 
+1086047: 	[NativeMethod("GetStereoEnabledForBuiltInOrSRP")]
+1086048: 	// RVA: 0x623D9C0 Offset: 0x623BFC0 VA: 0x18623D9C0
+1086049: 	public bool get_stereoEnabled() { }
+1086050: 
+1086051: 	// RVA: 0x623DA80 Offset: 0x623C080 VA: 0x18623DA80
+1086052: 	public float get_stereoSeparation() { }
+1086053: 
+1086054: 	// RVA: 0x6240AF0 Offset: 0x623F0F0 VA: 0x186240AF0
+1086055: 	public void set_stereoSeparation(float value) { }
+1086056: 
+1086057: 	// RVA: 0x623D900 Offset: 0x623BF00 VA: 0x18623D900
+1086058: 	public float get_stereoConvergence() { }
+1086059: 
+1086060: 	// RVA: 0x6240A10 Offset: 0x623F010 VA: 0x186240A10
+1086061: 	public void set_stereoConvergence(float value) { }
+1086062: 
+1086063: 	[NativeName("AreVRStereoViewMatricesWithinSingleCullTolerance")]
+1086064: 	// RVA: 0x623B120 Offset: 0x6239720 VA: 0x18623B120
+1086065: 	public bool get_areVRStereoViewMatricesWithinSingleCullTolerance() { }
+1086066: 
+1086067: 	// RVA: 0x623DB40 Offset: 0x623C140 VA: 0x18623DB40
+1086068: 	public StereoTargetEyeMask get_stereoTargetEye() { }
+1086069: 
+1086070: 	// RVA: 0x6240C50 Offset: 0x623F250 VA: 0x186240C50
+1086071: 	public void set_stereoTargetEye(StereoTargetEyeMask value) { }
+1086072: 
+1086073: 	// RVA: 0x623DB40 Offset: 0x623C140 VA: 0x18623DB40
+1086074: 	internal StereoTargetEyeMask get_stereoTargetEyeInternal() { }
+1086075: 
+1086076: 	// RVA: 0x6240BC0 Offset: 0x623F1C0 VA: 0x186240BC0
+1086077: 	internal void set_stereoTargetEyeInternal(StereoTargetEyeMask value) { }
+1086078: 
+1086079: 	[FreeFunction("CameraScripting::GetStereoActiveEye", HasExplicitThis = True)]
+1086080: 	// RVA: 0x623D840 Offset: 0x623BE40 VA: 0x18623D840
+1086081: 	public Camera.MonoOrStereoscopicEye get_stereoActiveEye() { }
+1086082: 
+1086083: 	// RVA: 0x6237410 Offset: 0x6235A10 VA: 0x186237410
+1086084: 	public Matrix4x4 GetStereoNonJitteredProjectionMatrix(Camera.StereoscopicEye eye) { }
+1086085: 
+1086086: 	[FreeFunction("CameraScripting::GetStereoViewMatrix", HasExplicitThis = True)]
+1086087: 	// RVA: 0x6237610 Offset: 0x6235C10 VA: 0x186237610
+1086088: 	public Matrix4x4 GetStereoViewMatrix(Camera.StereoscopicEye eye) { }
+1086089: 
+1086090: 	// RVA: 0x6236650 Offset: 0x6234C50 VA: 0x186236650
+1086091: 	public void CopyStereoDeviceProjectionMatrixToNonJittered(Camera.StereoscopicEye eye) { }
+1086092: 
+1086093: 	[FreeFunction("CameraScripting::GetStereoProjectionMatrix", HasExplicitThis = True)]
+1086094: 	// RVA: 0x6237510 Offset: 0x6235B10 VA: 0x186237510
+1086095: 	public Matrix4x4 GetStereoProjectionMatrix(Camera.StereoscopicEye eye) { }
+1086096: 
+1086097: 	// RVA: 0x6239660 Offset: 0x6237C60 VA: 0x186239660
+1086098: 	public void SetStereoProjectionMatrix(Camera.StereoscopicEye eye, Matrix4x4 matrix) { }
+1086099: 
+1086100: 	// RVA: 0x6238890 Offset: 0x6236E90 VA: 0x186238890
+1086101: 	public void ResetStereoProjectionMatrices() { }
+1086102: 
+1086103: 	// RVA: 0x6239750 Offset: 0x6237D50 VA: 0x186239750
+1086104: 	public void SetStereoViewMatrix(Camera.StereoscopicEye eye, Matrix4x4 matrix) { }
+1086105: 
+1086106: 	// RVA: 0x6238950 Offset: 0x6236F50 VA: 0x186238950
+1086107: 	public void ResetStereoViewMatrices() { }
+1086108: 
+1086109: 	[FreeFunction("CameraScripting::GetAllCamerasCount")]
+1086110: 	// RVA: 0x62368A0 Offset: 0x6234EA0 VA: 0x1862368A0
+1086111: 	private static int GetAllCamerasCount() { }
+1086112: 
+1086113: 	[FreeFunction("CameraScripting::GetAllCameras")]
+1086114: 	// RVA: 0x6236910 Offset: 0x6234F10 VA: 0x186236910
+1086115: 	private static int GetAllCamerasImpl([Out] Camera[] cam) { }
+1086116: 
+1086117: 	// RVA: 0x62368A0 Offset: 0x6234EA0 VA: 0x1862368A0
+1086118: 	public static int get_allCamerasCount() { }
+1086119: 
+1086120: 	// RVA: 0x623AC60 Offset: 0x6239260 VA: 0x18623AC60
+1086121: 	public static Camera[] get_allCameras() { }
+1086122: 
+1086123: 	// RVA: 0x6236980 Offset: 0x6234F80 VA: 0x186236980
+1086124: 	public static int GetAllCameras(Camera[] cameras) { }
+1086125: 
+1086126: 	[FreeFunction("CameraScripting::RenderToCubemap", HasExplicitThis = True)]
+1086127: 	// RVA: 0x6238080 Offset: 0x6236680 VA: 0x186238080

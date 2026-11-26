@@ -1,0 +1,59 @@
+﻿ 354019: 	// Methods
+ 354020: 
+ 354021: 	// RVA: 0x7AA710 Offset: 0x7A8D10 VA: 0x1807AA710
+ 354022: 	public void .ctor() { }
+ 354023: }
+ 354024: 
+ 354025: // Namespace: Game.Battle.EntityModel
+ 354026: public class LootNodeTargetHintUpdater : UpdaterPoolItem, IStoppedUpdater // TypeDefIndex: 8471
+ 354027: {
+ 354028: 	// Fields
+ 354029: 	private ITargetObject _targetObject; // 0x20
+ 354030: 	private TargetHintObjectsModel _targetHintObjectsModel; // 0x28
+ 354031: 	private LootNodeModel _lootNodeModel; // 0x30
+ 354032: 	private bool _isVisible; // 0x38
+ 354033: 
+ 354034: 	// Methods
+ 354035: 
+ 354036: 	// RVA: 0xAEE950 Offset: 0xAECF50 VA: 0x180AEE950
+ 354037: 	public LootNodeTargetHintUpdater Init(ITargetObject targetObject, TargetHintObjectsModel targetHintObjectsModel, LootNodeModel lootNodeModel) { }
+ 354038: 
+ 354039: 	// RVA: 0xB3E920 Offset: 0xB3CF20 VA: 0x180B3E920 Slot: 4
+ 354040: 	protected override void Dispose() { }
+ 354041: 
+ 354042: 	// RVA: 0xBF3120 Offset: 0xBF1720 VA: 0x180BF3120 Slot: 5
+ 354043: 	protected override void OnUpdate() { }
+ 354044: 
+ 354045: 	// RVA: 0xB3EA50 Offset: 0xB3D050 VA: 0x180B3EA50
+ 354046: 	private void UpdateVisible(bool isVisible) { }
+ 354047: 
+ 354048: 	// RVA: 0xB3EA10 Offset: 0xB3D010 VA: 0x180B3EA10 Slot: 7
+ 354049: 	public void Stop() { }
+ 354050: 
+ 354051: 	// RVA: 0x7B6C60 Offset: 0x7B5260 VA: 0x1807B6C60
+ 354052: 	public void .ctor() { }
+ 354053: 
+ 354054: 	// RVA: 0x9165B0 Offset: 0x914BB0 VA: 0x1809165B0 Slot: 6
+ 354055: 	private void Core.Updater.IStoppedUpdater.Update() { }
+ 354056: }
+ 354057: 
+ 354058: // Namespace: Game.Battle.EntityModel
+ 354059: public abstract class EntityModel : IEntityModel // TypeDefIndex: 8472
+ 354060: {
+ 354061: 	// Fields
+ 354062: 	[CompilerGenerated]
+ 354063: 	private readonly int <Id>k__BackingField; // 0x10
+ 354064: 
+ 354065: 	// Properties
+ 354066: 	public int Id { get; }
+ 354067: 
+ 354068: 	// Methods
+ 354069: 
+ 354070: 	// RVA: 0x7AA990 Offset: 0x7A8F90 VA: 0x1807AA990
+ 354071: 	protected void .ctor(int id) { }
+ 354072: 
+ 354073: 	[CompilerGenerated]
+ 354074: 	// RVA: 0x7AA080 Offset: 0x7A8680 VA: 0x1807AA080 Slot: 4
+ 354075: 	public int get_Id() { }
+ 354076: }
+ 354077: 

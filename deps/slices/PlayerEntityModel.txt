@@ -1,0 +1,67 @@
+﻿ 363293: 	public HitsCacheModel get_HitsCacheModel() { }
+ 363294: 
+ 363295: 	[CompilerGenerated]
+ 363296: 	// RVA: 0x926B80 Offset: 0x925180 VA: 0x180926B80
+ 363297: 	public ClientCooldownModel get_KinematicUseCooldownModel() { }
+ 363298: 
+ 363299: 	[CompilerGenerated]
+ 363300: 	// RVA: 0x926BC0 Offset: 0x9251C0 VA: 0x180926BC0
+ 363301: 	public ClientImmunePopupModel get_ImmunePopupModel() { }
+ 363302: 
+ 363303: 	[CompilerGenerated]
+ 363304: 	// RVA: 0x926BB0 Offset: 0x9251B0 VA: 0x180926BB0
+ 363305: 	public DesiredYawModel get_DesiredYawModel() { }
+ 363306: 
+ 363307: 	[CompilerGenerated]
+ 363308: 	// RVA: 0x926D50 Offset: 0x925350 VA: 0x180926D50
+ 363309: 	public AimAssistModel get_AimAssistModel() { }
+ 363310: 
+ 363311: 	[CompilerGenerated]
+ 363312: 	// RVA: 0x926D90 Offset: 0x925390 VA: 0x180926D90
+ 363313: 	public AutoFireModel get_AutoFireModel() { }
+ 363314: 
+ 363315: 	[CompilerGenerated]
+ 363316: 	// RVA: 0x926C70 Offset: 0x925270 VA: 0x180926C70
+ 363317: 	public AutoLootAfterBreakColliderModel get_AutoLootAfterBreak() { }
+ 363318: 
+ 363319: 	[CompilerGenerated]
+ 363320: 	// RVA: 0x926D60 Offset: 0x925360 VA: 0x180926D60
+ 363321: 	public RecoilModel get_RecoilModel() { }
+ 363322: 
+ 363323: 	[CompilerGenerated]
+ 363324: 	// RVA: 0x926CC0 Offset: 0x9252C0 VA: 0x180926CC0
+ 363325: 	public PlayerFakeSpreadModel get_FakeSpreadModel() { }
+ 363326: 
+ 363327: 	[CompilerGenerated]
+ 363328: 	// RVA: 0x926DD0 Offset: 0x9253D0 VA: 0x180926DD0
+ 363329: 	public PlayerInsidePlotModel get_PlayerInsidePlotModel() { }
+ 363330: }
+ 363331: 
+ 363332: // Namespace: Game.Battle.EntityModel.Player
+ 363333: public class PlayerEntityModel : EntityModel // TypeDefIndex: 8711
+ 363334: {
+ 363335: 	// Fields
+ 363336: 	[CompilerGenerated]
+ 363337: 	private readonly PlayerClientModel <ClientModel>k__BackingField; // 0x18
+ 363338: 	[CompilerGenerated]
+ 363339: 	private readonly BattleCharacterModel <ServerModel>k__BackingField; // 0x20
+ 363340: 	public readonly long PublicId; // 0x28
+ 363341: 
+ 363342: 	// Properties
+ 363343: 	public PlayerClientModel ClientModel { get; }
+ 363344: 	public BattleCharacterModel ServerModel { get; }
+ 363345: 
+ 363346: 	// Methods
+ 363347: 
+ 363348: 	// RVA: 0xC51380 Offset: 0xC4F980 VA: 0x180C51380
+ 363349: 	public void .ctor(int id, GlobalModel globalModel, BattleCharacterModel serverModel, BattleCharacterSlotModel battleCharacterSlotModel, SettlementBonusModel settlementBonusModel, LocationDescription locationDescription, InventoryModels inventoryModels, WorldEntitiesModel worldEntitiesModel, ISetNow now, DirtyCashModel laptopDirtyCashModel) { }
+ 363350: 
+ 363351: 	[CompilerGenerated]
+ 363352: 	// RVA: 0x7E7130 Offset: 0x7E5730 VA: 0x1807E7130
+ 363353: 	public PlayerClientModel get_ClientModel() { }
+ 363354: 
+ 363355: 	[CompilerGenerated]
+ 363356: 	// RVA: 0x7AB150 Offset: 0x7A9750 VA: 0x1807AB150
+ 363357: 	public BattleCharacterModel get_ServerModel() { }
+ 363358: }
+ 363359: 

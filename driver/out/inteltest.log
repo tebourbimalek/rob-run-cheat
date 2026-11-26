@@ -1,0 +1,22 @@
+﻿== create
+[SC] CreateService réussite(s)
+== start
+[SC] StartService échec(s) 5 :
+
+Accès refusé.
+
+=== exit 5
+== query
+
+SERVICE_NAME: iqvw64etest 
+        TYPE               : 1  KERNEL_DRIVER  
+        STATE              : 1  STOPPED 
+        WIN32_EXIT_CODE    : 5  (0x5)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+[SC] ControlService échec(s) 1062 :
+
+Le service n'a pas été démarré.
+
+[SC] DeleteService réussite(s)

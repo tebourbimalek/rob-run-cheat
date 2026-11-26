@@ -1,0 +1,286 @@
+﻿2010000: 	public void .ctor() { }
+2010001: 
+2010002: 	// RVA: 0x63ACB30 Offset: 0x63AB130 VA: 0x1863ACB30
+2010003: 	private static bool get_enabled_Injected(IntPtr _unity_self) { }
+2010004: 
+2010005: 	// RVA: 0x63ACBF0 Offset: 0x63AB1F0 VA: 0x1863ACBF0
+2010006: 	private static void set_enabled_Injected(IntPtr _unity_self, bool value) { }
+2010007: 
+2010008: 	// RVA: 0x63AC960 Offset: 0x63AAF60 VA: 0x1863AC960
+2010009: 	private static IntPtr get_attachedRigidbody_Injected(IntPtr _unity_self) { }
+2010010: 
+2010011: 	// RVA: 0x63ACCD0 Offset: 0x63AB2D0 VA: 0x1863ACCD0
+2010012: 	private static void set_isTrigger_Injected(IntPtr _unity_self, bool value) { }
+2010013: 
+2010014: 	// RVA: 0x63AC5F0 Offset: 0x63AABF0 VA: 0x1863AC5F0
+2010015: 	private static void ClosestPoint_Injected(IntPtr _unity_self, in Vector3 position, out Vector3 ret) { }
+2010016: 
+2010017: 	// RVA: 0x63ACA40 Offset: 0x63AB040 VA: 0x1863ACA40
+2010018: 	private static void get_bounds_Injected(IntPtr _unity_self, out Bounds ret) { }
+2010019: 
+2010020: 	// RVA: 0x63AC700 Offset: 0x63AAD00 VA: 0x1863AC700
+2010021: 	private static void Raycast_Injected(IntPtr _unity_self, in Ray ray, float maxDistance, ref bool hasHit, out RaycastHit ret) { }
+2010022: }
+2010023: 
+2010024: // Namespace: 
+2010025: public sealed class Physics.ContactEventDelegate : MulticastDelegate // TypeDefIndex: 36046
+2010026: {
+2010027: 	// Methods
+2010028: 
+2010029: 	// RVA: 0x1928AF0 Offset: 0x19270F0 VA: 0x181928AF0
+2010030: 	public void .ctor(object object, IntPtr method) { }
+2010031: 
+2010032: 	// RVA: 0x1927360 Offset: 0x1925960 VA: 0x181927360 Slot: 13
+2010033: 	public virtual void Invoke(PhysicsScene scene, NativeArray.ReadOnly<ContactPairHeader> headerArray) { }
+2010034: }
+2010035: 
+2010036: // Namespace: UnityEngine
+2010037: [StaticAccessor("GetPhysicsManager()", 0)]
+2010038: [NativeHeader("Modules/Physics/PhysicsManager.h")]
+2010039: [NativeHeader("Modules/Physics/PhysicsQuery.h")]
+2010040: public class Physics // TypeDefIndex: 36047
+2010041: {
+2010042: 	// Fields
+2010043: 	[DebuggerBrowsable(0)]
+2010044: 	[CompilerGenerated]
+2010045: 	private static Action<PhysicsScene, NativeArray<ModifiableContactPair>> ContactModifyEvent; // 0x0
+2010046: 	[CompilerGenerated]
+2010047: 	[DebuggerBrowsable(0)]
+2010048: 	private static Action<PhysicsScene, NativeArray<ModifiableContactPair>> ContactModifyEventCCD; // 0x8
+2010049: 	[CompilerGenerated]
+2010050: 	[DebuggerBrowsable(0)]
+2010051: 	private static Action<PhysicsScene, IntPtr, int, bool> GenericContactModifyEvent; // 0x10
+2010052: 	[CompilerGenerated]
+2010053: 	[DebuggerBrowsable(0)]
+2010054: 	private static Physics.ContactEventDelegate ContactEvent; // 0x18
+2010055: 	private static readonly Collision s_ReusableCollision; // 0x20
+2010056: 
+2010057: 	// Properties
+2010058: 	public static bool invokeCollisionCallbacks { get; }
+2010059: 	public static PhysicsScene defaultPhysicsScene { get; }
+2010060: 	public static bool reuseCollisionCallbacks { get; }
+2010061: 
+2010062: 	// Methods
+2010063: 
+2010064: 	[RequiredByNativeCode]
+2010065: 	// RVA: 0x63AF550 Offset: 0x63ADB50 VA: 0x1863AF550
+2010066: 	private static void OnSceneContactModify(PhysicsScene scene, IntPtr buffer, int count, bool isCCD) { }
+2010067: 
+2010068: 	// RVA: 0x63AF980 Offset: 0x63ADF80 VA: 0x1863AF980
+2010069: 	private static void PhysXOnSceneContactModify(PhysicsScene scene, IntPtr buffer, int count, bool isCCD) { }
+2010070: 
+2010071: 	// RVA: 0x63B2200 Offset: 0x63B0800 VA: 0x1863B2200
+2010072: 	public static bool get_invokeCollisionCallbacks() { }
+2010073: 
+2010074: 	// RVA: 0x2B5A570 Offset: 0x2B58B70 VA: 0x182B5A570
+2010075: 	public static PhysicsScene get_defaultPhysicsScene() { }
+2010076: 
+2010077: 	// RVA: 0x63B0C80 Offset: 0x63AF280 VA: 0x1863B0C80
+2010078: 	public static bool Raycast(Vector3 origin, Vector3 direction, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction) { }
+2010079: 
+2010080: 	[ExcludeFromDocs]
+2010081: 	// RVA: 0x63B09E0 Offset: 0x63AEFE0 VA: 0x1863B09E0
+2010082: 	public static bool Raycast(Vector3 origin, Vector3 direction, float maxDistance, int layerMask) { }
+2010083: 
+2010084: 	[ExcludeFromDocs]
+2010085: 	// RVA: 0x63B1470 Offset: 0x63AFA70 VA: 0x1863B1470
+2010086: 	public static bool Raycast(Vector3 origin, Vector3 direction, float maxDistance) { }
+2010087: 
+2010088: 	[ExcludeFromDocs]
+2010089: 	// RVA: 0x63B1220 Offset: 0x63AF820 VA: 0x1863B1220
+2010090: 	public static bool Raycast(Vector3 origin, Vector3 direction) { }
+2010091: 
+2010092: 	// RVA: 0x63B1140 Offset: 0x63AF740 VA: 0x1863B1140
+2010093: 	public static bool Raycast(Vector3 origin, Vector3 direction, out RaycastHit hitInfo, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction) { }
+2010094: 
+2010095: 	[RequiredByNativeCode]
+2010096: 	[ExcludeFromDocs]
+2010097: 	// RVA: 0x63B0D50 Offset: 0x63AF350 VA: 0x1863B0D50
+2010098: 	public static bool Raycast(Vector3 origin, Vector3 direction, out RaycastHit hitInfo, float maxDistance, int layerMask) { }
+2010099: 
+2010100: 	[ExcludeFromDocs]
+2010101: 	// RVA: 0x63B0910 Offset: 0x63AEF10 VA: 0x1863B0910
+2010102: 	public static bool Raycast(Vector3 origin, Vector3 direction, out RaycastHit hitInfo, float maxDistance) { }
+2010103: 
+2010104: 	[ExcludeFromDocs]
+2010105: 	// RVA: 0x63B0AB0 Offset: 0x63AF0B0 VA: 0x1863B0AB0
+2010106: 	public static bool Raycast(Vector3 origin, Vector3 direction, out RaycastHit hitInfo) { }
+2010107: 
+2010108: 	// RVA: 0x63B1070 Offset: 0x63AF670 VA: 0x1863B1070
+2010109: 	public static bool Raycast(Ray ray, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction) { }
+2010110: 
+2010111: 	[ExcludeFromDocs]
+2010112: 	// RVA: 0x63B0E30 Offset: 0x63AF430 VA: 0x1863B0E30
+2010113: 	public static bool Raycast(Ray ray, float maxDistance, int layerMask) { }
+2010114: 
+2010115: 	[ExcludeFromDocs]
+2010116: 	// RVA: 0x63B0EF0 Offset: 0x63AF4F0 VA: 0x1863B0EF0
+2010117: 	public static bool Raycast(Ray ray, float maxDistance) { }
+2010118: 
+2010119: 	[ExcludeFromDocs]
+2010120: 	// RVA: 0x63B1530 Offset: 0x63AFB30 VA: 0x1863B1530
+2010121: 	public static bool Raycast(Ray ray) { }
+2010122: 
+2010123: 	// RVA: 0x63B1390 Offset: 0x63AF990 VA: 0x1863B1390
+2010124: 	public static bool Raycast(Ray ray, out RaycastHit hitInfo, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction) { }
+2010125: 
+2010126: 	[ExcludeFromDocs]
+2010127: 	// RVA: 0x63B0B80 Offset: 0x63AF180 VA: 0x1863B0B80
+2010128: 	public static bool Raycast(Ray ray, out RaycastHit hitInfo, float maxDistance, int layerMask) { }
+2010129: 
+2010130: 	[ExcludeFromDocs]
+2010131: 	// RVA: 0x63B0FA0 Offset: 0x63AF5A0 VA: 0x1863B0FA0
+2010132: 	public static bool Raycast(Ray ray, out RaycastHit hitInfo, float maxDistance) { }
+2010133: 
+2010134: 	[ExcludeFromDocs]
+2010135: 	// RVA: 0x63B12D0 Offset: 0x63AF8D0 VA: 0x1863B12D0
+2010136: 	public static bool Raycast(Ray ray, out RaycastHit hitInfo) { }
+2010137: 
+2010138: 	[FreeFunction("Physics::RaycastAll")]
+2010139: 	// RVA: 0x63AF420 Offset: 0x63ADA20 VA: 0x1863AF420
+2010140: 	private static RaycastHit[] Internal_RaycastAll(PhysicsScene physicsScene, Ray ray, float maxDistance, int mask, QueryTriggerInteraction queryTriggerInteraction) { }
+2010141: 
+2010142: 	// RVA: 0x63AFE50 Offset: 0x63AE450 VA: 0x1863AFE50
+2010143: 	public static RaycastHit[] RaycastAll(Vector3 origin, Vector3 direction, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction) { }
+2010144: 
+2010145: 	[ExcludeFromDocs]
+2010146: 	// RVA: 0x63AFDA0 Offset: 0x63AE3A0 VA: 0x1863AFDA0
+2010147: 	public static RaycastHit[] RaycastAll(Vector3 origin, Vector3 direction, float maxDistance, int layerMask) { }
+2010148: 
+2010149: 	[ExcludeFromDocs]
+2010150: 	// RVA: 0x63B00A0 Offset: 0x63AE6A0 VA: 0x1863B00A0
+2010151: 	public static RaycastHit[] RaycastAll(Vector3 origin, Vector3 direction, float maxDistance) { }
+2010152: 
+2010153: 	[ExcludeFromDocs]
+2010154: 	// RVA: 0x63B0140 Offset: 0x63AE740 VA: 0x1863B0140
+2010155: 	public static RaycastHit[] RaycastAll(Vector3 origin, Vector3 direction) { }
+2010156: 
+2010157: 	// RVA: 0x63AFFF0 Offset: 0x63AE5F0 VA: 0x1863AFFF0
+2010158: 	public static RaycastHit[] RaycastAll(Ray ray, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction) { }
+2010159: 
+2010160: 	[RequiredByNativeCode]
+2010161: 	[ExcludeFromDocs]
+2010162: 	// RVA: 0x63AFD00 Offset: 0x63AE300 VA: 0x1863AFD00
+2010163: 	public static RaycastHit[] RaycastAll(Ray ray, float maxDistance, int layerMask) { }
+2010164: 
+2010165: 	[ExcludeFromDocs]
+2010166: 	// RVA: 0x63AFC60 Offset: 0x63AE260 VA: 0x1863AFC60
+2010167: 	public static RaycastHit[] RaycastAll(Ray ray, float maxDistance) { }
+2010168: 
+2010169: 	[ExcludeFromDocs]
+2010170: 	// RVA: 0x63B01E0 Offset: 0x63AE7E0 VA: 0x1863B01E0
+2010171: 	public static RaycastHit[] RaycastAll(Ray ray) { }
+2010172: 
+2010173: 	// RVA: 0x63B0680 Offset: 0x63AEC80 VA: 0x1863B0680
+2010174: 	public static int RaycastNonAlloc(Ray ray, RaycastHit[] results, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction) { }
+2010175: 
+2010176: 	[ExcludeFromDocs]
+2010177: 	[RequiredByNativeCode]
+2010178: 	// RVA: 0x63B0400 Offset: 0x63AEA00 VA: 0x1863B0400
+2010179: 	public static int RaycastNonAlloc(Ray ray, RaycastHit[] results, float maxDistance, int layerMask) { }
+2010180: 
+2010181: 	[ExcludeFromDocs]
+2010182: 	// RVA: 0x63B0270 Offset: 0x63AE870 VA: 0x1863B0270
+2010183: 	public static int RaycastNonAlloc(Ray ray, RaycastHit[] results, float maxDistance) { }
+2010184: 
+2010185: 	[ExcludeFromDocs]
+2010186: 	// RVA: 0x63B0340 Offset: 0x63AE940 VA: 0x1863B0340
+2010187: 	public static int RaycastNonAlloc(Ray ray, RaycastHit[] results) { }
+2010188: 
+2010189: 	// RVA: 0x63B0760 Offset: 0x63AED60 VA: 0x1863B0760
+2010190: 	public static int RaycastNonAlloc(Vector3 origin, Vector3 direction, RaycastHit[] results, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction) { }
+2010191: 
+2010192: 	[ExcludeFromDocs]
+2010193: 	// RVA: 0x63B05A0 Offset: 0x63AEBA0 VA: 0x1863B05A0
+2010194: 	public static int RaycastNonAlloc(Vector3 origin, Vector3 direction, RaycastHit[] results, float maxDistance, int layerMask) { }
+2010195: 
+2010196: 	[ExcludeFromDocs]
+2010197: 	// RVA: 0x63B04D0 Offset: 0x63AEAD0 VA: 0x1863B04D0
+2010198: 	public static int RaycastNonAlloc(Vector3 origin, Vector3 direction, RaycastHit[] results, float maxDistance) { }
+2010199: 
+2010200: 	[ExcludeFromDocs]
+2010201: 	// RVA: 0x63B0840 Offset: 0x63AEE40 VA: 0x1863B0840
+2010202: 	public static int RaycastNonAlloc(Vector3 origin, Vector3 direction, RaycastHit[] results) { }
+2010203: 
+2010204: 	// RVA: 0x63B2090 Offset: 0x63B0690 VA: 0x1863B2090
+2010205: 	public static void SyncTransforms() { }
+2010206: 
+2010207: 	// RVA: 0x63B2230 Offset: 0x63B0830 VA: 0x1863B2230
+2010208: 	public static bool get_reuseCollisionCallbacks() { }
+2010209: 
+2010210: 	[FreeFunction("Physics::ComputePenetration")]
+2010211: 	// RVA: 0x63AFAF0 Offset: 0x63AE0F0 VA: 0x1863AFAF0
+2010212: 	private static bool Query_ComputePenetration(Collider colliderA, Vector3 positionA, Quaternion rotationA, Collider colliderB, Vector3 positionB, Quaternion rotationB, ref Vector3 direction, ref float distance) { }
+2010213: 
+2010214: 	// RVA: 0x63AEE60 Offset: 0x63AD460 VA: 0x1863AEE60
+2010215: 	public static bool ComputePenetration(Collider colliderA, Vector3 positionA, Quaternion rotationA, Collider colliderB, Vector3 positionB, Quaternion rotationB, out Vector3 direction, out float distance) { }
+2010216: 
+2010217: 	// RVA: 0x63AF8B0 Offset: 0x63ADEB0 VA: 0x1863AF8B0
+2010218: 	public static int OverlapSphereNonAlloc(Vector3 position, float radius, Collider[] results, int layerMask, QueryTriggerInteraction queryTriggerInteraction) { }
+2010219: 
+2010220: 	[ExcludeFromDocs]
+2010221: 	// RVA: 0x63AF7B0 Offset: 0x63ADDB0 VA: 0x1863AF7B0
+2010222: 	public static int OverlapSphereNonAlloc(Vector3 position, float radius, Collider[] results, int layerMask) { }
+2010223: 
+2010224: 	// RVA: 0x63B1CC0 Offset: 0x63B02C0 VA: 0x1863B1CC0
+2010225: 	public static int SphereCastNonAlloc(Vector3 origin, float radius, Vector3 direction, RaycastHit[] results, float maxDistance, int layerMask, QueryTriggerInteraction queryTriggerInteraction) { }
+2010226: 
+2010227: 	[ExcludeFromDocs]
+2010228: 	// RVA: 0x63B1E90 Offset: 0x63B0490 VA: 0x1863B1E90
+2010229: 	public static int SphereCastNonAlloc(Vector3 origin, float radius, Vector3 direction, RaycastHit[] results, float maxDistance, int layerMask) { }
+2010230: 
+2010231: 	[StaticAccessor("PhysicsManager", 2)]
+2010232: 	// RVA: 0x63AF190 Offset: 0x63AD790 VA: 0x1863AF190
+2010233: 	internal static Collider GetColliderByInstanceID(EntityId entityId) { }
+2010234: 
+2010235: 	[StaticAccessor("PhysicsManager", 2)]
+2010236: 	// RVA: 0x63AF0D0 Offset: 0x63AD6D0 VA: 0x1863AF0D0
+2010237: 	internal static Component GetBodyByInstanceID(EntityId entityId) { }
+2010238: 
+2010239: 	[StaticAccessor("PhysicsManager", 2)]
+2010240: 	// RVA: 0x63B1A40 Offset: 0x63B0040 VA: 0x1863B1A40
+2010241: 	private static void SendOnCollisionEnter(Component component, Collision collision) { }
+2010242: 
+2010243: 	[StaticAccessor("PhysicsManager", 2)]
+2010244: 	// RVA: 0x63B1C20 Offset: 0x63B0220 VA: 0x1863B1C20
+2010245: 	private static void SendOnCollisionStay(Component component, Collision collision) { }
+2010246: 
+2010247: 	[StaticAccessor("PhysicsManager", 2)]
+2010248: 	// RVA: 0x63B1B30 Offset: 0x63B0130 VA: 0x1863B1B30
+2010249: 	private static void SendOnCollisionExit(Component component, Collision collision) { }
+2010250: 
+2010251: 	[RequiredByNativeCode]
+2010252: 	// RVA: 0x63AF600 Offset: 0x63ADC00 VA: 0x1863AF600
+2010253: 	private static void OnSceneContact(PhysicsScene scene, IntPtr buffer, int count) { }
+2010254: 
+2010255: 	// RVA: 0x63B15D0 Offset: 0x63AFBD0 VA: 0x1863B15D0
+2010256: 	private static void ReportContacts(NativeArray.ReadOnly<ContactPairHeader> array) { }
+2010257: 
+2010258: 	// RVA: 0x63AF210 Offset: 0x63AD810 VA: 0x1863AF210
+2010259: 	private static Collision GetCollisionToReport(in ContactPairHeader header, in ContactPair pair, bool flipped) { }
+2010260: 
+2010261: 	// RVA: 0x63B20C0 Offset: 0x63B06C0 VA: 0x1863B20C0
+2010262: 	private static void .cctor() { }
+2010263: 
+2010264: 	// RVA: 0x63AF3B0 Offset: 0x63AD9B0 VA: 0x1863AF3B0
+2010265: 	private static void Internal_RaycastAll_Injected(in PhysicsScene physicsScene, in Ray ray, float maxDistance, int mask, QueryTriggerInteraction queryTriggerInteraction, out BlittableArrayWrapper ret) { }
+2010266: 
+2010267: 	// RVA: 0x63AFA80 Offset: 0x63AE080 VA: 0x1863AFA80
+2010268: 	private static bool Query_ComputePenetration_Injected(IntPtr colliderA, in Vector3 positionA, in Quaternion rotationA, IntPtr colliderB, in Vector3 positionB, in Quaternion rotationB, ref Vector3 direction, ref float distance) { }
+2010269: 
+2010270: 	// RVA: 0x63AF150 Offset: 0x63AD750 VA: 0x1863AF150
+2010271: 	private static IntPtr GetColliderByInstanceID_Injected(in EntityId entityId) { }
+2010272: 
+2010273: 	// RVA: 0x63AF090 Offset: 0x63AD690 VA: 0x1863AF090
+2010274: 	private static IntPtr GetBodyByInstanceID_Injected(in EntityId entityId) { }
+2010275: 
+2010276: 	// RVA: 0x63B19F0 Offset: 0x63AFFF0 VA: 0x1863B19F0
+2010277: 	private static void SendOnCollisionEnter_Injected(IntPtr component, Collision collision) { }
+2010278: 
+2010279: 	// RVA: 0x63B1BD0 Offset: 0x63B01D0 VA: 0x1863B1BD0
+2010280: 	private static void SendOnCollisionStay_Injected(IntPtr component, Collision collision) { }
+2010281: 
+2010282: 	// RVA: 0x63B1AE0 Offset: 0x63B00E0 VA: 0x1863B1AE0
+2010283: 	private static void SendOnCollisionExit_Injected(IntPtr component, Collision collision) { }
+2010284: }
+2010285: 

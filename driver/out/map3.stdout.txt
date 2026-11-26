@@ -1,0 +1,21 @@
+[+] Free memory after driver execution enabled
+[<] Loading vulnerable driver, Name: RgWZaqXhSVfYzzoQEnD
+[+] NtLoadDriver Status 0x0
+[+] PiDDBLock found with third pattern
+[+] PiDDBCacheTable found with second pattern
+[+] PiDDBLock Ptr 0xfffff8038a9ae7c7
+[+] PiDDBCacheTable Ptr 0xfffff8038a9ae927
+[+] PiDDBLock Locked
+[+] Found Table Entry = 0xFFFFBD8044A06F30
+[+] PiDDBCacheTable Cleaned
+[+] g_KernelHashBucketList Found 0xFFFFF8031C9AF090
+[+] g_HashCacheLock Locked
+[+] Found In g_KernelHashBucketList: RgWZaqXhSVfYzzoQEnD
+[+] g_KernelHashBucketList Cleaned
+[+] MmUnloadedDrivers Cleaned: RgWZaqXhSVfYzzoQEnD
+[+] WdFilterDriverList Cleaned: \Users\GIGABYTE\AppData\Local\Temp\RgWZaqXhSVfYzzoQEnD
+[+] Image base has been allocated at 0xFFFF998FEE0C2000
+[+] Skipped 0x1000 bytes of PE Header
+[+] Load config directory wasn't found, probably StackCookie not defined, fix cookie skipped
+[<] Calling DriverEntry 0xFFFF998FEE0C2690
+[+] Callback example called

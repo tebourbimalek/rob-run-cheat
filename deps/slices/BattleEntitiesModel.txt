@@ -1,0 +1,261 @@
+﻿ 238416: {
+ 238417: 	// Fields
+ 238418: 	private readonly IClientUpdater _characterSlotsUpdater; // 0x10
+ 238419: 	private readonly IUpdater _clanBattleTeamCacheUpdater; // 0x18
+ 238420: 	private readonly GatherSettlementCollectionsModel _gatherSettlementCollectionsModel; // 0x20
+ 238421: 
+ 238422: 	// Methods
+ 238423: 
+ 238424: 	// RVA: 0x90E5B0 Offset: 0x90CBB0 VA: 0x18090E5B0
+ 238425: 	public void .ctor(BattleModel battleModel, GlobalModel globalModel, IRegisterDisposable registerDisposable) { }
+ 238426: 
+ 238427: 	// RVA: 0x90E410 Offset: 0x90CA10 VA: 0x18090E410 Slot: 4
+ 238428: 	public void Update() { }
+ 238429: }
+ 238430: 
+ 238431: // Namespace: 
+ 238432: [CompilerGenerated]
+ 238433: [Serializable]
+ 238434: private sealed class BattleEntitiesModel.<>c // TypeDefIndex: 5516
+ 238435: {
+ 238436: 	// Fields
+ 238437: 	public static readonly BattleEntitiesModel.<>c <>9; // 0x0
+ 238438: 
+ 238439: 	// Methods
+ 238440: 
+ 238441: 	// RVA: 0x944F70 Offset: 0x943570 VA: 0x180944F70
+ 238442: 	private static void .cctor() { }
+ 238443: 
+ 238444: 	// RVA: 0x7AA710 Offset: 0x7A8D10 VA: 0x1807AA710
+ 238445: 	public void .ctor() { }
+ 238446: 
+ 238447: 	// RVA: 0x944AF0 Offset: 0x9430F0 VA: 0x180944AF0
+ 238448: 	internal TimelineSnapshotsData<GrenadeTimelineData> <.cctor>b__107_0() { }
+ 238449: 
+ 238450: 	// RVA: 0x944BF0 Offset: 0x9431F0 VA: 0x180944BF0
+ 238451: 	internal TimelineExtrapolationsData<GrenadeTimelineData> <.cctor>b__107_1() { }
+ 238452: }
+ 238453: 
+ 238454: // Namespace: Game.Battle
+ 238455: [DefaultMember("Item")]
+ 238456: public class BattleEntitiesModel : IBattleEntitiesModel, IEnumerable<IEntityModel>, IEnumerable // TypeDefIndex: 5517
+ 238457: {
+ 238458: 	// Fields
+ 238459: 	private readonly PhysicsSceneModel _physicsSceneModel; // 0x10
+ 238460: 	private readonly PlayerBattleModel _playerBattleModel; // 0x18
+ 238461: 	private readonly InventoryModels _inventoryModels; // 0x20
+ 238462: 	private readonly WorldSettingsOverrideModel _worldSettingsOverrideModel; // 0x28
+ 238463: 	private readonly EntitiesParamsModel _entitiesParamsModel; // 0x30
+ 238464: 	private readonly SettlementModel _settlementModel; // 0x38
+ 238465: 	private readonly PhysicsBodiesModel _physicsBodiesModel; // 0x40
+ 238466: 	private readonly LocationDescriptionEntitiesModel _locationDescriptionEntitiesModel; // 0x48
+ 238467: 	private readonly Dictionary<int, IEntityModel> _models; // 0x50
+ 238468: 	private readonly Dictionary<int, PlotModel> _plotsModels; // 0x58
+ 238469: 	private readonly WorldEntitiesModel _worldEntitiesModel; // 0x60
+ 238470: 	private readonly IReplicationGridLayers _replicationGridLayers; // 0x68
+ 238471: 	private readonly Dictionary<LocationSecurityAlarmDescription, SecurityAlarmModel> _securityAlarmByDescription; // 0x70
+ 238472: 	[CompilerGenerated]
+ 238473: 	private readonly ReadOnlyDictionaryNonAlloc<LocationSecurityAlarmDescription, SecurityAlarmModel> <SecurityAlarmByDescription>k__BackingField; // 0x78
+ 238474: 	private static Pool<TimelineSnapshotsData<GrenadeTimelineData>> _grenadeSnapshots; // 0x0
+ 238475: 	private static Pool<TimelineExtrapolationsData<GrenadeTimelineData>> _grenadeExtrapolations; // 0x8
+ 238476: 	private readonly ClientCharacterSlotsModel _characterSlotModel; // 0x80
+ 238477: 	private readonly VehiclesClientModel _vehiclesModel; // 0x88
+ 238478: 	private readonly LocationPlotSpotsModel _locationPlotSpotsModel; // 0x90
+ 238479: 	private readonly LocationDescription _location; // 0x98
+ 238480: 	private readonly SectorDescription _sector; // 0xA0
+ 238481: 	private readonly SettlementBonusModel _settlementBonusModel; // 0xA8
+ 238482: 	private readonly GlobalModel _globalModel; // 0xB0
+ 238483: 	private readonly TimeModel _timeModel; // 0xB8
+ 238484: 	private readonly DirtyCashModel _laptopDirtyCashModel; // 0xC0
+ 238485: 	private readonly PlotGradeDescription _plotGrade; // 0xC8
+ 238486: 	[CompilerGenerated]
+ 238487: 	private PlayerEntityModel <Player>k__BackingField; // 0xD0
+ 238488: 	[CompilerGenerated]
+ 238489: 	private PlotEntityModel <SelfPlot>k__BackingField; // 0xD8
+ 238490: 	[CompilerGenerated]
+ 238491: 	private readonly ReadOnlyDictionaryNonAlloc<int, IEntityModel> <EntityModels>k__BackingField; // 0xE0
+ 238492: 
+ 238493: 	// Properties
+ 238494: 	public ReadOnlyDictionaryNonAlloc<LocationSecurityAlarmDescription, SecurityAlarmModel> SecurityAlarmByDescription { get; }
+ 238495: 	public PlayerEntityModel Player { get; set; }
+ 238496: 	public PlotEntityModel SelfPlot { get; set; }
+ 238497: 	public IEntityModel Item { get; }
+ 238498: 	public WorldEntitiesModel WorldEntitiesModel { get; }
+ 238499: 	public PhysicsBodiesModel PhysicsBodiesModel { get; }
+ 238500: 	public ReadOnlyDictionaryNonAlloc<int, IEntityModel> EntityModels { get; }
+ 238501: 	public PhysicsSceneModel PhysicsScene { get; }
+ 238502: 	public Dictionary.ValueCollection<int, IEntityModel> EntityModelsValues { get; }
+ 238503: 
+ 238504: 	// Methods
+ 238505: 
+ 238506: 	[CompilerGenerated]
+ 238507: 	// RVA: 0x9161A0 Offset: 0x9147A0 VA: 0x1809161A0 Slot: 62
+ 238508: 	public ReadOnlyDictionaryNonAlloc<LocationSecurityAlarmDescription, SecurityAlarmModel> get_SecurityAlarmByDescription() { }
+ 238509: 
+ 238510: 	[CompilerGenerated]
+ 238511: 	// RVA: 0x916190 Offset: 0x914790 VA: 0x180916190 Slot: 4
+ 238512: 	public PlayerEntityModel get_Player() { }
+ 238513: 
+ 238514: 	[CompilerGenerated]
+ 238515: 	// RVA: 0x9161C0 Offset: 0x9147C0 VA: 0x1809161C0
+ 238516: 	private void set_Player(PlayerEntityModel value) { }
+ 238517: 
+ 238518: 	[CompilerGenerated]
+ 238519: 	// RVA: 0x9161B0 Offset: 0x9147B0 VA: 0x1809161B0 Slot: 5
+ 238520: 	public PlotEntityModel get_SelfPlot() { }
+ 238521: 
+ 238522: 	[CompilerGenerated]
+ 238523: 	// RVA: 0x915740 Offset: 0x913D40 VA: 0x180915740
+ 238524: 	private void set_SelfPlot(PlotEntityModel value) { }
+ 238525: 
+ 238526: 	// RVA: 0x915CE0 Offset: 0x9142E0 VA: 0x180915CE0
+ 238527: 	public void .ctor(PhysicsSceneModel physicsSceneModel, ClientCharacterSlotsModel characterSlotsModel, VehiclesClientModel vehiclesClientModel, LocationPlotSpotsModel locationPlotSpotsModel, LocationDescription location, SettlementBonusModel settlementBonusModel, PlayerBattleModel playerBattleModel, InventoryModels inventoryModels, WorldSettingsOverrideModel worldSettingsOverrideModel, EntitiesParamsModel entitiesParamsModel, SettlementModel settlementModel, PhysicsBodiesModel physicsBodiesModel, LocationDescriptionEntitiesModel locationDescriptionEntitiesModel, WorldEntitiesModel worldEntitiesModel, IReplicationGridLayers replicationGridLayers, SectorDescription sector, GlobalModel globalModel, TimeModel timeModel, DirtyCashModel laptopDirtyCashModel) { }
+ 238528: 
+ 238529: 	// RVA: 0x915740 Offset: 0x913D40 VA: 0x180915740 Slot: 6
+ 238530: 	public void SetSelfPlot(PlotEntityModel value) { }
+ 238531: 
+ 238532: 	// RVA: 0x911A40 Offset: 0x910040 VA: 0x180911A40 Slot: 7
+ 238533: 	public PlayerEntityModel CreatePlayer(int id, BattleCharacterData data) { }
+ 238534: 
+ 238535: 	// RVA: 0x90EA70 Offset: 0x90D070 VA: 0x18090EA70 Slot: 8
+ 238536: 	public void CreateBattleCharacter(int id, BattleCharacterData data, BattleCharacterData simulatedData) { }
+ 238537: 
+ 238538: 	// RVA: 0x910210 Offset: 0x90E810 VA: 0x180910210 Slot: 9
+ 238539: 	public void CreateContainer(int id, ContainerData data) { }
+ 238540: 
+ 238541: 	// RVA: 0x910E40 Offset: 0x90F440 VA: 0x180910E40 Slot: 10
+ 238542: 	public void CreateInventoryContainer(int id, ContainerEntityInventoryData data) { }
+ 238543: 
+ 238544: 	// RVA: 0x911770 Offset: 0x90FD70 VA: 0x180911770 Slot: 11
+ 238545: 	public void CreateLoot(int id, LootData data) { }
+ 238546: 
+ 238547: 	// RVA: 0x911690 Offset: 0x90FC90 VA: 0x180911690 Slot: 12
+ 238548: 	public void CreateLootInventory(int id, LootEntityInventoryData data) { }
+ 238549: 
+ 238550: 	// RVA: 0x913050 Offset: 0x911650 VA: 0x180913050 Slot: 22
+ 238551: 	public void CreateVehicleLootModel(int id, VehicleLootData data) { }
+ 238552: 
+ 238553: 	// RVA: 0x912DC0 Offset: 0x9113C0 VA: 0x180912DC0 Slot: 23
+ 238554: 	public void CreateVehicleLootInventoryModel(int id, VehicleLootEntityInventoryData data) { }
+ 238555: 
+ 238556: 	// RVA: 0x911270 Offset: 0x90F870 VA: 0x180911270 Slot: 13
+ 238557: 	public void CreateLocationDoor(int id, LocationDoorData data) { }
+ 238558: 
+ 238559: 	// RVA: 0x910F20 Offset: 0x90F520 VA: 0x180910F20 Slot: 14
+ 238560: 	public void CreateKinematicObjectsController(int id, KinematicObjectsControllerData data) { }
+ 238561: 
+ 238562: 	// RVA: 0x911E40 Offset: 0x910440 VA: 0x180911E40
+ 238563: 	private KinematicObjectsControllerModel CreatePlotKinematicObjectsControllerModel(int id, KinematicObjectsControllerData data) { }
+ 238564: 
+ 238565: 	// RVA: 0x90FCA0 Offset: 0x90E2A0 VA: 0x18090FCA0 Slot: 15
+ 238566: 	public void CreateCar(int id, CarData data) { }
+ 238567: 
+ 238568: 	// RVA: 0x910B90 Offset: 0x90F190 VA: 0x180910B90 Slot: 16
+ 238569: 	public void CreateHelicopter(int id, HelicopterData data) { }
+ 238570: 
+ 238571: 	// RVA: 0x90EC50 Offset: 0x90D250 VA: 0x18090EC50 Slot: 17
+ 238572: 	public void CreateBreakableColliderSet(int id, BreakableColliderSetData data) { }
+ 238573: 
+ 238574: 	// RVA: 0x90F0E0 Offset: 0x90D6E0 VA: 0x18090F0E0 Slot: 18
+ 238575: 	public void CreateBuildingModel(int id, BuildingData data) { }
+ 238576: 
+ 238577: 	// RVA: 0x911850 Offset: 0x90FE50 VA: 0x180911850 Slot: 19
+ 238578: 	public void CreateMetalDetectorModel(int id, MetalDetectorData data) { }
+ 238579: 
+ 238580: 	// RVA: 0x912C40 Offset: 0x911240 VA: 0x180912C40 Slot: 20
+ 238581: 	public void CreateTrunkModel(int id, VehicleEntityTrunkData data) { }
+ 238582: 
+ 238583: 	// RVA: 0x90FF70 Offset: 0x90E570 VA: 0x18090FF70 Slot: 21
+ 238584: 	public void CreateCargoModel(int id, CargoDroppedData data) { }
+ 238585: 
+ 238586: 	// RVA: 0x90E740 Offset: 0x90CD40 VA: 0x18090E740
+ 238587: 	private BattleCharacterModel AddBattleCharacter(int id, BattleCharacterConfig config, PhysicsBodyId bodyId, BattleCharacterData battleCharacterData, PlayerBattleModel playerBattleModel) { }
+ 238588: 
+ 238589: 	// RVA: 0x90E860 Offset: 0x90CE60 VA: 0x18090E860
+ 238590: 	private PhysicsBodyId AddPhysicsCharacter(BattleCharacterData data, PhysicsCharacterConfig physicsConfig, bool isCrouch) { }
+ 238591: 
+ 238592: 	// RVA: 0x912AB0 Offset: 0x9110B0 VA: 0x180912AB0 Slot: 24
+ 238593: 	public void CreateStorageBoxInventory(int id, StorageBoxInventoryData data) { }
+ 238594: 
+ 238595: 	// RVA: 0x911CB0 Offset: 0x9102B0 VA: 0x180911CB0 Slot: 25
+ 238596: 	public void CreatePlotContainerInventory(int id, PlotContainerInventoryData data) { }
+ 238597: 
+ 238598: 	// RVA: 0x910050 Offset: 0x90E650 VA: 0x180910050 Slot: 26
+ 238599: 	public void CreateCargoOpenWorkbenchSlotInventory(int id, CargoOpenWorkbenchSlotPrivateData data) { }
+ 238600: 
+ 238601: 	// RVA: 0x912410 Offset: 0x910A10 VA: 0x180912410 Slot: 27
+ 238602: 	public void CreatePlot(int id, PlotData data) { }
+ 238603: 
+ 238604: 	// RVA: 0x910A10 Offset: 0x90F010 VA: 0x180910A10 Slot: 28
+ 238605: 	public void CreateGrenade(int id, GrenadeData data) { }
+ 238606: 
+ 238607: 	// RVA: 0x90FE80 Offset: 0x90E480 VA: 0x18090FE80 Slot: 29
+ 238608: 	public void CreateCargoExchanger(int id, CargoExchangerData data) { }
+ 238609: 
+ 238610: 	// RVA: 0x9129B0 Offset: 0x910FB0 VA: 0x1809129B0 Slot: 30
+ 238611: 	public void CreateSettlementCash(int id, SettlementCashPublicData data) { }
+ 238612: 
+ 238613: 	// RVA: 0x911CA0 Offset: 0x9102A0 VA: 0x180911CA0 Slot: 31
+ 238614: 	public void CreatePlotCarTrunk(int id, PlotCarTrunkEntityData data) { }
+ 238615: 
+ 238616: 	// RVA: 0x911CA0 Offset: 0x9102A0 VA: 0x180911CA0 Slot: 32
+ 238617: 	public void CreatePlotHelicopterTrunk(int id, PlotHelicopterTrunkEntityData data) { }
+ 238618: 
+ 238619: 	// RVA: 0x912290 Offset: 0x910890 VA: 0x180912290
+ 238620: 	private void CreatePlotVehicleTrunk(int id, PlotVehicleTrunkEntityData data) { }
+ 238621: 
+ 238622: 	// RVA: 0x910930 Offset: 0x90EF30 VA: 0x180910930 Slot: 33
+ 238623: 	public void CreateFurnitureLoot(int id, FurnitureLootData data) { }
+ 238624: 
+ 238625: 	// RVA: 0x910600 Offset: 0x90EC00 VA: 0x180910600 Slot: 34
+ 238626: 	public void CreateFurnitureLootInventory(int id, FurnitureLootEntityInventoryData data) { }
+ 238627: 
+ 238628: 	// RVA: 0x90ED20 Offset: 0x90D320 VA: 0x18090ED20 Slot: 35
+ 238629: 	public void CreateBuilderLootInventory(int id, BuilderLootEntityInventoryData data) { }
+ 238630: 
+ 238631: 	// RVA: 0x911340 Offset: 0x90F940 VA: 0x180911340 Slot: 36
+ 238632: 	public void CreateLocationEventCargo(int id, LocationEventCargoData data) { }
+ 238633: 
+ 238634: 	// RVA: 0x910130 Offset: 0x90E730 VA: 0x180910130 Slot: 37
+ 238635: 	public void CreateCashLootNode(int id, CashLootNodeData data) { }
+ 238636: 
+ 238637: 	// RVA: 0x910520 Offset: 0x90EB20 VA: 0x180910520 Slot: 41
+ 238638: 	public void CreateDefenseBlockPrivate(int id, DefenseBlockPrivateData data) { }
+ 238639: 
+ 238640: 	// RVA: 0x9110D0 Offset: 0x90F6D0 VA: 0x1809110D0 Slot: 42
+ 238641: 	public void CreateLocationDefenseBlock(int id, DefenseBlockPublicData data) { }
+ 238642: 
+ 238643: 	// RVA: 0x910D70 Offset: 0x90F370 VA: 0x180910D70 Slot: 43
+ 238644: 	public void CreateHoldingCell(int id, HoldingCellData data) { }
+ 238645: 
+ 238646: 	// RVA: 0x90FBC0 Offset: 0x90E1C0 VA: 0x18090FBC0 Slot: 44
+ 238647: 	public void CreateBuyer(int id, BuyerData data) { }
+ 238648: 
+ 238649: 	// RVA: 0x90FAE0 Offset: 0x90E0E0 VA: 0x18090FAE0 Slot: 45
+ 238650: 	public void CreateBuyerInventory(int id, BuyerEntityInventoryData data) { }
+ 238651: 
+ 238652: 	// RVA: 0x910350 Offset: 0x90E950 VA: 0x180910350 Slot: 46
+ 238653: 	public void CreateCopRewardBox(int id, CopRewardBoxInventoryData copRewardBoxInventoryData) { }
+ 238654: 
+ 238655: 	// RVA: 0x910440 Offset: 0x90EA40 VA: 0x180910440 Slot: 47
+ 238656: 	public void CreateCryptoWorkbench(int id, CryptoWorkbenchDatabaseData cryptoWorkbenchDatabaseData) { }
+ 238657: 
+ 238658: 	// RVA: 0x9128C0 Offset: 0x910EC0 VA: 0x1809128C0 Slot: 48
+ 238659: 	public void CreateRoulette(int id, RouletteData data, IDataTickModel dataTickModel) { }
+ 238660: 
+ 238661: 	// RVA: 0x9121B0 Offset: 0x9107B0 VA: 0x1809121B0 Slot: 49
+ 238662: 	public void CreatePlotLoot(int id, PlotLootData data) { }
+ 238663: 
+ 238664: 	// RVA: 0x912700 Offset: 0x910D00 VA: 0x180912700 Slot: 50
+ 238665: 	public void CreatePointOfInterest(int id, PointOfInterestData data) { }
+ 238666: 
+ 238667: 	// RVA: 0x911420 Offset: 0x90FA20 VA: 0x180911420 Slot: 38
+ 238668: 	public void CreateLocationLootNode(int id, LootNodeData data) { }
+ 238669: 
+ 238670: 	// RVA: 0x9115C0 Offset: 0x90FBC0 VA: 0x1809115C0 Slot: 39
+ 238671: 	public void CreateLocationStaticLootObject(int id, IPrimitiveData<bool> data) { }
+ 238672: 
+ 238673: 	// RVA: 0x9114F0 Offset: 0x90FAF0 VA: 0x1809114F0 Slot: 40
+ 238674: 	public void CreateLocationRandomLootObject(int id, RandomLootObjectData data) { }
+ 238675: 
+ 238676: 	// RVA: 0x911950 Offset: 0x90FF50 VA: 0x180911950 Slot: 51

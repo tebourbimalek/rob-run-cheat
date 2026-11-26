@@ -1,0 +1,441 @@
+﻿1919048: 	[NativeName("fullPathHash")]
+1919049: 	private int m_FullPath; // 0x0
+1919050: 	[NativeName("userNameHash")]
+1919051: 	private int m_UserName; // 0x4
+1919052: 	[NativeName("nameHash")]
+1919053: 	private int m_Name; // 0x8
+1919054: 	[NativeName("hasFixedDuration")]
+1919055: 	private bool m_HasFixedDuration; // 0xC
+1919056: 	[NativeName("duration")]
+1919057: 	private float m_Duration; // 0x10
+1919058: 	[NativeName("normalizedTime")]
+1919059: 	private float m_NormalizedTime; // 0x14
+1919060: 	[NativeName("anyState")]
+1919061: 	private bool m_AnyState; // 0x18
+1919062: 	[NativeName("transitionType")]
+1919063: 	private int m_TransitionType; // 0x1C
+1919064: 
+1919065: 	// Properties
+1919066: 	public float normalizedTime { get; }
+1919067: 
+1919068: 	// Methods
+1919069: 
+1919070: 	// RVA: 0x1913780 Offset: 0x1911D80 VA: 0x181913780
+1919071: 	public float get_normalizedTime() { }
+1919072: }
+1919073: 
+1919074: // Namespace: UnityEngine
+1919075: [NativeHeader("Modules/Animation/Animator.h")]
+1919076: public struct MatchTargetWeightMask // TypeDefIndex: 33871
+1919077: {
+1919078: 	// Fields
+1919079: 	private Vector3 m_PositionXYZWeight; // 0x0
+1919080: 	private float m_RotationWeight; // 0xC
+1919081: }
+1919082: 
+1919083: // Namespace: UnityEngine
+1919084: [NativeHeader("Modules/Animation/Animator.h")]
+1919085: [NativeHeader("Modules/Animation/ScriptBindings/Animator.bindings.h")]
+1919086: [NativeHeader("Modules/Animation/ScriptBindings/AnimatorControllerParameter.bindings.h")]
+1919087: [UsedByNativeCode]
+1919088: public class Animator : Behaviour // TypeDefIndex: 33872
+1919089: {
+1919090: 	// Properties
+1919091: 	public bool isOptimizable { get; }
+1919092: 	public bool isHuman { get; }
+1919093: 	public bool hasRootMotion { get; }
+1919094: 	internal bool isRootPositionOrRotationControlledByCurves { get; }
+1919095: 	public float humanScale { get; }
+1919096: 	public bool isInitialized { get; }
+1919097: 	public Vector3 deltaPosition { get; }
+1919098: 	public Quaternion deltaRotation { get; }
+1919099: 	public Vector3 velocity { get; }
+1919100: 	public Vector3 angularVelocity { get; }
+1919101: 	public Vector3 rootPosition { get; set; }
+1919102: 	public Quaternion rootRotation { get; set; }
+1919103: 	public bool applyRootMotion { get; set; }
+1919104: 	[Obsolete("Animator.linearVelocityBlending is no longer used and has been deprecated.")]
+1919105: 	public bool linearVelocityBlending { get; set; }
+1919106: 	public bool animatePhysics { get; set; }
+1919107: 	public AnimatorUpdateMode updateMode { get; set; }
+1919108: 	public bool hasTransformHierarchy { get; }
+1919109: 	internal bool allowConstantClipSamplingOptimization { get; set; }
+1919110: 	public float gravityWeight { get; }
+1919111: 	public Vector3 bodyPosition { get; set; }
+1919112: 	internal Vector3 bodyPositionInternal { get; set; }
+1919113: 	public Quaternion bodyRotation { get; set; }
+1919114: 	internal Quaternion bodyRotationInternal { get; set; }
+1919115: 	public bool stabilizeFeet { get; set; }
+1919116: 	public int layerCount { get; }
+1919117: 	public AnimatorControllerParameter[] parameters { get; }
+1919118: 	public int parameterCount { get; }
+1919119: 	public float feetPivotActive { get; set; }
+1919120: 	public float pivotWeight { get; }
+1919121: 	public Vector3 pivotPosition { get; }
+1919122: 	public bool isMatchingTarget { get; }
+1919123: 	public float speed { get; set; }
+1919124: 	public Vector3 targetPosition { get; }
+1919125: 	public Quaternion targetRotation { get; }
+1919126: 	public Transform avatarRoot { get; }
+1919127: 	public AnimatorCullingMode cullingMode { get; set; }
+1919128: 	public float playbackTime { get; set; }
+1919129: 	public float recorderStartTime { get; set; }
+1919130: 	public float recorderStopTime { get; set; }
+1919131: 	public AnimatorRecorderMode recorderMode { get; }
+1919132: 	public RuntimeAnimatorController runtimeAnimatorController { get; set; }
+1919133: 	public bool hasBoundPlayables { get; }
+1919134: 	public Avatar avatar { get; set; }
+1919135: 	public PlayableGraph playableGraph { get; }
+1919136: 	public bool layersAffectMassCenter { get; set; }
+1919137: 	public float leftFeetBottomHeight { get; }
+1919138: 	public float rightFeetBottomHeight { get; }
+1919139: 	[NativeConditional("UNITY_EDITOR")]
+1919140: 	internal bool supportsOnAnimatorMove { get; }
+1919141: 	public bool logWarnings { get; set; }
+1919142: 	public bool fireEvents { get; set; }
+1919143: 	[Obsolete("keepAnimatorControllerStateOnDisable is deprecated, use keepAnimatorStateOnDisable instead. (UnityUpgradable) -> keepAnimatorStateOnDisable", False)]
+1919144: 	public bool keepAnimatorControllerStateOnDisable { get; set; }
+1919145: 	public bool keepAnimatorStateOnDisable { get; set; }
+1919146: 	public bool writeDefaultValuesOnDisable { get; set; }
+1919147: 
+1919148: 	// Methods
+1919149: 
+1919150: 	[NativeMethod("IsOptimizable")]
+1919151: 	// RVA: 0x62227F0 Offset: 0x6220DF0 VA: 0x1862227F0
+1919152: 	public bool get_isOptimizable() { }
+1919153: 
+1919154: 	[NativeMethod("IsHuman")]
+1919155: 	// RVA: 0x62225B0 Offset: 0x6220BB0 VA: 0x1862225B0
+1919156: 	public bool get_isHuman() { }
+1919157: 
+1919158: 	[NativeMethod("HasRootMotion")]
+1919159: 	// RVA: 0x6222370 Offset: 0x6220970 VA: 0x186222370
+1919160: 	public bool get_hasRootMotion() { }
+1919161: 
+1919162: 	[NativeMethod("IsRootTranslationOrRotationControllerByCurves")]
+1919163: 	// RVA: 0x62228B0 Offset: 0x6220EB0 VA: 0x1862228B0
+1919164: 	internal bool get_isRootPositionOrRotationControlledByCurves() { }
+1919165: 
+1919166: 	// RVA: 0x62224F0 Offset: 0x6220AF0 VA: 0x1862224F0
+1919167: 	public float get_humanScale() { }
+1919168: 
+1919169: 	[NativeMethod("IsInitialized")]
+1919170: 	// RVA: 0x6222670 Offset: 0x6220C70 VA: 0x186222670
+1919171: 	public bool get_isInitialized() { }
+1919172: 
+1919173: 	// RVA: 0x621B180 Offset: 0x6219780 VA: 0x18621B180
+1919174: 	public float GetFloat(string name) { }
+1919175: 
+1919176: 	// RVA: 0x621AEC0 Offset: 0x62194C0 VA: 0x18621AEC0
+1919177: 	public float GetFloat(int id) { }
+1919178: 
+1919179: 	// RVA: 0x621F620 Offset: 0x621DC20 VA: 0x18621F620
+1919180: 	public void SetFloat(string name, float value) { }
+1919181: 
+1919182: 	// RVA: 0x621F610 Offset: 0x621DC10 VA: 0x18621F610
+1919183: 	public void SetFloat(string name, float value, float dampTime, float deltaTime) { }
+1919184: 
+1919185: 	// RVA: 0x621F0C0 Offset: 0x621D6C0 VA: 0x18621F0C0
+1919186: 	public void SetFloat(int id, float value) { }
+1919187: 
+1919188: 	// RVA: 0x621EFC0 Offset: 0x621D5C0 VA: 0x18621EFC0
+1919189: 	public void SetFloat(int id, float value, float dampTime, float deltaTime) { }
+1919190: 
+1919191: 	// RVA: 0x621AA50 Offset: 0x6219050 VA: 0x18621AA50
+1919192: 	public bool GetBool(string name) { }
+1919193: 
+1919194: 	// RVA: 0x621A7A0 Offset: 0x6218DA0 VA: 0x18621A7A0
+1919195: 	public bool GetBool(int id) { }
+1919196: 
+1919197: 	// RVA: 0x621EF50 Offset: 0x621D550 VA: 0x18621EF50
+1919198: 	public void SetBool(string name, bool value) { }
+1919199: 
+1919200: 	// RVA: 0x621EC80 Offset: 0x621D280 VA: 0x18621EC80
+1919201: 	public void SetBool(int id, bool value) { }
+1919202: 
+1919203: 	// RVA: 0x621BDD0 Offset: 0x621A3D0 VA: 0x18621BDD0
+1919204: 	public int GetInteger(string name) { }
+1919205: 
+1919206: 	// RVA: 0x621BB20 Offset: 0x621A120 VA: 0x18621BB20
+1919207: 	public int GetInteger(int id) { }
+1919208: 
+1919209: 	// RVA: 0x62202D0 Offset: 0x621E8D0 VA: 0x1862202D0
+1919210: 	public void SetInteger(string name, int value) { }
+1919211: 
+1919212: 	// RVA: 0x6220000 Offset: 0x621E600 VA: 0x186220000
+1919213: 	public void SetInteger(int id, int value) { }
+1919214: 
+1919215: 	// RVA: 0x6220E20 Offset: 0x621F420 VA: 0x186220E20
+1919216: 	public void SetTrigger(string name) { }
+1919217: 
+1919218: 	// RVA: 0x6220B70 Offset: 0x621F170 VA: 0x186220B70
+1919219: 	public void SetTrigger(int id) { }
+1919220: 
+1919221: 	// RVA: 0x621E8F0 Offset: 0x621CEF0 VA: 0x18621E8F0
+1919222: 	public void ResetTrigger(string name) { }
+1919223: 
+1919224: 	// RVA: 0x621E640 Offset: 0x621CC40 VA: 0x18621E640
+1919225: 	public void ResetTrigger(int id) { }
+1919226: 
+1919227: 	// RVA: 0x621D510 Offset: 0x621BB10 VA: 0x18621D510
+1919228: 	public bool IsParameterControlledByCurve(string name) { }
+1919229: 
+1919230: 	// RVA: 0x621D260 Offset: 0x621B860 VA: 0x18621D260
+1919231: 	public bool IsParameterControlledByCurve(int id) { }
+1919232: 
+1919233: 	// RVA: 0x6221EB0 Offset: 0x62204B0 VA: 0x186221EB0
+1919234: 	public Vector3 get_deltaPosition() { }
+1919235: 
+1919236: 	// RVA: 0x6221FA0 Offset: 0x62205A0 VA: 0x186221FA0
+1919237: 	public Quaternion get_deltaRotation() { }
+1919238: 
+1919239: 	// RVA: 0x6223B90 Offset: 0x6222190 VA: 0x186223B90
+1919240: 	public Vector3 get_velocity() { }
+1919241: 
+1919242: 	// RVA: 0x6221680 Offset: 0x621FC80 VA: 0x186221680
+1919243: 	public Vector3 get_angularVelocity() { }
+1919244: 
+1919245: 	[NativeMethod("GetAvatarPosition")]
+1919246: 	// RVA: 0x6223410 Offset: 0x6221A10 VA: 0x186223410
+1919247: 	public Vector3 get_rootPosition() { }
+1919248: 
+1919249: 	[NativeMethod("SetAvatarPosition")]
+1919250: 	// RVA: 0x6224AD0 Offset: 0x62230D0 VA: 0x186224AD0
+1919251: 	public void set_rootPosition(Vector3 value) { }
+1919252: 
+1919253: 	[NativeMethod("GetAvatarRotation")]
+1919254: 	// RVA: 0x6223500 Offset: 0x6221B00 VA: 0x186223500
+1919255: 	public Quaternion get_rootRotation() { }
+1919256: 
+1919257: 	[NativeMethod("SetAvatarRotation")]
+1919258: 	// RVA: 0x6224BB0 Offset: 0x62231B0 VA: 0x186224BB0
+1919259: 	public void set_rootRotation(Quaternion value) { }
+1919260: 
+1919261: 	// RVA: 0x6221820 Offset: 0x621FE20 VA: 0x186221820
+1919262: 	public bool get_applyRootMotion() { }
+1919263: 
+1919264: 	// RVA: 0x6223F00 Offset: 0x6222500 VA: 0x186223F00
+1919265: 	public void set_applyRootMotion(bool value) { }
+1919266: 
+1919267: 	// RVA: 0x6222C70 Offset: 0x6221270 VA: 0x186222C70
+1919268: 	public bool get_linearVelocityBlending() { }
+1919269: 
+1919270: 	// RVA: 0x6224830 Offset: 0x6222E30 VA: 0x186224830
+1919271: 	public void set_linearVelocityBlending(bool value) { }
+1919272: 
+1919273: 	// RVA: 0x6221760 Offset: 0x621FD60 VA: 0x186221760
+1919274: 	public bool get_animatePhysics() { }
+1919275: 
+1919276: 	// RVA: 0x6223E20 Offset: 0x6222420 VA: 0x186223E20
+1919277: 	public void set_animatePhysics(bool value) { }
+1919278: 
+1919279: 	// RVA: 0x6223AC0 Offset: 0x62220C0 VA: 0x186223AC0
+1919280: 	public AnimatorUpdateMode get_updateMode() { }
+1919281: 
+1919282: 	// RVA: 0x6224F50 Offset: 0x6223550 VA: 0x186224F50
+1919283: 	public void set_updateMode(AnimatorUpdateMode value) { }
+1919284: 
+1919285: 	// RVA: 0x6222430 Offset: 0x6220A30 VA: 0x186222430
+1919286: 	public bool get_hasTransformHierarchy() { }
+1919287: 
+1919288: 	// RVA: 0x62215B0 Offset: 0x621FBB0 VA: 0x1862215B0
+1919289: 	internal bool get_allowConstantClipSamplingOptimization() { }
+1919290: 
+1919291: 	// RVA: 0x6223D40 Offset: 0x6222340 VA: 0x186223D40
+1919292: 	internal void set_allowConstantClipSamplingOptimization(bool value) { }
+1919293: 
+1919294: 	// RVA: 0x62221F0 Offset: 0x62207F0 VA: 0x1862221F0
+1919295: 	public float get_gravityWeight() { }
+1919296: 
+1919297: 	// RVA: 0x6221B50 Offset: 0x6220150 VA: 0x186221B50
+1919298: 	public Vector3 get_bodyPosition() { }
+1919299: 
+1919300: 	// RVA: 0x6224180 Offset: 0x6222780 VA: 0x186224180
+1919301: 	public void set_bodyPosition(Vector3 value) { }
+1919302: 
+1919303: 	[NativeMethod("GetBodyPosition")]
+1919304: 	// RVA: 0x6221AB0 Offset: 0x62200B0 VA: 0x186221AB0
+1919305: 	internal Vector3 get_bodyPositionInternal() { }
+1919306: 
+1919307: 	[NativeMethod("SetBodyPosition")]
+1919308: 	// RVA: 0x62240F0 Offset: 0x62226F0 VA: 0x1862240F0
+1919309: 	internal void set_bodyPositionInternal(Vector3 value) { }
+1919310: 
+1919311: 	// RVA: 0x6221CF0 Offset: 0x62202F0 VA: 0x186221CF0
+1919312: 	public Quaternion get_bodyRotation() { }
+1919313: 
+1919314: 	// RVA: 0x6224300 Offset: 0x6222900 VA: 0x186224300
+1919315: 	public void set_bodyRotation(Quaternion value) { }
+1919316: 
+1919317: 	[NativeMethod("GetBodyRotation")]
+1919318: 	// RVA: 0x6221C60 Offset: 0x6220260 VA: 0x186221C60
+1919319: 	internal Quaternion get_bodyRotationInternal() { }
+1919320: 
+1919321: 	[NativeMethod("SetBodyRotation")]
+1919322: 	// RVA: 0x6224270 Offset: 0x6222870 VA: 0x186224270
+1919323: 	internal void set_bodyRotationInternal(Quaternion value) { }
+1919324: 
+1919325: 	// RVA: 0x621B8C0 Offset: 0x6219EC0 VA: 0x18621B8C0
+1919326: 	public Vector3 GetIKPosition(AvatarIKGoal goal) { }
+1919327: 
+1919328: 	// RVA: 0x621B1E0 Offset: 0x62197E0 VA: 0x18621B1E0
+1919329: 	private Vector3 GetGoalPosition(AvatarIKGoal goal) { }
+1919330: 
+1919331: 	// RVA: 0x621FDC0 Offset: 0x621E3C0 VA: 0x18621FDC0
+1919332: 	public void SetIKPosition(AvatarIKGoal goal, Vector3 goalPosition) { }
+1919333: 
+1919334: 	// RVA: 0x621F680 Offset: 0x621DC80 VA: 0x18621F680
+1919335: 	private void SetGoalPosition(AvatarIKGoal goal, Vector3 goalPosition) { }
+1919336: 
+1919337: 	// RVA: 0x621BA20 Offset: 0x621A020 VA: 0x18621BA20
+1919338: 	public Quaternion GetIKRotation(AvatarIKGoal goal) { }
+1919339: 
+1919340: 	// RVA: 0x621B2D0 Offset: 0x62198D0 VA: 0x18621B2D0
+1919341: 	private Quaternion GetGoalRotation(AvatarIKGoal goal) { }
+1919342: 
+1919343: 	// RVA: 0x621FF10 Offset: 0x621E510 VA: 0x18621FF10
+1919344: 	public void SetIKRotation(AvatarIKGoal goal, Quaternion goalRotation) { }
+1919345: 
+1919346: 	// RVA: 0x621F770 Offset: 0x621DD70 VA: 0x18621F770
+1919347: 	private void SetGoalRotation(AvatarIKGoal goal, Quaternion goalRotation) { }
+1919348: 
+1919349: 	// RVA: 0x621B830 Offset: 0x6219E30 VA: 0x18621B830
+1919350: 	public float GetIKPositionWeight(AvatarIKGoal goal) { }
+1919351: 
+1919352: 	// RVA: 0x621B3B0 Offset: 0x62199B0 VA: 0x18621B3B0
+1919353: 	private float GetGoalWeightPosition(AvatarIKGoal goal) { }
+1919354: 
+1919355: 	// RVA: 0x621FD20 Offset: 0x621E320 VA: 0x18621FD20
+1919356: 	public void SetIKPositionWeight(AvatarIKGoal goal, float value) { }
+1919357: 
+1919358: 	// RVA: 0x621F860 Offset: 0x621DE60 VA: 0x18621F860
+1919359: 	private void SetGoalWeightPosition(AvatarIKGoal goal, float value) { }
+1919360: 
+1919361: 	// RVA: 0x621B990 Offset: 0x6219F90 VA: 0x18621B990
+1919362: 	public float GetIKRotationWeight(AvatarIKGoal goal) { }
+1919363: 
+1919364: 	// RVA: 0x621B480 Offset: 0x6219A80 VA: 0x18621B480
+1919365: 	private float GetGoalWeightRotation(AvatarIKGoal goal) { }
+1919366: 
+1919367: 	// RVA: 0x621FE70 Offset: 0x621E470 VA: 0x18621FE70
+1919368: 	public void SetIKRotationWeight(AvatarIKGoal goal, float value) { }
+1919369: 
+1919370: 	// RVA: 0x621F950 Offset: 0x621DF50 VA: 0x18621F950
+1919371: 	private void SetGoalWeightRotation(AvatarIKGoal goal, float value) { }
+1919372: 
+1919373: 	// RVA: 0x621B760 Offset: 0x6219D60 VA: 0x18621B760
+1919374: 	public Vector3 GetIKHintPosition(AvatarIKHint hint) { }
+1919375: 
+1919376: 	// RVA: 0x621B560 Offset: 0x6219B60 VA: 0x18621B560
+1919377: 	private Vector3 GetHintPosition(AvatarIKHint hint) { }
+1919378: 
+1919379: 	// RVA: 0x621FC70 Offset: 0x621E270 VA: 0x18621FC70
+1919380: 	public void SetIKHintPosition(AvatarIKHint hint, Vector3 hintPosition) { }
+1919381: 
+1919382: 	// RVA: 0x621FA40 Offset: 0x621E040 VA: 0x18621FA40
+1919383: 	private void SetHintPosition(AvatarIKHint hint, Vector3 hintPosition) { }
+1919384: 
+1919385: 	// RVA: 0x621B6D0 Offset: 0x6219CD0 VA: 0x18621B6D0
+1919386: 	public float GetIKHintPositionWeight(AvatarIKHint hint) { }
+1919387: 
+1919388: 	// RVA: 0x621B640 Offset: 0x6219C40 VA: 0x18621B640
+1919389: 	private float GetHintWeightPosition(AvatarIKHint hint) { }
+1919390: 
+1919391: 	// RVA: 0x621FBD0 Offset: 0x621E1D0 VA: 0x18621FBD0
+1919392: 	public void SetIKHintPositionWeight(AvatarIKHint hint, float value) { }
+1919393: 
+1919394: 	// RVA: 0x621FB30 Offset: 0x621E130 VA: 0x18621FB30
+1919395: 	private void SetHintWeightPosition(AvatarIKHint hint, float value) { }
+1919396: 
+1919397: 	// RVA: 0x62204B0 Offset: 0x621EAB0 VA: 0x1862204B0
+1919398: 	public void SetLookAtPosition(Vector3 lookAtPosition) { }
+1919399: 
+1919400: 	[NativeMethod("SetLookAtPosition")]
+1919401: 	// RVA: 0x6220420 Offset: 0x621EA20 VA: 0x186220420
+1919402: 	private void SetLookAtPositionInternal(Vector3 lookAtPosition) { }
+1919403: 
+1919404: 	// RVA: 0x6220990 Offset: 0x621EF90 VA: 0x186220990
+1919405: 	public void SetLookAtWeight(float weight) { }
+1919406: 
+1919407: 	// RVA: 0x6220670 Offset: 0x621EC70 VA: 0x186220670
+1919408: 	public void SetLookAtWeight(float weight, float bodyWeight) { }
+1919409: 
+1919410: 	// RVA: 0x62208C0 Offset: 0x621EEC0 VA: 0x1862208C0
+1919411: 	public void SetLookAtWeight(float weight, float bodyWeight, float headWeight) { }
+1919412: 
+1919413: 	// RVA: 0x6220730 Offset: 0x621ED30 VA: 0x186220730
+1919414: 	public void SetLookAtWeight(float weight, float bodyWeight, float headWeight, float eyesWeight) { }
+1919415: 
+1919416: 	// RVA: 0x6220800 Offset: 0x621EE00 VA: 0x186220800
+1919417: 	public void SetLookAtWeight(float weight, float bodyWeight, float headWeight, float eyesWeight, float clampWeight) { }
+1919418: 
+1919419: 	[NativeMethod("SetLookAtWeight")]
+1919420: 	// RVA: 0x62205C0 Offset: 0x621EBC0 VA: 0x1862205C0
+1919421: 	private void SetLookAtWeightInternal(float weight, float bodyWeight, float headWeight, float eyesWeight, float clampWeight) { }
+1919422: 
+1919423: 	// RVA: 0x621EB60 Offset: 0x621D160 VA: 0x18621EB60
+1919424: 	public void SetBoneLocalRotation(HumanBodyBones humanBoneId, Quaternion rotation) { }
+1919425: 
+1919426: 	[NativeMethod("SetBoneLocalRotation")]
+1919427: 	// RVA: 0x621EAC0 Offset: 0x621D0C0 VA: 0x18621EAC0
+1919428: 	private void SetBoneLocalRotationInternal(int humanBoneId, Quaternion rotation) { }
+1919429: 
+1919430: 	// RVA: 0x6219FD0 Offset: 0x62185D0 VA: 0x186219FD0
+1919431: 	private ScriptableObject GetBehaviour(Type type) { }
+1919432: 
+1919433: 	// RVA: -1 Offset: -1
+1919434: 	public T GetBehaviour<T>() { }
+1919435: 	/* GenericInstMethod :
+1919436: 	|
+1919437: 	|-RVA: 0x1346620 Offset: 0x1344C20 VA: 0x181346620
+1919438: 	|-Animator.GetBehaviour<object>
+1919439: 	*/
+1919440: 
+1919441: 	// RVA: -1 Offset: -1
+1919442: 	private static T[] ConvertStateMachineBehaviour<T>(ScriptableObject[] rawObjects) { }
+1919443: 	/* GenericInstMethod :
+1919444: 	|
+1919445: 	|-RVA: 0x117DD60 Offset: 0x117C360 VA: 0x18117DD60
+1919446: 	|-Animator.ConvertStateMachineBehaviour<object>
+1919447: 	*/
+1919448: 
+1919449: 	// RVA: -1 Offset: -1
+1919450: 	public T[] GetBehaviours<T>() { }
+1919451: 	/* GenericInstMethod :
+1919452: 	|
+1919453: 	|-RVA: 0x13466B0 Offset: 0x1344CB0 VA: 0x1813466B0
+1919454: 	|-Animator.GetBehaviours<object>
+1919455: 	*/
+1919456: 
+1919457: 	[FreeFunction(Name = "AnimatorBindings::InternalGetBehaviours", HasExplicitThis = True)]
+1919458: 	// RVA: 0x621CD70 Offset: 0x621B370 VA: 0x18621CD70
+1919459: 	internal ScriptableObject[] InternalGetBehaviours(Type type) { }
+1919460: 
+1919461: 	// RVA: 0x621A0A0 Offset: 0x62186A0 VA: 0x18621A0A0
+1919462: 	public StateMachineBehaviour[] GetBehaviours(int fullPathHash, int layerIndex) { }
+1919463: 
+1919464: 	[FreeFunction(Name = "AnimatorBindings::InternalGetBehavioursByKey", HasExplicitThis = True)]
+1919465: 	// RVA: 0x621CC50 Offset: 0x621B250 VA: 0x18621CC50
+1919466: 	internal ScriptableObject[] InternalGetBehavioursByKey(int fullPathHash, int layerIndex, Type type) { }
+1919467: 
+1919468: 	// RVA: 0x6223770 Offset: 0x6221D70 VA: 0x186223770
+1919469: 	public bool get_stabilizeFeet() { }
+1919470: 
+1919471: 	// RVA: 0x6224E80 Offset: 0x6223480 VA: 0x186224E80
+1919472: 	public void set_stabilizeFeet(bool value) { }
+1919473: 
+1919474: 	// RVA: 0x6222A30 Offset: 0x6221030 VA: 0x186222A30
+1919475: 	public int get_layerCount() { }
+1919476: 
+1919477: 	// RVA: 0x621C050 Offset: 0x621A650 VA: 0x18621C050
+1919478: 	public string GetLayerName(int layerIndex) { }
+1919479: 
+1919480: 	// RVA: 0x621BE30 Offset: 0x621A430 VA: 0x18621BE30
+1919481: 	public int GetLayerIndex(string layerName) { }
+1919482: 
+1919483: 	// RVA: 0x621C1B0 Offset: 0x621A7B0 VA: 0x18621C1B0
+1919484: 	public float GetLayerWeight(int layerIndex) { }
+1919485: 
+1919486: 	// RVA: 0x6220330 Offset: 0x621E930 VA: 0x186220330
+1919487: 	public void SetLayerWeight(int layerIndex, float weight) { }
+1919488: 

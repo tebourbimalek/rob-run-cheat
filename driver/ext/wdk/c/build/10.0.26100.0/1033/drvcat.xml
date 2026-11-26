@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Copyright, Microsoft Corporation, All rights reserved.-->
+<ProjectSchemaDefinitions xmlns="http://schemas.microsoft.com/build/2009/properties" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+  <Rule Name="DrvCat" PageTemplate="tool" DisplayName="Driver Catalog"  Order="320">
+    <Rule.Categories>
+      <Category Name="General">
+        <Category.DisplayName>
+          <sys:String>General</sys:String>
+        </Category.DisplayName>
+      </Category>
+      <Category Name="Command Line" Subtype="CommandLine">
+        <Category.DisplayName>
+          <sys:String>Command Line</sys:String>
+        </Category.DisplayName>
+      </Category>
+    </Rule.Categories>
+    <Rule.DataSource>
+      <DataSource Persistence="ProjectFile" Label="" HasConfigurationCondition="true"/>
+    </Rule.DataSource>
+    <BoolProperty Name="DriverCatalog_Enable" DisplayName="Run DriverCatalog" Description="Run the DrvCat tool to add key value pair attributes to catalog file" Category="General"/>
+    <StringListProperty Name="DriverAttributeList" DisplayName="Driver Attributes" Description="Comma separated list of key value pair attributes separated by space. datb1 attr1, datb2 attr2" Category="General" Switch="/os:"/>
+    <StringProperty Name="AdditionalOptions" Category="Command Line" F1Keyword="vc.project.AdditionalOptionsPage">
+      <StringProperty.DisplayName>
+        <sys:String>Additional Options</sys:String>
+      </StringProperty.DisplayName>
+      <StringProperty.Description>
+        <sys:String>Additional Options</sys:String>
+      </StringProperty.Description>
+      <StringProperty.DataSource>
+        <DataSource Persistence="ProjectFile" HasConfigurationCondition="true" PersistedName="DrvCatAdditionalOptions" />
+      </StringProperty.DataSource>
+    </StringProperty>
+  </Rule>
+</ProjectSchemaDefinitions>
